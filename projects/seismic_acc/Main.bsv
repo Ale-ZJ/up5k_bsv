@@ -20,7 +20,8 @@ module mkMain(MainIfc);
 	FIFO#(Bit#(8)) dataOutQ <- mkFIFO;	// bytes to be transmitted to RPi
 
 
-	Reg#(Integer#(2)) count <- mkReg(0);
+	Reg#(Bit#(4)) count <- mkReg(0);
+	Reg#(Bit#(4)) shiftCount <- mkReg(0);
 	Reg#(Bit#(8)) first <- mkReg(?);
 	Reg#(Bit#(8)) second <- mkReg(?);
 	Reg#(Bit#(8)) third <- mkReg(?);
@@ -42,8 +43,7 @@ module mkMain(MainIfc);
 
 		if(count >= 4) begin 
 			count <= 0;
-			let concat <- {first, second, third, fourth};
-			integrator1.addSample(unpack(concat));
+			integrator1.addSample(unpack({first, second, third, fourth}));
 		end 
 
 	endrule
@@ -53,15 +53,32 @@ module mkMain(MainIfc);
 		integrator2.addSample(integrand);
 	endrule
 
-	rule relayDataOut;
+	rule relayData1 (shiftCount == 0);
 		let integrand <- integrator2.integratorOut();
 
 		shiftout <= pack(integrand);
 
-		for(int i = 0; i < 4; i = i+1) begin
-			dataOutQ.enq(shiftout[7:0]);
-			shiftout <= shiftout >> 8; 
-		end
+		dataOutQ.enq(shiftout[7:0]);
+		shiftout <= shiftout >> 8; 
+		shiftCount <= shiftCount + 1;
+	endrule
+
+	rule relayData2 (sshiftCount == 1);
+		dataOutQ.enq(shiftout[7:0]);
+		shiftout <= shiftout >> 8; 
+		shiftCount <= shiftCount + 1;
+	endrule
+
+	rule relayData3 (shiftCount == 2)
+		dataOutQ.enq(shiftout[7:0]);
+		shiftout <= shiftout >> 8; 
+		shiftCount <= shiftCount + 1;
+	endrule
+	
+	rule relayData4 (shiftCount == 3);
+		dataOutQ.enq(shiftout[7:0]);
+		shiftout <= shiftout >> 8; 
+		shiftCount <= 0;
 	endrule
 
 	method Action spiIn(Bit#(8) data);
