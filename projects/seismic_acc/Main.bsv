@@ -56,7 +56,7 @@ module mkMain(MainIfc);
 	rule relayDataOut;
 		let integrand <- integrator2.integratorOut();
 
-		shiftout <= fromDouble(integrand);
+		shiftout <= pack(integrand);
 
 		for(int i = 0; i < 4; i = i+1) begin
 			dataOutQ.enq(shiftout[7:0]);
