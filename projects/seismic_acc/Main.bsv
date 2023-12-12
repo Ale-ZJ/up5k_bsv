@@ -7,6 +7,7 @@
 
 import FIFO::*;
 import Spi::*;
+import Integrator::*;
 
 interface MainIfc;
 	method Action spiIn(Bit#(8) data);
@@ -35,49 +36,47 @@ module mkMain(MainIfc);
 	rule relayDataToIntegrator;
 		dataInQ.deq;
 		
-		let d = dataINQ.first;
+		let d = dataInQ.first;
 
 		first <= second; second <= third; third <= fourth; fourth <= d;
 
-		count <= count + 1;
 
-		if(count >= 4) begin 
+		if(count >= 3) begin 
 			count <= 0;
 			integrator1.addSample(unpack({first, second, third, fourth}));
-		end 
+		end else begin
+			count <= count + 1;
+		end
 
 	endrule
 
 	rule relayIntegratorToIntegrator;
-		let integrand <- integrator1.integratorOut();
-		integrator2.addSample(integrand);
+		integrator2.addSample(integrator1.integrateOut());
 	endrule
 
 	rule relayData1 (shiftCount == 0);
-		let integrand <- integrator2.integratorOut();
 
-		shiftout <= pack(integrand);
+		shiftout <= pack(integrator2.integrateOut());
 
 		dataOutQ.enq(shiftout[7:0]);
-		shiftout <= shiftout >> 8; 
 		shiftCount <= shiftCount + 1;
 	endrule
 
-	rule relayData2 (sshiftCount == 1);
+	rule relayData2 (shiftCount == 1);
+		shiftout <= shiftout >> 8;
 		dataOutQ.enq(shiftout[7:0]);
-		shiftout <= shiftout >> 8; 
 		shiftCount <= shiftCount + 1;
 	endrule
 
-	rule relayData3 (shiftCount == 2)
+	rule relayData3 (shiftCount == 2);
+		shiftout <= shiftout >> 8;
 		dataOutQ.enq(shiftout[7:0]);
-		shiftout <= shiftout >> 8; 
 		shiftCount <= shiftCount + 1;
 	endrule
 	
 	rule relayData4 (shiftCount == 3);
+		shiftout <= shiftout >> 8;
 		dataOutQ.enq(shiftout[7:0]);
-		shiftout <= shiftout >> 8; 
 		shiftCount <= 0;
 	endrule
 

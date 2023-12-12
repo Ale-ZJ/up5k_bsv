@@ -19,7 +19,9 @@ interface BsvTopIfc;
 	(* always_ready *)
 	method Bit#(1) red;
 	(* always_ready *)
-    method Bit#(1) serial_out;
+        method Bit#(1) serial_out;
+
+		method Bit#(1) spi_miso;
 	
     // INPUTS 
 	(* always_enabled, always_ready, prefix = "", result = "spi_mosi" *)
@@ -68,6 +70,10 @@ module mkBsvTop(BsvTopIfc);
 	endmethod
 	method Action serial_select(Bit#(1) spi_ssn);
 		spi.serial_select(spi_ssn);
+	endmethod
+
+	method Bit#(1) spi_miso;
+		return spi.serial_out;
 	endmethod
 
 endmodule
