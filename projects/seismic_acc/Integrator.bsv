@@ -32,8 +32,8 @@ module mkIntegrator(IntegratorInterface);
     Reg#(Bool) valid <- mkReg(False);
 
     FIFO#(Float) sampleIn               <- mkFIFO;
-    // FIFO#(Tuple2#(Float, Float)) fmultQ <- mkFIFO;
-    // FIFO#(Tuple2#(Float, Float)) faddQ  <- mkFIFO;
+    FIFO#(Tuple2#(Float, Float)) fmultQ <- mkFIFO;
+    FIFO#(Tuple2#(Float, Float)) faddQ  <- mkFIFO;
 
     FloatTwoOp fmult <- mkFloatMult;
     FloatTwoOp fadd  <- mkFloatAdd;
@@ -57,28 +57,28 @@ module mkIntegrator(IntegratorInterface);
         end
     endrule 
 
-    // rule relayFmult;
-    //     fmultQ.deq;
-    //     let ops <- fmultQ.first;
-    //     fmult.put(tpl_1(ops), tpl_2(ops));
-    // endrule
+    rule relayFmult;
+        fmultQ.deq;
+        let ops <- fmultQ.first;
+        fmult.put(tpl_1(ops), tpl_2(ops));
+    endrule
 
-    // rule relayFadd;
-    //     faddQ.deq;
-    //     let ops <- faddQ.first;
-    //     fadd.put(tpl_1(ops), tpl_2(ops));
-    // endrule; 
+    rule relayFadd;
+        faddQ.deq;
+        let ops <- faddQ.first;
+        fadd.put(tpl_1(ops), tpl_2(ops));
+    endrule; 
 
     rule relayNegate(state == NEG);
         let tempNegate <- fmult.get;
-        fadd.put(curr, tempNegate);
+        faddQ.enq(curr, tempNegate);
 
         state <= SUB;
     endrule 
 
     rule relaySubtract(state == SUB);
         let tempSubtract <- fadd.get;
-        fadd.put(tempSubtract, accum);
+        faddQ.enq(tempSubtract, accum);
 
         state <= ADDACCUM;
     endrule
@@ -86,29 +86,29 @@ module mkIntegrator(IntegratorInterface);
     rule relayAccum(state == ADDACCUM);
         let tempAccum <- fadd.get;
         accum <= tempAccum;
-        fmult.put(accum, unpack(32'h3b000000));
+        fmultQ.enq(accum, unpack(32'h3b000000));
 
         state <= CALCAVG;
     endrule 
 
     rule relayAvg(state == CALCAVG);
         let tempAvg <- fmult.get;
-        fmult.put(tempAvg, unpack(32'hbf800000));
+        fmultQ.enq(tempAvg, unpack(32'hbf800000));
 
         state <= NEGAVG;
     endrule 
 
     rule relayNegAvg(state == NEGAVG);
         let tempNegAvg <- fmult.get;
-        fadd.put(curr, tempNegAvg); // ci - M
-        fmult.put(prev, unpack(32'h3f67ae14)); //ci-1*(1-L)
+        faddQ.enq(curr, tempNegAvg); // ci - M
+        fmultQ.enq(prev, unpack(32'h3f67ae14)); //ci-1*(1-L)
         state <= SUBAVG;
     endrule 
 
     rule relaySubAvg(state == SUBAVG);
         let tempSubAvg <- fadd.get;
         let tempTerm2  <- fmult.get;
-        fmult.put(tempSubAvg, unpack(32'h3ca3d70a));
+        fmultQ.enq(tempSubAvg, unpack(32'h3ca3d70a));
 
         term2 <= tempTerm2;
 
@@ -119,7 +119,7 @@ module mkIntegrator(IntegratorInterface);
         let tempTerm1 <- fmult.get;
         term1 <= tempTerm1;
 
-        fadd.put(term1, term2);
+        faddQ.enq(term1, term2);
 
         state <= CALCRES;
     endrule 
