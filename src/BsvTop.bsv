@@ -12,16 +12,16 @@ import Spi::*;
 interface BsvTopIfc;
 
 	// OUTPUT
+	//(* always_ready *)
+	//method Bit#(1) blue;
+	//(* always_ready *)
+	//method Bit#(1) green;
+	//(* always_ready *)
+	//method Bit#(1) red;
 	(* always_ready *)
-	method Bit#(1) blue;
-	(* always_ready *)
-	method Bit#(1) green;
-	(* always_ready *)
-	method Bit#(1) red;
-	(* always_ready *)
-    method Bit#(1) serial_out;
+    	method Bit#(1) spi_miso;
 	
-    // INPUTS 
+    	// INPUTS 
 	(* always_enabled, always_ready, prefix = "", result = "spi_mosi" *)
 	method Action serial_in(Bit#(1) spi_mosi);
 	(* always_enabled, always_ready, prefix = "", result = "spi_sck" *)
@@ -46,7 +46,7 @@ module mkBsvTop(BsvTopIfc);
 	endrule
 
 	// LEDs
-	method Bit#(1) blue;
+	/*method Bit#(1) blue;
 		return hwmain.rgbOut()[2];
 	endmethod
 	method Bit#(1) green;
@@ -54,10 +54,10 @@ module mkBsvTop(BsvTopIfc);
 	endmethod
 	method Bit#(1) red;
 		return hwmain.rgbOut()[0];
-	endmethod
+	endmethod*/
 
 	// Spi
-	method Bit#(1) serial_out;
+	method Bit#(1) spi_miso;
 		return spi.serial_out;
 	endmethod
 	method Action serial_in(Bit#(1) spi_mosi);
