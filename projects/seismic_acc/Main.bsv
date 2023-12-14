@@ -6,13 +6,12 @@
  */
 
 import FIFO::*;
-import Spi::*;
 import Integrator::*;
 
 interface MainIfc;
-	method Action spiIn(Bit#(8) data);
-	method ActionValue#(Bit#(8)) spiOut;
-	//method Bit#(3) rgbOut;
+	method Action uartIn(Bit#(8) data);
+	method ActionValue#(Bit#(8)) uartOut;
+	method Bit#(3) rgbOut;
 endinterface
 
 module mkMain(MainIfc);
@@ -35,11 +34,8 @@ module mkMain(MainIfc);
 
 	rule relayDataToIntegrator;
 		dataInQ.deq;
-		
 		let d = dataInQ.first;
-
 		first <= second; second <= third; third <= fourth; fourth <= d;
-
 
 		if(count >= 3) begin 
 			count <= 0;
@@ -47,7 +43,6 @@ module mkMain(MainIfc);
 		end else begin
 			count <= count + 1;
 		end
-
 	endrule
 
 	rule relayIntegratorToIntegrator;
@@ -55,7 +50,6 @@ module mkMain(MainIfc);
 	endrule
 
 	rule relayData1 (shiftCount == 0);
-
 		shiftout <= pack(integrator2.integrateOut());
 
 		dataOutQ.enq(shiftout[7:0]);
@@ -80,19 +74,26 @@ module mkMain(MainIfc);
 		shiftCount <= 0;
 	endrule
 
-	method Action spiIn(Bit#(8) data);
+	method Action uartIn(Bit#(8) data);
+		// $write( "urart in\n");
 		dataInQ.enq(data);
-	endmethod
+		// if ( data[0] == 1 ) ram.req(zeroExtend(data), zeroExtend(data), True, 4'b1111);
+		// else ram.req(zeroExtend(data), ?, False, ?);
+		// $write( "uartIn %d\n", data);
 
-	method ActionValue#(Bit#(8)) spiOut;
+	endmethod
+	method ActionValue#(Bit#(8)) uartOut;
+		// $write( "urart out\n");
 		dataOutQ.deq;
 		let d = dataOutQ.first;
+		// $write( "uartOut %d\n", d );
 		return d;
+
 	endmethod
 
-	//method Bit#(3) rgbOut;
-	//	return 0;
-	//endmethod
+	method Bit#(3) rgbOut;
+		return 0;
+	endmethod
 
 
 endmodule

@@ -2,7 +2,6 @@ set_io --warn-no-port led_blue 40
 set_io --warn-no-port led_green 39
 set_io --warn-no-port led_red 41
 
-set_io --warn-no-port spi_ssn 16    # FPGA SPI Slave Select (active low)
-set_io --warn-no-port spi_sck 15    # FPGA SPI receive clock from RPi (master)
-set_io --warn-no-port spi_mosi 17   # FPGA SPI receive from RPi (master)
-set_io --warn-no-port spi_miso 14   # FPGA SPI transmit to RPi (master)
+set_io --warn-no-port serial_txd 14 # FPGA transmit to USB
+set_io --warn-no-port serial_rxd 15 # FPGA receive from USB
+set_io --warn-no-port spi_cs 16 # Drive high to ensure that the SPI flash is disabled

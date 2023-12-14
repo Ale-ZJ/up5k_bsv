@@ -16,7 +16,7 @@ BSIM_CPPFILES= $(ROOTDIR)/src/cpp/UartSim.cpp ./cpp/main.cpp
 all:
 	rm -rf build
 	mkdir -p build
-	cd $(BUILD_DIR); apio init -b upduino2 -p .
+	cd $(BUILD_DIR); apio init -b upduino31 -p .
 	bsc  $(BSCFLAGS) $(BSCFLAGS_SYNTH) -remove-dollar -p +:$(BSVPATH) -verilog -u -g mkBsvTop $(ROOTDIR)/src/BsvTop.bsv 
 	cp verilog/*.v build
 	cp verilog/*.pcf build
