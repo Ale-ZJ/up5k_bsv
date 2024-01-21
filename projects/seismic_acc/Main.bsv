@@ -1,17 +1,17 @@
 /* Main.Bsv
  * 
- * RPi sends data to spi_mosi pin
- * Main.Bsv processes the data
- * FPGA sends procced data to spi_miso pin
+ * RPi sends floating point samples to UART_RX pin of FPGA
+ * Main.Bsv receives one sample as four bytes. It assembles the sample
+ * and takes two integral of the sample. 
+ * FPGA sends the processed data as four bytes to UART_TX pin
  */
 
 import FIFO::*;
-import Spi::*;
 import Integrator::*;
 
 interface MainIfc;
-	method Action spiIn(Bit#(8) data);
-	method ActionValue#(Bit#(8)) spiOut;
+	method Action uartIn(Bit#(8) data);
+	method ActionValue#(Bit#(8)) uartOut;
 	method Bit#(3) rgbOut;
 endinterface
 
@@ -20,73 +20,59 @@ module mkMain(MainIfc);
 	FIFO#(Bit#(8)) dataInQ <- mkFIFO;	// bytes received from RPi
 	FIFO#(Bit#(8)) dataOutQ <- mkFIFO;	// bytes to be transmitted to RPi
 
-
-	Reg#(Bit#(4)) count <- mkReg(0);
-	Reg#(Bit#(4)) shiftCount <- mkReg(0);
-	Reg#(Bit#(8)) first <- mkReg(?);
-	Reg#(Bit#(8)) second <- mkReg(?);
-	Reg#(Bit#(8)) third <- mkReg(?);
-	Reg#(Bit#(8)) fourth <- mkReg(?);
-
+	// FIFO#(Bit#(32)) floatQ <- mkFIFO; 	// debugging: floats read
+	Reg#(Bit#(32)) inputBuffer <- mkReg(0);
+	Reg#(Bit#(2)) inputBufferCnt <- mkReg(0);
 	IntegratorInterface integrator1 <- mkIntegrator;
-	IntegratorInterface integrator2 <- mkIntegrator;
 
-	Reg#(Bit#(32)) shiftout <- mkReg(?);
-
-	rule relayDataToIntegrator;
+	rule readFloat;
 		dataInQ.deq;
-		
-		let d = dataInQ.first;
-
-		first <= second; second <= third; third <= fourth; fourth <= d;
-
-
-		if(count >= 3) begin 
-			count <= 0;
-			integrator1.addSample(unpack({first, second, third, fourth}));
+		let msb_byte = dataInQ.first;
+		Bit#(32) doubleword = (inputBuffer>>8)|(zeroExtend(msb_byte)<<24);
+		inputBuffer <= doubleword;
+		if ( inputBufferCnt == 3 ) begin
+			inputBufferCnt <= 0;
+			//floatQ.enq(unpack(doubleword));
+			integrator1.addSample(unpack(doubleword));
 		end else begin
-			count <= count + 1;
+			inputBufferCnt <= inputBufferCnt + 1;
+		end 
+	endrule
+
+	IntegratorInterface integrator2 <- mkIntegrator;
+	rule relayFirstIntegral;
+		let fi <- integrator1.integrateOut; // QUESTION: the rule will only fire when integrator1 has a value ready?
+		integrator2.addSample(fi);
+	endrule
+
+    Reg#(Bit#(32)) outputBuffer <- mkReg(0);
+	Reg#(Bit#(2)) outputBufferCnt <- mkReg(0);
+	rule writeResult;
+		if (outputBufferCnt > 0 ) begin
+			outputBufferCnt <= outputBufferCnt - 1;
+			Bit#(8) lsb_byte = truncate(outputBuffer); // read 8 LSB 
+			outputBuffer <= (outputBuffer>>8);
+			dataOutQ.enq(lsb_byte);
+		end else begin
+			// floatQ.deq;
+			// let float = floatQ.first;
+			let float <- integrator2.integrateOut;
+			Bit#(8) lsb_byte = truncate(pack(float));
+			outputBuffer <= (pack(float)>>8);
+			outputBufferCnt <= 3;
+			dataOutQ.enq(lsb_byte);
 		end
+	endrule	
 
-	endrule
-
-	rule relayIntegratorToIntegrator;
-		integrator2.addSample(integrator1.integrateOut());
-	endrule
-
-	rule relayData1 (shiftCount == 0);
-
-		shiftout <= pack(integrator2.integrateOut());
-
-		dataOutQ.enq(shiftout[7:0]);
-		shiftCount <= shiftCount + 1;
-	endrule
-
-	rule relayData2 (shiftCount == 1);
-		shiftout <= shiftout >> 8;
-		dataOutQ.enq(shiftout[7:0]);
-		shiftCount <= shiftCount + 1;
-	endrule
-
-	rule relayData3 (shiftCount == 2);
-		shiftout <= shiftout >> 8;
-		dataOutQ.enq(shiftout[7:0]);
-		shiftCount <= shiftCount + 1;
-	endrule
-	
-	rule relayData4 (shiftCount == 3);
-		shiftout <= shiftout >> 8;
-		dataOutQ.enq(shiftout[7:0]);
-		shiftCount <= 0;
-	endrule
-
-	method Action spiIn(Bit#(8) data);
+	method Action uartIn(Bit#(8) data);
+		//$write( "Main.bsv: uartIn%d\n", data);
 		dataInQ.enq(data);
 	endmethod
 
-	method ActionValue#(Bit#(8)) spiOut;
+	method ActionValue#(Bit#(8)) uartOut;
 		dataOutQ.deq;
 		let d = dataOutQ.first;
+		//$write( "Main.bsv: uartOut %d\n", d );
 		return d;
 	endmethod
 

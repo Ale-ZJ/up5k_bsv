@@ -11,9 +11,9 @@ module top (output wire led_blue,
 	
 	assign spi_cs = 1; // it is necessary to turn off the SPI flash chip
 
-	wire clk; // 48 mhz clock
+	wire clk; // 24 mhz clock
 	SB_HFOSC# (
-		.CLKHF_DIV("0b00") // divide clock by
+		.CLKHF_DIV("0b01") // divide clock by
 	) inthosc(.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
 
 	wire rst; 

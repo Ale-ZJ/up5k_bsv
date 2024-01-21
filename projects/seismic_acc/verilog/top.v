@@ -1,18 +1,19 @@
 module top (output wire led_blue,
-            output wire led_green,
-            output wire led_red,
+               output wire led_green,
+               output wire led_red,
 
-			output spi_miso,
-			input spi_mosi,
-            input spi_sck,
-            input spi_ssn
-			
-			);
+				output serial_txd,
+				input serial_rxd,
+
+				output spi_cs
+				//, input clk // 12? MHz clock
+			   );
 	
+	assign spi_cs = 1; // it is necessary to turn off the SPI flash chip
 
-	wire clk; // 48 mhz clock
+	wire clk; // 24 mhz clock
 	SB_HFOSC# (
-		.CLKHF_DIV("0b00") // divide clock by
+		.CLKHF_DIV("0b01") // divide clock by
 	) inthosc(.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
 
 	wire rst; 
@@ -33,5 +34,5 @@ module top (output wire led_blue,
 
 
 	mkBsvTop hwtop(.CLK(clk), .RST_N(rst), .blue(led_blue), .green(led_green), .red(led_red),
-		.spi_miso(spi_miso), .spi_mosi(spi_mosi), .spi_sck(spi_sck), .spi_ssn(spi_ssn));
+		.serial_txd(serial_txd), .serial_rxd(serial_rxd));
 endmodule
