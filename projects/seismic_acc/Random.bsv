@@ -71,22 +71,30 @@ endmodule
 
 interface RandFloatIfc#(numeric type bitwidth);
 	method Action randVal(Bit#(64) data);
-	method ActionValue#(Bit#(bitwidth) get;
+	method ActionValue#(Bit#(bitwidth)) get;
 endinterface
 
 module mkRandFloat32(RandFloatIfc#(32));
 
 	FIFO#(Bit#(64)) inQ <- mkFIFO;
 
-	Reg#(Bit#(64)) curVal
+	Reg#(Bit#(64)) curVal;
+	FloatTwoOp fmult <- mkFloatMult;
 
-	rule 
+	rule relayRand;
 		inQ.deq;
 		let randInt = inQ.first;
 
-		(randInt >> 8) unpack(32'h33800000)
+		// since its 40 bits, shift right by 32 to ignore the first 32 bits
+		// then shift 8 bits to the right
+		let partial = randInt >> 8; 
 
-		outQ.enq()
+		fmult.add(partial, 32'h33800000);
+	endrule
+
+	rule relayResult;
+		let result = fmult.get;
+		outQ.enq(result);
 	endrule
 
 	method Action randVal(Bit#(64) data);
