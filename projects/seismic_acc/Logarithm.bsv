@@ -2,7 +2,7 @@ import SimpleFloat::*;
 import FloatingPoint::*;
 
 
-typedef enum { READY, P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11} State deriving(Bits, Eq);
+typedef enum { READY, PA, PB, PC, PD, PE, PF, PG, PH, PI, PJ, PK} State deriving(Bits, Eq);
 
 interface LogarithmIfc#(numeric type bitwidth);;
 	method Action addSample#(Bit#(bitwidth));
@@ -24,70 +24,70 @@ module mkLogarithm32(LogarithmIfc#(32))
     	let sample = sampleIn.first;
     	currSample = sample;
     	fmult.put(sample, 32'h3c088889); //d5 * x
-    	state <= P1;
+    	state <= PA;
     endrule
 
-    rule relayP1(state == P1);
+    rule relayPA(state == PA);
     	let partial = fmult.get;
         fadd.put(partial, unpack(32'h3cad82d8)); //d4 + partial
-        state <= P2;
+        state <= PB;
     endrule
 
-    rule relayP2(state == P2);
+    rule relayPB(state == PB);
     	let partial = fadd.get;
     	fmult.put(partial, currSample); // x * partial
-    	state <= P3;
+    	state <= PC;
 	endrule
 
-	rule relayP3(state == P3);
+	rule relayPC(state == PC);
     	let partial = fmult.get;
     	fadd.put(partial, unpack(32'h3dd3e93f)); // d3 + partial
-    	state <= P4;
+    	state <= PD;
 	endrule
 
-	rule relayP4(state == P4);
+	rule relayPD(state == PD);
     	let partial = fadd.get;
     	fmult.put(partial, currSample); // x * partial
-    	state <= P5;
+    	state <= PE;
 	endrule
 
-	rule relayP5(state == P5);
+	rule relayPE(state == PE);
     	let partial = fmult.get;
     	fadd.put(partial, unpack(32'h3e9aeeef)); // d2 + partial
-    	state <= P6;
+    	state <= PF;
 	endrule
 
-	rule relayP6(state == P6);
+	rule relayPF(state == PF);
     	let partial = fadd.get;
     	fmult.put(partial, currSample); // x * partial
-    	state <= P7;
+    	state <= PG;
 	endrule
 
-	rule relayP7(state == P7);
+	rule relayPG(state == PG);
     	let partial = fmult.get;
     	fadd.put(partial, unpack(32'h3f1b49f5)); // d1 + partial
-    	state <= P8;
+    	state <= PH;
 	endrule
 
-	rule relayP8(state == P8);
+	rule relayPH(state == PH);
     	let partial = fadd.get;
     	fmult.put(partial, currSample); // x * partial
-    	state <= P9;
+    	state <= PI;
 	endrule
 
-	rule relayP9(state == P9);
+	rule relayPI(state == PI);
     	let partial = fmult.get;
     	fadd.put(partial, unpack(32'h3f1b45b0)); // d0 + partial
-    	state <= P10;
+    	state <= PJ;
 	endrule
 
-	rule relayP10(state == P10);
+	rule relayPJ(state == PJ);
 		let partial = fadd.get;
 		fmult.put(partial, unpack(32'h3fd3094c)); //e^a + partial, where a=0.5
-		state <= P11;
+		state <= PK;
 	endrule
 
-	rule relayP11(state == P11);
+	rule relayPK(state == PK);
 		let result = fadd.get;
 		sampleOut.enq(result);
 		state <= READY;

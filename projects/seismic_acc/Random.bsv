@@ -119,7 +119,7 @@ module mkLaplaceRandFloat32(LaplaceRand32Ifc);
 	FIFO#(Bit#(8)) outQ <- mkFIFO;
 
 	LogarithmIfc#(Bit#(32)) log1 <- mkLogarithm32;
-	LogarithmIfc#(Bit#(32)) log1 <- mkLogarithm32;
+	LogarithmIfc#(Bit#(32)) log2 <- mkLogarithm32;
 
 
 	rule enqLog;
