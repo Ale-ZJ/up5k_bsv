@@ -9,6 +9,8 @@
 import FIFO::*;
 import Integrator::*;
 import Random::*;
+import SimpleFloat::*;
+import FloatingPoint::*;
 
 interface MainIfc;
 	method Action uartIn(Bit#(8) data);
@@ -25,9 +27,39 @@ module mkMain(MainIfc);
 	Reg#(Bit#(32)) inputBuffer <- mkReg(0);
 	Reg#(Bit#(2)) inputBufferCnt <- mkReg(0);
 	IntegratorInterface integrator1 <- mkIntegrator;
-
+	IntegratorInterface integrator2 <- mkIntegrator;
+        
+	Reg#(Bit#(1)) initialize <- mkReg(1);
+	RandomIfc#(32) rand1 <- mkRandomLinearCongruential;
+	RandomIfc#(32) rand2 <- mkRandomLinearCongruential;
 	LaplaceRandFloat32Ifc dpModule <- mkLaplaceRandFloat32;
 
+	FloatTwoOp fadd <- mkFloatAdd;
+	FIFO#(Float) outQ <- mkFIFO;	
+
+	rule relaySample;
+	        if(initialize == 1) begin
+			rand1.setSeed(64'h7);
+			rand2.setSeed(64'h10);
+			initialize <= 0;
+		end
+	        let sample1 <- rand1.get;
+		let sample2 <- rand2.get;
+
+		dpModule.randVal(sample1, sample2);
+	endrule
+
+	rule relayNoise;
+		let noise <- dpModule.get;
+                let data  <- integrator2.integrateOut;
+
+		fadd.put(unpack(noise), data);
+	endrule
+
+	rule relayResult;
+                let result <- fadd.get;
+		outQ.enq(result);
+	endrule
 	rule readFloat;
 		dataInQ.deq;
 		let msb_byte = dataInQ.first;
@@ -42,7 +74,6 @@ module mkMain(MainIfc);
 		end 
 	endrule
 
-	IntegratorInterface integrator2 <- mkIntegrator;
 	rule relayFirstIntegral;
 		let fi <- integrator1.integrateOut; // QUESTION: the rule will only fire when integrator1 has a value ready?
 		integrator2.addSample(fi);
@@ -59,7 +90,8 @@ module mkMain(MainIfc);
 		end else begin
 			// floatQ.deq;
 			// let float = floatQ.first;
-			let float <- integrator2.integrateOut;
+			outQ.deq;
+			let float = outQ.first;
 			Bit#(8) lsb_byte = truncate(pack(float));
 			outputBuffer <= (pack(float)>>8);
 			outputBufferCnt <= 3;

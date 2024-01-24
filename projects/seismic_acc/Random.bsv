@@ -1,6 +1,8 @@
 import FIFO::*;
 import FIFOF::*;
 import Vector::*;
+import SimpleFloat::*;
+import FloatingPoint::*;
 import Logarithm::*;
 
 interface RandomIfc#(numeric type bitwidth);
@@ -76,9 +78,10 @@ endinterface
 
 module mkRandFloat32(RandFloatIfc#(32));
 
-	FIFO#(Bit#(64)) inQ <- mkFIFO;
+	FIFO#(Bit#(64)) inQ  <- mkFIFO;
+	FIFO#(Bit#(32)) outQ <- mkFIFO;
 
-	Reg#(Bit#(64)) curVal;
+	Reg#(Bit#(64)) curVal <- mkReg(0);
 	FloatTwoOp fmult <- mkFloatMult;
 
 	rule relayRand;
@@ -87,14 +90,14 @@ module mkRandFloat32(RandFloatIfc#(32));
 
 		// since its 40 bits, shift right by 32 to ignore the first 32 bits
 		// then shift 8 bits to the right
-		let partial = randInt >> 8; 
+		Float partial = unpack(truncate(randInt >> 40)); 
 
-		fmult.add(partial, 32'h33800000);
+		fmult.put(partial, unpack(32'h33800000));
 	endrule
 
 	rule relayResult;
-		let result = fmult.get;
-		outQ.enq(result);
+		let result <- fmult.get;
+		outQ.enq(pack(result));
 	endrule
 
 	method Action randVal(Bit#(64) data);
@@ -111,15 +114,15 @@ endmodule
 
 interface LaplaceRandFloat32Ifc;
 	method Action randVal(Bit#(32) data1, Bit#(32) data2);
-	method ActionValue#(Bit#(8)) get;
+	method ActionValue#(Bit#(32)) get;
 endinterface
 
-module mkLaplaceRandFloat32(LaplaceRand32Ifc);
+module mkLaplaceRandFloat32(LaplaceRandFloat32Ifc);
 	FIFO#(Tuple2#(Bit#(32), Bit#(32))) inQ <- mkFIFO;
-	FIFO#(Bit#(8)) outQ <- mkFIFO;
+	FIFO#(Bit#(32)) outQ <- mkFIFO;
 
-	LogarithmIfc#(Bit#(32)) log1 <- mkLogarithm32;
-	LogarithmIfc#(Bit#(32)) log2 <- mkLogarithm32;
+	LogarithmIfc#(32) log1 <- mkLogarithm32;
+	LogarithmIfc#(32) log2 <- mkLogarithm32;
 
 
 	rule enqLog;
@@ -130,8 +133,8 @@ module mkLaplaceRandFloat32(LaplaceRand32Ifc);
 	endrule
 
 	rule relayLog;
-		Float partial1 = log1.get();
-		Float partial2 = log2.get();
+	        let partial1 <- log1.get;
+		let partial2 <- log2.get;
 
 		outQ.enq(zeroExtend(partial1-partial2)); //should i multiply by the -scale?
 	endrule
@@ -139,7 +142,7 @@ module mkLaplaceRandFloat32(LaplaceRand32Ifc);
 	method Action randVal(Bit#(32) data1, Bit#(32) data2);
 		inQ.enq(tuple2(data1,data2));
 	endmethod
-	method ActionValue#(Bit#(8)) get;
+	method ActionValue#(Bit#(32)) get;
 		outQ.deq;
 		return outQ.first;
 	endmethod
