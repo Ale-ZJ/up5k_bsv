@@ -1,27 +1,28 @@
 import FIFO::*;
 import FIFOF::*;
 import Vector::*;
+import Logarithm::*;
 
 interface RandomIfc#(numeric type bitwidth);
-	method Action setSeed(Bit#(32) seed);
+	method Action setSeed(Bit#(64) seed);
 	method ActionValue#(Bit#(bitwidth)) get;
 endinterface
 
 module mkRandomLinearCongruential(RandomIfc#(bitwidth))
-	provisos(Add#(bitwidth,a__,32));
-	Reg#(Bit#(32)) curVal <- mkReg(0);
+	provisos(Add#(bitwidth,a__,64));
+	Reg#(Bit#(64)) curVal <- mkReg(0);
 	FIFO#(Bit#(bitwidth)) outQ <- mkFIFO;
-	FIFOF#(Bit#(32)) seedQ <- mkFIFOF;
+	FIFOF#(Bit#(64)) seedQ <- mkFIFOF;
 	rule genRand;
 		if ( seedQ.notEmpty ) begin
 			seedQ.deq;
 			curVal <= seedQ.first;
 		end else begin
-			curVal <= (curVal * 22695477 ) + 1;
+			curVal <= (curVal * 2862933555777941757 ) + 3037000493; // magic numbers for linear congruential source : https://nuclear.llnl.gov/CNP/rng/rngman/node4.html
 		end
 		outQ.enq(truncate(curVal));
 	endrule
-	method Action setSeed(Bit#(32) seed);
+	method Action setSeed(Bit#(64) seed);
 		seedQ.enq(seed);
 	endmethod
 	method ActionValue#(Bit#(bitwidth)) get;
@@ -68,3 +69,70 @@ module mkLaplaceRand16(LaplaceRand16Ifc);
 endmodule
 
 
+interface RandFloatIfc#(numeric type bitwidth);
+	method Action randVal(Bit#(64) data);
+	method ActionValue#(Bit#(bitwidth) get;
+endinterface
+
+module mkRandFloat32(RandFloatIfc#(32));
+
+	FIFO#(Bit#(64)) inQ <- mkFIFO;
+
+	Reg#(Bit#(64)) curVal
+
+	rule 
+		inQ.deq;
+		let randInt = inQ.first;
+
+		(randInt >> 8) unpack(32'h33800000)
+
+		outQ.enq()
+	endrule
+
+	method Action randVal(Bit#(64) data);
+		inQ.enq(data);
+	endmethod
+
+	method ActionValue#(Bit#(32)) get;
+		outQ.deq;
+		return outQ.first;
+	endmethod
+endmodule
+
+
+
+interface LaplaceRand32Ifc;
+	method Action randVal(Bit#(32) data1, Bit#(32) data2);
+	method ActionValue#(Bit#(8)) get;
+endinterface
+
+module mkLaplaceRand32(LaplaceRand32Ifc);
+	FIFO#(Tuple2#(Bit#(32), Bit#(32))) inQ <- mkFIFO;
+	FIFO#(Bit#(8)) outQ <- mkFIFO;
+
+	LogarithmIfc#(Bit#(32)) log1 <- mkLogarithm32;
+	LogarithmIfc#(Bit#(32)) log1 <- mkLogarithm32;
+
+
+	rule enqLog;
+		inQ.deq;
+		let d = inQ.first;
+		log1.addSample(tpl_1(d));
+		log2.addSample(tpl_2(d));
+	endrule
+
+	rule relayLog;
+		Float partial1 = log1.get();
+		Float partial2 = log2.get();
+
+		outQ.enq(zeroExtend(partial1-partial2)); //should i multiply by the -scale?
+	endrule
+	
+	method Action randVal(Bit#(32) data1, Bit#(32) data2);
+		inQ.enq(tuple2(data1,data2));
+	endmethod
+	method ActionValue#(Bit#(8)) get;
+		outQ.deq;
+		return outQ.first;
+	endmethod
+endmodule 
