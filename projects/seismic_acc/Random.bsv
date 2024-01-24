@@ -101,12 +101,12 @@ endmodule
 
 
 
-interface LaplaceRand32Ifc;
+interface LaplaceRandFloat32Ifc;
 	method Action randVal(Bit#(32) data1, Bit#(32) data2);
 	method ActionValue#(Bit#(8)) get;
 endinterface
 
-module mkLaplaceRand32(LaplaceRand32Ifc);
+module mkLaplaceRandFloat32(LaplaceRand32Ifc);
 	FIFO#(Tuple2#(Bit#(32), Bit#(32))) inQ <- mkFIFO;
 	FIFO#(Bit#(8)) outQ <- mkFIFO;
 

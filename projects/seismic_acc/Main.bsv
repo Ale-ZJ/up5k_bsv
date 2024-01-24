@@ -8,6 +8,7 @@
 
 import FIFO::*;
 import Integrator::*;
+import Random::*;
 
 interface MainIfc;
 	method Action uartIn(Bit#(8) data);
@@ -24,6 +25,8 @@ module mkMain(MainIfc);
 	Reg#(Bit#(32)) inputBuffer <- mkReg(0);
 	Reg#(Bit#(2)) inputBufferCnt <- mkReg(0);
 	IntegratorInterface integrator1 <- mkIntegrator;
+
+	LaplaceRandFloat32Ifc dpModule <- mkLaplaceRandFloat32;
 
 	rule readFloat;
 		dataInQ.deq;
