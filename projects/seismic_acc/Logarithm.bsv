@@ -4,7 +4,7 @@ import FloatingPoint::*;
 
 typedef enum { READY, PA, PB, PC, PD, PE, PF, PG, PH, PI, PJ, PK} State deriving(Bits, Eq);
 
-interface LogarithmIfc#(numeric type bitwidth);;
+interface LogarithmIfc#(numeric type bitwidth);
 	method Action addSample#(Bit#(bitwidth));
 	method ActionValue#(Bit#(bitwidth)) get;
 endinterface
@@ -18,6 +18,8 @@ module mkLogarithm32(LogarithmIfc#(32))
 
 	FloatTwoOp fmult <- mkFloatMult;
     FloatTwoOp fadd <- mkFloatAdd;
+
+    Reg#(State) state  <- mkReg(READY);
 
     rule relaySample(state == READY);
     	sampleIn.deq;
@@ -88,20 +90,20 @@ module mkLogarithm32(LogarithmIfc#(32))
 	endrule
 
 	rule relayPK(state == PK);
-		let result = fadd.get;
+		let result <- fadd.get;
 		sampleOut.enq(result);
 		state <= READY;
 	endrule
 	
 
-    method Action addSample(Float sample) if (state == READY);
+    method Action addSample(Bit#(32) sample) if (state == READY);
         //$write("Integrator.bsv: added sample %d\n", sample);
-        sampleIn.enq(sample);        
+        sampleIn.enq(unpack(sample));        
     endmethod
 
     method ActionValue#(Bit#(32)) get;
 		sampleOut.deq;
-		return sampleOut.first;
+		return pack(sampleOut.first);
 	endmethod
 
 endmodule
