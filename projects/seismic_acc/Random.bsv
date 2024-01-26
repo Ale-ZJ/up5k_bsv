@@ -6,27 +6,20 @@ import FloatingPoint::*;
 import Logarithm::*;
 
 interface RandomIfc#(numeric type bitwidth);
-	method Action setSeed(Bit#(64) seed);
+	//method Action setSeed(Bit#(32) seed);
 	method ActionValue#(Bit#(bitwidth)) get;
 endinterface
 
 module mkRandomLinearCongruential(RandomIfc#(bitwidth))
-	provisos(Add#(bitwidth,a__,64));
-	Reg#(Bit#(64)) curVal <- mkReg(0);
+	provisos(Add#(bitwidth,a__,32));
+	Reg#(Bit#(32)) curVal <- mkReg(7);
 	FIFO#(Bit#(bitwidth)) outQ <- mkFIFO;
-	FIFOF#(Bit#(64)) seedQ <- mkFIFOF;
+	//FIFOF#(Bit#(32)) seedQ <- mkFIFOF;
 	rule genRand;
-		if ( seedQ.notEmpty ) begin
-			seedQ.deq;
-			curVal <= seedQ.first;
-		end else begin
-			curVal <= (curVal * 2862933555777941757 ) + 3037000493; // magic numbers for linear congruential source : https://nuclear.llnl.gov/CNP/rng/rngman/node4.html
-		end
+                curVal <= (curVal * 22695477 ) + 1; // magic numbers for linear congruential source : https://nuclear.llnl.gov/CNP/rng/rngman/node4.html
+		//end
 		outQ.enq(truncate(curVal));
 	endrule
-	method Action setSeed(Bit#(64) seed);
-		seedQ.enq(seed);
-	endmethod
 	method ActionValue#(Bit#(bitwidth)) get;
 		outQ.deq;
 		return outQ.first;
@@ -71,37 +64,31 @@ module mkLaplaceRand16(LaplaceRand16Ifc);
 endmodule
 
 
-interface RandFloatIfc#(numeric type bitwidth);
-	method Action randVal(Bit#(64) data);
-	method ActionValue#(Bit#(bitwidth)) get;
+interface RandIntToFloatIfc;
+	method Action randVal(Bit#(32) data);
+	method ActionValue#(Bit#(32)) get;
 endinterface
 
-module mkRandFloat32(RandFloatIfc#(32));
+module mkRandIntToFloat(RandIntToFloatIfc);
 
-	FIFO#(Bit#(64)) inQ  <- mkFIFO;
+	FIFO#(Bit#(32)) inQ  <- mkFIFO;
 	FIFO#(Bit#(32)) outQ <- mkFIFO;
 
-	Reg#(Bit#(64)) curVal <- mkReg(0);
 	FloatTwoOp fmult <- mkFloatMult;
-
+        
 	rule relayRand;
 		inQ.deq;
-		let randInt = inQ.first;
-
-		// since its 40 bits, shift right by 32 to ignore the first 32 bits
-		// then shift 8 bits to the right
-		Float partial = unpack(truncate(randInt >> 40)); 
-
-		fmult.put(partial, unpack(32'h33800000));
-	endrule
-
+		Bit#(32) randInt = inQ.first;
+		fmult.put(unpack(truncate(randInt>>8)), unpack(32'h33800000));
+        endrule
 	rule relayResult;
 		let result <- fmult.get;
 		outQ.enq(pack(result));
 	endrule
 
-	method Action randVal(Bit#(64) data);
+	method Action randVal(Bit#(32) data);
 		inQ.enq(data);
+		//fmult.put(unpack(truncate(data >> 8)), unpack(32'h33800000));
 	endmethod
 
 	method ActionValue#(Bit#(32)) get;
@@ -118,19 +105,19 @@ interface LaplaceRandFloat32Ifc;
 endinterface
 
 module mkLaplaceRandFloat32(LaplaceRandFloat32Ifc);
-	FIFO#(Tuple2#(Bit#(32), Bit#(32))) inQ <- mkFIFO;
+	//FIFO#(Tuple2#(Bit#(32), Bit#(32))) inQ <- mkFIFO;
 	FIFO#(Bit#(32)) outQ <- mkFIFO;
 
-	LogarithmIfc#(32) log1 <- mkLogarithm32;
-	LogarithmIfc#(32) log2 <- mkLogarithm32;
+	LogarithmIfc#(32) log1 <- mkFastLog32;
+	LogarithmIfc#(32) log2 <- mkFastLog32;
 
 
-	rule enqLog;
-		inQ.deq;
-		let d = inQ.first;
-		log1.addSample(tpl_1(d));
-		log2.addSample(tpl_2(d));
-	endrule
+	//rule enqLog;
+	//	inQ.deq;
+	//	let d = inQ.first;
+	//	log1.addSample(tpl_1(d));
+	//	log2.addSample(tpl_2(d));
+	//endrule
 
 	rule relayLog;
 	        let partial1 <- log1.get;
@@ -140,7 +127,9 @@ module mkLaplaceRandFloat32(LaplaceRandFloat32Ifc);
 	endrule
 	
 	method Action randVal(Bit#(32) data1, Bit#(32) data2);
-		inQ.enq(tuple2(data1,data2));
+		//inQ.enq(tuple2(data1,data2));
+		log1.addSample(data1);
+		log2.addSample(data2);
 	endmethod
 	method ActionValue#(Bit#(32)) get;
 		outQ.deq;

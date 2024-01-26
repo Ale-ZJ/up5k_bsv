@@ -11,6 +11,35 @@ interface LogarithmIfc#(numeric type bitwidth);
 	method ActionValue#(Bit#(bitwidth)) get;
 endinterface
 
+module mkFastLog32(LogarithmIfc#(32));
+    //FIFO#(Bit#(32)) sampleIn  <- mkFIFO;
+    FIFO#(Bit#(32)) sampleOut <- mkFIFO;
+    
+    
+//    rule relaySample;
+//	    sampleIn.deq;
+//	    Bit#(32) sample = sampleIn.first;
+//	    
+//          Bit#(8) float_exp = sample[30:23];
+//            Bit#(32) float_log = zeroExtend(float_exp - 123);
+//
+//          sampleOut.enq(float_log);
+//    endrule 
+
+
+    method Action addSample(Bit#(32) sample);
+	    //sampleIn.enq(sample);
+	    Bit#(8) float_exp  = sample[30:23];
+	    Bit#(32) float_log = zeroExtend(float_exp-123);
+	    sampleOut.enq(float_log);
+    endmethod
+
+    method ActionValue#(Bit#(32)) get;
+	    sampleOut.deq;
+	    return sampleOut.first;
+    endmethod
+endmodule
+
 module mkLogarithm32(LogarithmIfc#(32));
     FIFO#(Float) sampleIn   <- mkFIFO;
     FIFO#(Float) sampleOut  <- mkFIFO;

@@ -29,25 +29,40 @@ module mkMain(MainIfc);
 	IntegratorInterface integrator1 <- mkIntegrator;
 	IntegratorInterface integrator2 <- mkIntegrator;
         
-	Reg#(Bit#(1)) initialize <- mkReg(1);
+	//Reg#(Bit#(1)) initialize <- mkReg(1);
 	RandomIfc#(32) rand1 <- mkRandomLinearCongruential;
-	RandomIfc#(32) rand2 <- mkRandomLinearCongruential;
+	RandIntToFloatIfc itf <- mkRandIntToFloat;
+	//RandomIfc#(32) rand2 <- mkRandomLinearCongruential;
 	LaplaceRandFloat32Ifc dpModule <- mkLaplaceRandFloat32;
 
 	FloatTwoOp fadd <- mkFloatAdd;
 	FIFO#(Float) outQ <- mkFIFO;	
 
+        Reg#(Bit#(1))  samplesRdy <- mkReg(0);
+	Reg#(Bit#(32)) randSample <- mkReg(0);
 	rule relaySample;
-	        if(initialize == 1) begin
-			rand1.setSeed(64'h7);
-			rand2.setSeed(64'h10);
-			initialize <= 0;
-		end
-	        let sample1 <- rand1.get;
-		let sample2 <- rand2.get;
-
-		dpModule.randVal(sample1, sample2);
+		Bit#(32) randInt <- rand1.get;
+		itf.randVal(randInt);
 	endrule
+
+	rule relayRand;
+		let randFloat <- itf.get;
+		if(samplesRdy == 1'b0) begin
+			randSample <= randFloat;
+			samplesRdy <= 1;
+		end else begin 
+			dpModule.randVal(randSample, randFloat);
+			samplesRdy <= 0;
+		end
+	endrule
+	//rule relayFloat
+
+	//rule relaySample;
+	//        let sample1 <- rand1.get;
+		//let sample2 <- rand2.get;
+
+	//	dpModule.randVal(sample1, 32'h0);//sample2
+	//endrule
 
 	rule relayNoise;
 		let noise <- dpModule.get;
