@@ -105,6 +105,7 @@ module mkSpi(SpiIfc);
         if (ncsBit==1) begin
             rx_cnt <= 8;
             doneSampling <= False;
+            led <= 3'b010; // turn on green led
         end 
         else if (!doneSampling) begin
             led <= 3'b001; // turn on red led 
