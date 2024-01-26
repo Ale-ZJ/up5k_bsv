@@ -67,11 +67,11 @@ module mkSpi(SpiIfc);
     // in which case, we discard the word being transmitted (should we reattempt to send the word again?)
 	Reg#(Bit#(9)) tx_word <- mkReg(0);
 	Reg#(Bit#(4))  tx_cnt <- mkReg(0);
-    Reg#(Bool) doneShifting <- mkReg(False);
+    Reg#(Bool) doneShifting <- mkReg(True);
     rule shiftOutWord;
         if (ncsBit==1) begin
             tx_cnt <= 0;
-            doneShifting <= False;
+            doneShifting <= True;
         end else begin
             // in the middle of transmitting word
             if (prevSck==1 && currSck==0 && tx_cnt!=0) begin
@@ -83,11 +83,12 @@ module mkSpi(SpiIfc);
                 end
             end
             // dequeue new word to transmit
-            else if (prevSck==1 && currSck==0 && !doneShifting) begin
+            else if (prevSck==1 && currSck==0 && doneShifting) begin
                 inQ.deq;
                 let word = inQ.first;
                 tx_word <= {word, 1'b0}; // new word to transmit
                 tx_cnt <= 8;
+                doneShifting <= False;
             end
         end 
     endrule
@@ -105,10 +106,9 @@ module mkSpi(SpiIfc);
         if (ncsBit==1) begin
             rx_cnt <= 8;
             doneSampling <= False;
-            led <= 3'b010; // turn on green led
+            // led <= 3'b101; // turn on green led
         end 
         else if (!doneSampling) begin
-            led <= 3'b001; // turn on red led 
             // in the middle of sampling word
             if (prevSck==0 && currSck==1 && rx_cnt!=0) begin
                 rx_word <= {rx, rx_word[7:1]};
@@ -118,6 +118,7 @@ module mkSpi(SpiIfc);
             else if (prevSck==0 && currSck==1) begin
                 outQ.enq(rx_word);
                 doneSampling <= True;
+                led <= 3'b111;
             end
         end
     endrule
