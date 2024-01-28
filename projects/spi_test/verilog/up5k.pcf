@@ -2,7 +2,7 @@ set_io --warn-no-port led_blue 40
 set_io --warn-no-port led_green 39
 set_io --warn-no-port led_red 41
 
-set_io --warn-no-port spi_ncs 16    # FPGA SPI Chip Select (active low)
-set_io --warn-no-port spi_sck 15    # FPGA SPI Slave Clock
-set_io --warn-no-port spi_sdi 17    # FPGA SPI Slave Data In
-set_io --warn-no-port spi_sdo 14    # FPGA SPI Slave Data Out
+set_io --warn-no-port spi_ncs 19    # FPGA SPI Chip Select (active low)
+set_io --warn-no-port spi_sck 18    # FPGA SPI Slave Clock
+set_io --warn-no-port spi_sdi 11    # FPGA SPI Slave Data In
+set_io --warn-no-port spi_sdo 9     # FPGA SPI Slave Data Out

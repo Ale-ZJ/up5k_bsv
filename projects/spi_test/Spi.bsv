@@ -63,64 +63,37 @@ module mkSpi(SpiIfc);
     // Write a word, one bit at a time 
     //      1. Write at the falling edge (SPI clock goes from 1 to 0)
     //      2. Active-Low Chip Select must remain low when writing complete word
-    // Shifting Data Out can be interrupted by nCS going high in the middle of transmission
-    // in which case, we discard the word being transmitted (should we reattempt to send the word again?)
-	Reg#(Bit#(9)) tx_word <- mkReg(0);
+	Reg#(Bit#(8)) tx_word <- mkReg(0);
 	Reg#(Bit#(4))  tx_cnt <- mkReg(0);
-    Reg#(Bool) doneShifting <- mkReg(True);
-    rule shiftOutWord;
-        if (ncsBit==1) begin
-            tx_cnt <= 0;
-            doneShifting <= True;
-        end else begin
-            // in the middle of transmitting word
-            if (prevSck==1 && currSck==0 && tx_cnt!=0) begin
-                tx_word <= {1'b0, tx_word[8:1]};
-                tx <= tx_word[0];
-                tx_cnt <= tx_cnt - 1;
-                if (tx_cnt == 1) begin // All bits have been shifted out
-                    doneShifting <= True; 
-                end
-            end
-            // dequeue new word to transmit
-            else if (prevSck==1 && currSck==0 && doneShifting) begin
-                inQ.deq;
-                let word = inQ.first;
-                tx_word <= {word, 1'b0}; // new word to transmit
-                tx_cnt <= 8;
-                doneShifting <= False;
-            end
-        end 
+    rule shiftoutWord (prevSck == 0 && currSck == 1 && tx_cnt != 0 && ncsBit == 0);
+        tx <= tx_word[7];
+        tx_word <= {tx_word[6:0], 1'b0};
+        tx_cnt <= tx_cnt - 1;        
+    endrule 
+
+    rule setupTx (tx_cnt == 0);
+        inQ.deq;
+        let t = inQ.first;
+        tx_word <= t;
+        tx_cnt <= 8;
     endrule
 
 
     // Read one bit at a time until we get a word
     //      1. Read at spi_sck rising edge (SPI clock goes from 0 to 1)
     //      2. spi_cs must remain low when reading a word
-    // If the user needs to sample multiple words, then the user must set ncs high 
-    // for at least an FPGA's clock cycle 
     Reg#(Bit#(8)) rx_word <- mkReg(0);
     Reg#(Bit#(4))  rx_cnt <- mkReg(0);
-    Reg#(Bool) doneSampling <- mkReg(False);
-    rule sampleWord;
-        if (ncsBit==1) begin
-            rx_cnt <= 8;
-            doneSampling <= False;
-            // led <= 3'b101; // turn on green led
-        end 
-        else if (!doneSampling) begin
-            // in the middle of sampling word
-            if (prevSck==0 && currSck==1 && rx_cnt!=0) begin
-                rx_word <= {rx, rx_word[7:1]};
-                rx_cnt <= rx_cnt - 1;
-            end
-            // done sampling 
-            else if (prevSck==0 && currSck==1) begin
-                outQ.enq(rx_word);
-                doneSampling <= True;
-                led <= 3'b111;
-            end
-        end
+    rule sampleWord (prevSck==0 && currSck==1); // reading on rising
+		// rx_word <= {rx, rx_word[7:1]};
+        rx_word <= {rx_word[6:0], rx}; // msb
+		if ( rx_cnt >= 7 ) begin
+			rx_cnt <= 0;
+			outQ.enq(rx_word);
+			led <= 3'b111;
+		end else begin
+			rx_cnt <= rx_cnt + 1;
+		end
     endrule
 
 
@@ -140,19 +113,19 @@ module mkSpi(SpiIfc);
         // IN: Noise debouncing spi_sdi pin to read one bit into rxdw wire
         method Action sdi(Bit#(1) spi_sdi);
             rxin <= {spi_sdi, rxin[3:1]};
-            rx <= (rxin==0)?0:1;
+            rx <= (rxin==0)?0:1; 
         endmethod
 
         // IN: Noise debouncing spi_sck pin to read one bit into sckdw wire
         method Action sck(Bit#(1) spi_sck);
             sckin <= {spi_sck, sckin[3:1]};
-            currSck <= (sckin==0)?0:1;
+            currSck <= (sckin==4'b1111)?1:0; // clock must be 1 when the fpga reads it four times
         endmethod
         
         // IN: Noise debouncing spi_ncs pin to read one bit into ncsBit
         method Action ncs(Bit#(1) spi_ncs);
             ncsin <= {spi_ncs, ncsin[3:1]};
-            ncsBit <= (ncsin==0)?0:1;
+            ncsBit <= (ncsin==0)?0:1; 
         endmethod
     endinterface
 

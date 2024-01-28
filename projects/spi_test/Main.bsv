@@ -25,6 +25,9 @@ module mkMain(MainIfc);
 		dataInQ.deq;
 		let d = dataInQ.first;
 		dataOutQ.enq(8'b01000001); // always send char 'A'
+		// dataOutQ.enq(8'b00000000); // always send 0
+		// dataOutQ.enq(8'b10101010); // always send this
+		// dataOutQ.enq(d); 
 	endrule
 
 	method Action spiIn(Bit#(8) data);
