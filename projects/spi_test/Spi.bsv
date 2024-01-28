@@ -65,9 +65,9 @@ module mkSpi(SpiIfc);
     //      2. Active-Low Chip Select must remain low when writing complete word
 	Reg#(Bit#(8)) tx_word <- mkReg(0);
 	Reg#(Bit#(4))  tx_cnt <- mkReg(0);
-    rule shiftoutWord (prevSck == 0 && currSck == 1 && tx_cnt != 0 && ncsBit == 0);
+    rule shiftoutWord (prevSck == 0 && currSck == 1 && tx_cnt != 0);
         tx <= tx_word[7];
-        tx_word <= {tx_word[6:0], 1'b0};
+        tx_word <= (tx_word << 1);
         tx_cnt <= tx_cnt - 1;        
     endrule 
 
