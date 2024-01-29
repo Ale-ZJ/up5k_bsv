@@ -24,8 +24,8 @@ module mkIntegrator(IntegratorInterface);
     FloatTwoOp fmult  <- mkFloatMult;
     FloatTwoOp fadd   <- mkFloatAdd;
 
-    FloatTwoOp fmult2 <- mkFloatMult;
-    FloatTwoOp fadd2  <- mkFloatAdd;
+    // FloatTwoOp fmult2 <- mkFloatMult;
+    // FloatTwoOp fadd2  <- mkFloatAdd;
 
     Reg#(State) state  <- mkReg(READY);
 
@@ -45,18 +45,17 @@ module mkIntegrator(IntegratorInterface);
         curr <= sampleIn.first;
 
         // Find the mean of last 512 samples
-        samples.enq(sampleIn.first);
 
-        if(samples.notFull) begin
+        if(samples.notFull) begin 
             fadd.put(accum, sampleIn.first);         // accum + new_value
             fmult.put(curr, unpack(32'h3ca3d70a));   // curr  * delta
             state <= STEP1;
-        end else begin
-            //should adjust the average
-            fadd.put(accum, negate(sampleIn.first)); // accum - deq_value
+        end else begin 
+            samples.deq;
+            fadd.put(accum, negate(samples.first));
             state <= FULL;
-        end
-
+        end            
+        samples.enq(sampleIn.first);
     endrule 
 
 // magic numbers
