@@ -72,7 +72,7 @@ module mkIntegrator(IntegratorInterface);
     endfunction
 
     rule bufferFull(state == FULL);
-        let adjusted_accum = fadd.get; 
+        let adjusted_accum <- fadd.get; 
         fadd.put(accum, sampleIn.first);       // accum + new_value
         fmult.put(curr, unpack(32'h3ca3d70a)); // ci * delta
 
@@ -80,7 +80,7 @@ module mkIntegrator(IntegratorInterface);
     endrule
 
     rule step1(state == STEP1);
-        let new_accum = fadd.get;
+        let new_accum <- fadd.get;
         accum <= new_accum;
 
         fmult.put(new_accum, unpack(32'h3823d70a)); // accum * (delta/512) = M*delta
@@ -88,7 +88,7 @@ module mkIntegrator(IntegratorInterface);
     endrule
 
     rule step2(state == STEP2);
-        let mean = fmult.get; // mean
+        let mean <- fmult.get; // mean
 
         fadd.put(curr, negate(mean)); //c_i*delta - M*delta
         fmult.put(prev, unpack(32'h3f67ae14)); // (ci-1)(1-L)
@@ -96,15 +96,15 @@ module mkIntegrator(IntegratorInterface);
     endrule
 
     rule step3(state == STEP3);
-        let part1 = fadd.get;
-        let part2 = fmult.get;
+        let part1 <- fadd.get;
+        let part2 <- fmult.get;
 
         fadd.put(part1, part2); //sum lhs and rhs
         state <= STEP4;
     endrule
 
     rule step4(state == STEP4);
-        let result = fadd.get;
+        let result <- fadd.get;
         sampleOut.enq(result);
         state <= READY;
     endrule
