@@ -29,7 +29,7 @@ module mkFastLog32(LogarithmIfc#(8));
 
     method Action addSample(Bit#(8) sample); //assume sample is float exp
 	    //sampleIn.enq(sample);
-	    Bit#(32) float_log = zeroExtend(sample-123);
+	    Bit#(32) float_log = zeroExtend(sample-127);
 	    sampleOut.enq(float_log);
     endmethod
 
