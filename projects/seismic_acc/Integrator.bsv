@@ -36,8 +36,8 @@ module mkIntegrator(IntegratorInterface);
 
     FIFOF#(Float) samples <- mkSizedFIFOF(512);
 
-    Reg#(Float) term1  <- mkReg(?);
-    Reg#(Float) term2  <- mkReg(?); 
+    //Reg#(Float) term1  <- mkReg(?);
+    //Reg#(Float) term2  <- mkReg(?); 
 
     rule enqSample(state == READY);
         $write ("Integrator.bsv: ready state");

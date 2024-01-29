@@ -65,7 +65,7 @@ endmodule
 
 
 interface RandIntToFloatIfc;
-	method Action randVal(Bit#(32) data);
+	method Action randVal(Bit#(24) data);
 	method ActionValue#(Bit#(32)) get;
 endinterface
 
@@ -79,21 +79,17 @@ module mkRandIntToFloat(RandIntToFloatIfc);
 	rule relayRand;
 		inQ.deq;
 		Bit#(32) randInt = inQ.first;
-		fmult.put(unpack(truncate(randInt>>8)), unpack(32'h33800000));
+		//fmult.put(unpack(truncate(randInt>>8)), unpack(32'h33800000));
         endrule
-	rule relayResult;
-		let result <- fmult.get;
-		outQ.enq(pack(result));
-	endrule
 
-	method Action randVal(Bit#(32) data);
-		inQ.enq(data);
+	method Action randVal(Bit#(24) data);
+		fmult.put(unpack(zeroExtend(data)), unpack(32'h33800000));
 		//fmult.put(unpack(truncate(data >> 8)), unpack(32'h33800000));
 	endmethod
 
 	method ActionValue#(Bit#(32)) get;
-		outQ.deq;
-		return outQ.first;
+		let result <- fmult.get;
+		return pack(result);
 	endmethod
 endmodule
 
@@ -111,6 +107,8 @@ module mkLaplaceRandFloat32(LaplaceRandFloat32Ifc);
 	LogarithmIfc#(8) log1 <- mkFastLog32;
 	LogarithmIfc#(8) log2 <- mkFastLog32;
 
+	Reg#(Bit#(1)) log_valid <- mkReg(0);
+	Reg#(Bit#(32)) log_buffer <- mkReg(?);
 
 	//rule enqLog;
 	//	inQ.deq;
@@ -118,12 +116,10 @@ module mkLaplaceRandFloat32(LaplaceRandFloat32Ifc);
 	//	log1.addSample(tpl_1(d));
 	//	log2.addSample(tpl_2(d));
 	//endrule
-
 	rule relayLog;
 	        let partial1 <- log1.get;
 		let partial2 <- log2.get;
-
-		outQ.enq(zeroExtend(partial1-partial2)); //should i multiply by the -scale?
+		outQ.enq(zeroExtend(partial1 - partial2)); //should i multiply by the -scale?
 	endrule
 	
 	method Action randVal(Bit#(8) data1, Bit#(8) data2);
