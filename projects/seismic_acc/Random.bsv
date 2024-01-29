@@ -100,7 +100,7 @@ endmodule
 
 
 interface LaplaceRandFloat32Ifc;
-	method Action randVal(Bit#(32) data1, Bit#(32) data2);
+	method Action randVal(Bit#(8) data1, Bit#(8) data2);
 	method ActionValue#(Bit#(32)) get;
 endinterface
 
@@ -108,8 +108,8 @@ module mkLaplaceRandFloat32(LaplaceRandFloat32Ifc);
 	//FIFO#(Tuple2#(Bit#(32), Bit#(32))) inQ <- mkFIFO;
 	FIFO#(Bit#(32)) outQ <- mkFIFO;
 
-	LogarithmIfc#(32) log1 <- mkFastLog32;
-	LogarithmIfc#(32) log2 <- mkFastLog32;
+	LogarithmIfc#(8) log1 <- mkFastLog32;
+	LogarithmIfc#(8) log2 <- mkFastLog32;
 
 
 	//rule enqLog;
@@ -126,7 +126,7 @@ module mkLaplaceRandFloat32(LaplaceRandFloat32Ifc);
 		outQ.enq(zeroExtend(partial1-partial2)); //should i multiply by the -scale?
 	endrule
 	
-	method Action randVal(Bit#(32) data1, Bit#(32) data2);
+	method Action randVal(Bit#(8) data1, Bit#(8) data2);
 		//inQ.enq(tuple2(data1,data2));
 		log1.addSample(data1);
 		log2.addSample(data2);

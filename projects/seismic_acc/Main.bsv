@@ -39,7 +39,7 @@ module mkMain(MainIfc);
 	FIFO#(Float) outQ <- mkFIFO;	
 
         Reg#(Bit#(1))  samplesRdy <- mkReg(0);
-	Reg#(Bit#(32)) randSample <- mkReg(0);
+	Reg#(Bit#(8)) randSample <- mkReg(0);
 	rule relaySample;
 		Bit#(32) randInt <- rand1.get;
 		itf.randVal(randInt);
@@ -48,10 +48,10 @@ module mkMain(MainIfc);
 	rule relayRand;
 		let randFloat <- itf.get;
 		if(samplesRdy == 1'b0) begin
-			randSample <= randFloat;
+			randSample <= randFloat[30:23];
 			samplesRdy <= 1;
 		end else begin 
-			dpModule.randVal(randSample, randFloat);
+			dpModule.randVal(randSample, randFloat[30:23]);
 			samplesRdy <= 0;
 		end
 	endrule

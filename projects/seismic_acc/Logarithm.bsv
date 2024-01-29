@@ -8,10 +8,10 @@ typedef enum { READY, PA, PB, PC, PD, PE, PF, PG, PH, PI, PJ, PK} State deriving
 
 interface LogarithmIfc#(numeric type bitwidth);
 	method Action addSample(Bit#(bitwidth) samples);
-	method ActionValue#(Bit#(bitwidth)) get;
+	method ActionValue#(Bit#(32)) get;
 endinterface
 
-module mkFastLog32(LogarithmIfc#(32));
+module mkFastLog32(LogarithmIfc#(8));
     //FIFO#(Bit#(32)) sampleIn  <- mkFIFO;
     FIFO#(Bit#(32)) sampleOut <- mkFIFO;
     
@@ -27,10 +27,9 @@ module mkFastLog32(LogarithmIfc#(32));
 //    endrule 
 
 
-    method Action addSample(Bit#(32) sample);
+    method Action addSample(Bit#(8) sample); //assume sample is float exp
 	    //sampleIn.enq(sample);
-	    Bit#(8) float_exp  = sample[30:23];
-	    Bit#(32) float_log = zeroExtend(float_exp-123);
+	    Bit#(32) float_log = zeroExtend(sample-123);
 	    sampleOut.enq(float_log);
     endmethod
 
