@@ -23,7 +23,6 @@ module mkMain(MainIfc);
 	FIFO#(Bit#(8)) dataInQ <- mkFIFO;	// bytes received from RPi
 	FIFO#(Bit#(8)) dataOutQ <- mkFIFO;	// bytes to be transmitted to RPi
 
-	// FIFO#(Bit#(32)) floatQ <- mkFIFO; 	// debugging: floats read
 	Reg#(Bit#(32)) inputBuffer <- mkReg(0);
 	Reg#(Bit#(2)) inputBufferCnt <- mkReg(0);
 	IntegratorInterface integrator1 <- mkIntegrator;
@@ -57,24 +56,11 @@ module mkMain(MainIfc);
 	endrule
 	//rule relayFloat
 
-	//rule relaySample;
-	//        let sample1 <- rand1.get;
-		//let sample2 <- rand2.get;
-
-	//	dpModule.randVal(sample1, 32'h0);//sample2
-	//endrule
-
-	rule relayNoise;
-		let noise <- dpModule.get;
-                let data  <- integrator2.integrateOut;
-
-		fadd.put(unpack(noise), data);
+	Reg#(Bit#(32)) ticks <- mkReg(0);
+	rule cycleCounting;
+		ticks <= ticks + 1;
 	endrule
 
-	rule relayResult;
-                let result <- fadd.get;
-		outQ.enq(result);
-	endrule
 	rule readFloat;
 		dataInQ.deq;
 		let msb_byte = dataInQ.first;
@@ -83,6 +69,7 @@ module mkMain(MainIfc);
 		if ( inputBufferCnt == 3 ) begin
 			inputBufferCnt <= 0;
 			//floatQ.enq(unpack(doubleword));
+			$write("Main.bsv: IN integrator1, ticks: %d\n", ticks);
 			integrator1.addSample(unpack(doubleword));
 		end else begin
 			inputBufferCnt <= inputBufferCnt + 1;
@@ -108,6 +95,7 @@ module mkMain(MainIfc);
 			outQ.deq;
 			let float = outQ.first;
 			Bit#(8) lsb_byte = truncate(pack(float));
+			$write("Main.bsv: OUT integrator 2, ticks: %d\n", ticks);
 			outputBuffer <= (pack(float)>>8);
 			outputBufferCnt <= 3;
 			dataOutQ.enq(lsb_byte);
