@@ -36,7 +36,7 @@ interface BsvTopIfc;
 endinterface
 
 module mkBsvTop(BsvTopIfc);
-	UartIfc uart <- mkUart(2500);
+	UartIfc uart <- mkUart(9600);
 	MainIfc hwmain <- mkMain;
 	// SpiIfc spi <- mkSpi;
 

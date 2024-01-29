@@ -1,0 +1,860 @@
+sent -0.018427
+sent -0.018400
+sent -0.018476
+sent -0.018552
+sent -0.018613
+sent -0.018675
+sent -0.018675
+sent -0.018629
+sent -0.018461
+sent -0.018705
+sent -0.018842
+sent -0.018293
+sent -0.018521
+sent -0.018674
+sent -0.018675
+sent -0.018445
+sent -0.018430
+sent -0.018385
+sent -0.018552
+sent -0.018629
+sent -0.018614
+sent -0.018323
+sent -0.018522
+sent -0.018476
+sent -0.018613
+sent -0.018873
+sent -0.018843
+sent -0.019025
+sent -0.018888
+sent -0.018751
+sent -0.018690
+sent -0.018644
+sent -0.018613
+sent -0.018675
+sent -0.018476
+sent -0.018674
+sent -0.018263
+sent -0.018598
+sent -0.018385
+sent -0.018537
+sent -0.018721
+sent -0.018491
+sent -0.018415
+sent -0.018643
+sent -0.018339
+sent -0.018278
+sent -0.018385
+sent -0.018735
+sent -0.018919
+sent -0.018461
+sent -0.018659
+sent -0.018659
+sent -0.018857
+sent -0.018399
+sent -0.018690
+sent -0.018781
+sent -0.018766
+sent -0.018567
+sent -0.018659
+sent -0.018613
+sent -0.018384
+sent -0.018720
+sent -0.018446
+sent -0.018506
+sent -0.018675
+sent -0.018887
+sent -0.018583
+sent -0.018675
+sent -0.018751
+sent -0.018613
+sent -0.018659
+sent -0.018689
+sent -0.018842
+sent -0.018720
+sent -0.018903
+sent -0.018857
+sent -0.018812
+sent -0.018858
+sent -0.018828
+sent -0.018537
+sent -0.018445
+sent -0.018567
+sent -0.018888
+sent -0.018461
+sent -0.018751
+sent -0.018888
+sent -0.019025
+sent -0.018812
+sent -0.018552
+sent -0.018293
+sent -0.018797
+sent -0.018721
+sent -0.018659
+sent -0.018690
+sent -0.018720
+sent -0.018567
+sent -0.018797
+sent -0.018461
+sent -0.018492
+sent -0.018721
+sent -0.018567
+sent -0.018567
+sent -0.018659
+sent -0.018689
+sent -0.018674
+sent -0.018689
+sent -0.018843
+sent -0.018628
+sent -0.018827
+sent -0.018568
+sent -0.018399
+sent -0.018644
+sent -0.018842
+sent -0.018674
+sent -0.018400
+sent -0.018614
+sent -0.018583
+sent -0.018613
+sent -0.018567
+sent -0.018415
+sent -0.018583
+sent -0.018691
+sent -0.018751
+sent -0.018629
+sent -0.018857
+sent -0.018797
+sent -0.018674
+sent -0.018674
+sent -0.018995
+sent -0.018689
+sent -0.018919
+sent -0.018598
+sent -0.018813
+sent -0.018857
+sent -0.018796
+sent -0.018781
+sent -0.018553
+sent -0.018766
+sent -0.018491
+sent -0.018720
+sent -0.018522
+sent -0.018735
+sent -0.018781
+sent -0.018659
+sent -0.018751
+sent -0.018613
+sent -0.019071
+sent -0.018720
+sent -0.018736
+sent -0.018736
+sent -0.018491
+sent -0.018629
+sent -0.018553
+sent -0.018659
+sent -0.018751
+sent -0.018841
+sent -0.018766
+sent -0.018720
+sent -0.018858
+sent -0.018689
+sent -0.018689
+sent -0.018569
+sent -0.018491
+sent -0.018887
+sent -0.018842
+sent -0.018522
+sent -0.018629
+sent -0.018873
+sent -0.018903
+sent -0.018629
+sent -0.018628
+sent -0.018537
+sent -0.018751
+sent -0.018719
+sent -0.018446
+sent -0.018645
+sent -0.018629
+sent -0.018674
+sent -0.018827
+sent -0.018751
+sent -0.018735
+sent -0.019071
+sent -0.018415
+sent -0.018354
+sent -0.018675
+sent -0.018613
+sent -0.018873
+sent -0.018659
+sent -0.018644
+sent -0.018568
+sent -0.018476
+sent -0.018720
+sent -0.018369
+sent -0.019009
+sent -0.018872
+sent -0.018644
+sent -0.018613
+sent -0.018369
+sent -0.018736
+sent -0.018689
+sent -0.018522
+sent -0.018675
+sent -0.018811
+sent -0.018736
+sent -0.018705
+sent -0.018523
+sent -0.018889
+sent -0.018889
+sent -0.018506
+sent -0.018857
+sent -0.018613
+sent -0.018690
+sent -0.018507
+sent -0.018476
+sent -0.018537
+Main.bsv: IN integrator1, ticks:        352
+Main.bsv: IN integrator1, ticks:        387
+Main.bsv: IN integrator1, ticks:        422
+Main.bsv: OUT integrator 2, ticks:        422
+Main.bsv: IN integrator1, ticks:        457
+Main.bsv: OUT integrator 2, ticks:        457
+received -0.000000
+received -0.000000
+Main.bsv: IN integrator1, ticks:        492
+Main.bsv: OUT integrator 2, ticks:        492
+Main.bsv: IN integrator1, ticks:        527
+Main.bsv: OUT integrator 2, ticks:        527
+Main.bsv: IN integrator1, ticks:        562
+Main.bsv: OUT integrator 2, ticks:        562
+Main.bsv: IN integrator1, ticks:        597
+Main.bsv: OUT integrator 2, ticks:        597
+Main.bsv: IN integrator1, ticks:        632
+Main.bsv: OUT integrator 2, ticks:        632
+received -0.015764
+received -0.015741
+received -0.015806
+received -0.015872
+received -0.015924
+Main.bsv: IN integrator1, ticks:        667
+Main.bsv: OUT integrator 2, ticks:        667
+received -0.015976
+Main.bsv: IN integrator1, ticks:        702
+Main.bsv: OUT integrator 2, ticks:        702
+received -0.015976
+Main.bsv: IN integrator1, ticks:        737
+Main.bsv: OUT integrator 2, ticks:        737
+Main.bsv: IN integrator1, ticks:        772
+Main.bsv: OUT integrator 2, ticks:        772
+received -0.015937
+received -0.015793
+Main.bsv: IN integrator1, ticks:        807
+Main.bsv: OUT integrator 2, ticks:        807
+received -0.016002
+Main.bsv: IN integrator1, ticks:        842
+Main.bsv: OUT integrator 2, ticks:        842
+Main.bsv: IN integrator1, ticks:        877
+Main.bsv: OUT integrator 2, ticks:        877
+Main.bsv: IN integrator1, ticks:        912
+Main.bsv: OUT integrator 2, ticks:        912
+received -0.016119
+received -0.015650
+received -0.015845
+Main.bsv: IN integrator1, ticks:        947
+Main.bsv: OUT integrator 2, ticks:        947
+Main.bsv: IN integrator1, ticks:        982
+Main.bsv: OUT integrator 2, ticks:        982
+Main.bsv: IN integrator1, ticks:       1017
+Main.bsv: OUT integrator 2, ticks:       1017
+Main.bsv: IN integrator1, ticks:       1052
+Main.bsv: OUT integrator 2, ticks:       1052
+received -0.015976
+received -0.015976
+received -0.015780
+received -0.015767
+Main.bsv: IN integrator1, ticks:       1087
+Main.bsv: OUT integrator 2, ticks:       1087
+Main.bsv: IN integrator1, ticks:       1122
+Main.bsv: OUT integrator 2, ticks:       1122
+Main.bsv: IN integrator1, ticks:       1157
+Main.bsv: OUT integrator 2, ticks:       1157
+received -0.015728
+received -0.015872
+received -0.015937
+Main.bsv: IN integrator1, ticks:       1192
+Main.bsv: OUT integrator 2, ticks:       1192
+received -0.015925
+Main.bsv: IN integrator1, ticks:       1227
+Main.bsv: OUT integrator 2, ticks:       1227
+Main.bsv: IN integrator1, ticks:       1262
+Main.bsv: OUT integrator 2, ticks:       1262
+received -0.015676
+received -0.015846
+Main.bsv: IN integrator1, ticks:       1297
+Main.bsv: OUT integrator 2, ticks:       1297
+received -0.015806
+Main.bsv: IN integrator1, ticks:       1332
+Main.bsv: OUT integrator 2, ticks:       1332
+received -0.015924
+Main.bsv: IN integrator1, ticks:       1367
+Main.bsv: OUT integrator 2, ticks:       1367
+received -0.016146
+Main.bsv: IN integrator1, ticks:       1402
+Main.bsv: OUT integrator 2, ticks:       1402
+Main.bsv: IN integrator1, ticks:       1437
+Main.bsv: OUT integrator 2, ticks:       1437
+received -0.016120
+received -0.016276
+Main.bsv: IN integrator1, ticks:       1472
+Main.bsv: OUT integrator 2, ticks:       1472
+received -0.016159
+Main.bsv: IN integrator1, ticks:       1507
+Main.bsv: OUT integrator 2, ticks:       1507
+received -0.016042
+Main.bsv: IN integrator1, ticks:       1542
+Main.bsv: OUT integrator 2, ticks:       1542
+Main.bsv: IN integrator1, ticks:       1577
+Main.bsv: OUT integrator 2, ticks:       1577
+received -0.015989
+received -0.015950
+Main.bsv: IN integrator1, ticks:       1612
+Main.bsv: OUT integrator 2, ticks:       1612
+received -0.015923
+Main.bsv: IN integrator1, ticks:       1647
+Main.bsv: OUT integrator 2, ticks:       1647
+Main.bsv: IN integrator1, ticks:       1682
+Main.bsv: OUT integrator 2, ticks:       1682
+Main.bsv: IN integrator1, ticks:       1717
+Main.bsv: OUT integrator 2, ticks:       1717
+Main.bsv: IN integrator1, ticks:       1752
+Main.bsv: OUT integrator 2, ticks:       1752
+received -0.015976
+received -0.015806
+received -0.015976
+received -0.015624
+Main.bsv: IN integrator1, ticks:       1787
+Main.bsv: OUT integrator 2, ticks:       1787
+received -0.015911
+Main.bsv: IN integrator1, ticks:       1822
+Main.bsv: OUT integrator 2, ticks:       1822
+received -0.015728
+Main.bsv: IN integrator1, ticks:       1857
+Main.bsv: OUT integrator 2, ticks:       1857
+received -0.015858
+Main.bsv: IN integrator1, ticks:       1892
+Main.bsv: OUT integrator 2, ticks:       1892
+received -0.016016
+Main.bsv: IN integrator1, ticks:       1927
+Main.bsv: OUT integrator 2, ticks:       1927
+received -0.015820
+Main.bsv: IN integrator1, ticks:       1962
+Main.bsv: OUT integrator 2, ticks:       1962
+received -0.015754
+Main.bsv: IN integrator1, ticks:       1997
+Main.bsv: OUT integrator 2, ticks:       1997
+received -0.015949
+Main.bsv: IN integrator1, ticks:       2032
+Main.bsv: OUT integrator 2, ticks:       2032
+received -0.015689
+Main.bsv: IN integrator1, ticks:       2067
+Main.bsv: OUT integrator 2, ticks:       2067
+received -0.015637
+Main.bsv: IN integrator1, ticks:       2102
+Main.bsv: OUT integrator 2, ticks:       2102
+received -0.015728
+Main.bsv: IN integrator1, ticks:       2137
+Main.bsv: OUT integrator 2, ticks:       2137
+received -0.016028
+Main.bsv: IN integrator1, ticks:       2172
+Main.bsv: OUT integrator 2, ticks:       2172
+received -0.016185
+Main.bsv: IN integrator1, ticks:       2207
+Main.bsv: OUT integrator 2, ticks:       2207
+received -0.015793
+Main.bsv: IN integrator1, ticks:       2242
+Main.bsv: OUT integrator 2, ticks:       2242
+received -0.015963
+Main.bsv: IN integrator1, ticks:       2277
+Main.bsv: OUT integrator 2, ticks:       2277
+received -0.015963
+Main.bsv: IN integrator1, ticks:       2312
+Main.bsv: OUT integrator 2, ticks:       2312
+received -0.016133
+Main.bsv: IN integrator1, ticks:       2347
+Main.bsv: OUT integrator 2, ticks:       2347
+received -0.015741
+Main.bsv: IN integrator1, ticks:       2382
+Main.bsv: OUT integrator 2, ticks:       2382
+received -0.015989
+Main.bsv: IN integrator1, ticks:       2417
+Main.bsv: OUT integrator 2, ticks:       2417
+received -0.016068
+Main.bsv: IN integrator1, ticks:       2452
+Main.bsv: OUT integrator 2, ticks:       2452
+received -0.016055
+Main.bsv: IN integrator1, ticks:       2487
+Main.bsv: OUT integrator 2, ticks:       2487
+received -0.015885
+Main.bsv: IN integrator1, ticks:       2522
+Main.bsv: OUT integrator 2, ticks:       2522
+received -0.015963
+Main.bsv: IN integrator1, ticks:       2557
+Main.bsv: OUT integrator 2, ticks:       2557
+received -0.015924
+Main.bsv: IN integrator1, ticks:       2592
+Main.bsv: OUT integrator 2, ticks:       2592
+received -0.015728
+Main.bsv: IN integrator1, ticks:       2627
+Main.bsv: OUT integrator 2, ticks:       2627
+received -0.016015
+Main.bsv: IN integrator1, ticks:       2662
+Main.bsv: OUT integrator 2, ticks:       2662
+Main.bsv: IN integrator1, ticks:       2697
+Main.bsv: OUT integrator 2, ticks:       2697
+Main.bsv: IN integrator1, ticks:       2732
+received -0.015781
+received -0.015832
+Main.bsv: OUT integrator 2, ticks:       2732
+received -0.015977
+Main.bsv: IN integrator1, ticks:       2767
+Main.bsv: OUT integrator 2, ticks:       2767
+received -0.016158
+Main.bsv: IN integrator1, ticks:       2802
+Main.bsv: OUT integrator 2, ticks:       2802
+received -0.015898
+Main.bsv: IN integrator1, ticks:       2837
+Main.bsv: OUT integrator 2, ticks:       2837
+received -0.015976
+Main.bsv: IN integrator1, ticks:       2872
+Main.bsv: OUT integrator 2, ticks:       2872
+received -0.016041
+Main.bsv: IN integrator1, ticks:       2907
+Main.bsv: OUT integrator 2, ticks:       2907
+received -0.015924
+Main.bsv: IN integrator1, ticks:       2942
+Main.bsv: OUT integrator 2, ticks:       2942
+received -0.015963
+Main.bsv: IN integrator1, ticks:       2977
+Main.bsv: OUT integrator 2, ticks:       2977
+received -0.015989
+Main.bsv: IN integrator1, ticks:       3012
+Main.bsv: OUT integrator 2, ticks:       3012
+received -0.016119
+Main.bsv: IN integrator1, ticks:       3047
+Main.bsv: OUT integrator 2, ticks:       3047
+received -0.016015
+Main.bsv: IN integrator1, ticks:       3082
+Main.bsv: OUT integrator 2, ticks:       3082
+received -0.016172
+Main.bsv: IN integrator1, ticks:       3117
+Main.bsv: OUT integrator 2, ticks:       3117
+received -0.016133
+Main.bsv: IN integrator1, ticks:       3152
+Main.bsv: OUT integrator 2, ticks:       3152
+received -0.016094
+Main.bsv: IN integrator1, ticks:       3187
+Main.bsv: OUT integrator 2, ticks:       3187
+received -0.016133
+Main.bsv: IN integrator1, ticks:       3222
+Main.bsv: OUT integrator 2, ticks:       3222
+received -0.016107
+Main.bsv: IN integrator1, ticks:       3257
+Main.bsv: OUT integrator 2, ticks:       3257
+received -0.015859
+Main.bsv: IN integrator1, ticks:       3292
+Main.bsv: OUT integrator 2, ticks:       3292
+received -0.015780
+Main.bsv: IN integrator1, ticks:       3327
+Main.bsv: OUT integrator 2, ticks:       3327
+received -0.015885
+Main.bsv: IN integrator1, ticks:       3362
+Main.bsv: OUT integrator 2, ticks:       3362
+received -0.016159
+Main.bsv: IN integrator1, ticks:       3397
+Main.bsv: OUT integrator 2, ticks:       3397
+received -0.015793
+Main.bsv: IN integrator1, ticks:       3432
+Main.bsv: OUT integrator 2, ticks:       3432
+received -0.016042
+Main.bsv: IN integrator1, ticks:       3467
+Main.bsv: OUT integrator 2, ticks:       3467
+received -0.016159
+Main.bsv: IN integrator1, ticks:       3502
+Main.bsv: OUT integrator 2, ticks:       3502
+received -0.016276
+Main.bsv: IN integrator1, ticks:       3537
+Main.bsv: OUT integrator 2, ticks:       3537
+received -0.016094
+Main.bsv: IN integrator1, ticks:       3572
+Main.bsv: OUT integrator 2, ticks:       3572
+received -0.015872
+Main.bsv: IN integrator1, ticks:       3607
+Main.bsv: OUT integrator 2, ticks:       3607
+received -0.015650
+Main.bsv: IN integrator1, ticks:       3642
+Main.bsv: OUT integrator 2, ticks:       3642
+received -0.016081
+Main.bsv: IN integrator1, ticks:       3677
+Main.bsv: OUT integrator 2, ticks:       3677
+received -0.016016
+Main.bsv: IN integrator1, ticks:       3712
+Main.bsv: OUT integrator 2, ticks:       3712
+received -0.015963
+Main.bsv: IN integrator1, ticks:       3747
+Main.bsv: OUT integrator 2, ticks:       3747
+received -0.015989
+Main.bsv: IN integrator1, ticks:       3782
+Main.bsv: OUT integrator 2, ticks:       3782
+received -0.016015
+Main.bsv: IN integrator1, ticks:       3817
+Main.bsv: OUT integrator 2, ticks:       3817
+received -0.015884
+Main.bsv: IN integrator1, ticks:       3852
+Main.bsv: OUT integrator 2, ticks:       3852
+received -0.016081
+Main.bsv: IN integrator1, ticks:       3887
+Main.bsv: OUT integrator 2, ticks:       3887
+received -0.015793
+Main.bsv: IN integrator1, ticks:       3922
+Main.bsv: OUT integrator 2, ticks:       3922
+received -0.015820
+Main.bsv: IN integrator1, ticks:       3957
+Main.bsv: OUT integrator 2, ticks:       3957
+received -0.016016
+Main.bsv: IN integrator1, ticks:       3992
+Main.bsv: OUT integrator 2, ticks:       3992
+received -0.015885
+Main.bsv: IN integrator1, ticks:       4027
+Main.bsv: OUT integrator 2, ticks:       4027
+received -0.015885
+Main.bsv: IN integrator1, ticks:       4062
+Main.bsv: OUT integrator 2, ticks:       4062
+received -0.015963
+Main.bsv: IN integrator1, ticks:       4097
+Main.bsv: OUT integrator 2, ticks:       4097
+received -0.015989
+Main.bsv: IN integrator1, ticks:       4132
+Main.bsv: OUT integrator 2, ticks:       4132
+received -0.015976
+Main.bsv: IN integrator1, ticks:       4167
+Main.bsv: OUT integrator 2, ticks:       4167
+received -0.015989
+Main.bsv: IN integrator1, ticks:       4202
+Main.bsv: OUT integrator 2, ticks:       4202
+received -0.016120
+Main.bsv: IN integrator1, ticks:       4237
+Main.bsv: OUT integrator 2, ticks:       4237
+received -0.015936
+Main.bsv: IN integrator1, ticks:       4272
+Main.bsv: OUT integrator 2, ticks:       4272
+received -0.016107
+Main.bsv: IN integrator1, ticks:       4307
+Main.bsv: OUT integrator 2, ticks:       4307
+received -0.015885
+Main.bsv: IN integrator1, ticks:       4342
+Main.bsv: OUT integrator 2, ticks:       4342
+received -0.015741
+Main.bsv: IN integrator1, ticks:       4377
+Main.bsv: OUT integrator 2, ticks:       4377
+received -0.015950
+Main.bsv: IN integrator1, ticks:       4412
+Main.bsv: OUT integrator 2, ticks:       4412
+received -0.016119
+Main.bsv: IN integrator1, ticks:       4447
+Main.bsv: OUT integrator 2, ticks:       4447
+received -0.015976
+Main.bsv: IN integrator1, ticks:       4482
+Main.bsv: OUT integrator 2, ticks:       4482
+received -0.015742
+Main.bsv: IN integrator1, ticks:       4517
+Main.bsv: OUT integrator 2, ticks:       4517
+received -0.015925
+Main.bsv: IN integrator1, ticks:       4552
+Main.bsv: OUT integrator 2, ticks:       4552
+received -0.015898
+Main.bsv: IN integrator1, ticks:       4587
+Main.bsv: OUT integrator 2, ticks:       4587
+received -0.015924
+Main.bsv: IN integrator1, ticks:       4622
+Main.bsv: OUT integrator 2, ticks:       4622
+received -0.015885
+Main.bsv: IN integrator1, ticks:       4657
+Main.bsv: OUT integrator 2, ticks:       4657
+received -0.015754
+Main.bsv: IN integrator1, ticks:       4692
+Main.bsv: OUT integrator 2, ticks:       4692
+received -0.015898
+Main.bsv: IN integrator1, ticks:       4727
+Main.bsv: OUT integrator 2, ticks:       4727
+received -0.015990
+Main.bsv: IN integrator1, ticks:       4762
+Main.bsv: OUT integrator 2, ticks:       4762
+received -0.016041
+Main.bsv: IN integrator1, ticks:       4797
+Main.bsv: OUT integrator 2, ticks:       4797
+received -0.015937
+Main.bsv: IN integrator1, ticks:       4832
+Main.bsv: OUT integrator 2, ticks:       4832
+received -0.016133
+Main.bsv: IN integrator1, ticks:       4867
+Main.bsv: OUT integrator 2, ticks:       4867
+received -0.016081
+Main.bsv: IN integrator1, ticks:       4902
+Main.bsv: OUT integrator 2, ticks:       4902
+received -0.015976
+Main.bsv: IN integrator1, ticks:       4937
+Main.bsv: OUT integrator 2, ticks:       4937
+received -0.015976
+Main.bsv: IN integrator1, ticks:       4972
+Main.bsv: OUT integrator 2, ticks:       4972
+received -0.016250
+Main.bsv: IN integrator1, ticks:       5007
+Main.bsv: OUT integrator 2, ticks:       5007
+received -0.015989
+Main.bsv: IN integrator1, ticks:       5042
+Main.bsv: OUT integrator 2, ticks:       5042
+received -0.016186
+Main.bsv: IN integrator1, ticks:       5077
+Main.bsv: OUT integrator 2, ticks:       5077
+received -0.015911
+Main.bsv: IN integrator1, ticks:       5112
+Main.bsv: OUT integrator 2, ticks:       5112
+received -0.016095
+Main.bsv: IN integrator1, ticks:       5147
+Main.bsv: OUT integrator 2, ticks:       5147
+received -0.016133
+Main.bsv: IN integrator1, ticks:       5182
+Main.bsv: OUT integrator 2, ticks:       5182
+received -0.016080
+Main.bsv: IN integrator1, ticks:       5217
+Main.bsv: OUT integrator 2, ticks:       5217
+received -0.016068
+Main.bsv: IN integrator1, ticks:       5252
+Main.bsv: OUT integrator 2, ticks:       5252
+received -0.015872
+Main.bsv: IN integrator1, ticks:       5287
+Main.bsv: OUT integrator 2, ticks:       5287
+received -0.016055
+Main.bsv: IN integrator1, ticks:       5322
+Main.bsv: OUT integrator 2, ticks:       5322
+received -0.015819
+Main.bsv: IN integrator1, ticks:       5357
+Main.bsv: OUT integrator 2, ticks:       5357
+received -0.016015
+Main.bsv: IN integrator1, ticks:       5392
+Main.bsv: OUT integrator 2, ticks:       5392
+received -0.015846
+Main.bsv: IN integrator1, ticks:       5427
+Main.bsv: OUT integrator 2, ticks:       5427
+received -0.016028
+Main.bsv: IN integrator1, ticks:       5462
+Main.bsv: OUT integrator 2, ticks:       5462
+received -0.016068
+Main.bsv: IN integrator1, ticks:       5497
+Main.bsv: OUT integrator 2, ticks:       5497
+received -0.015963
+Main.bsv: IN integrator1, ticks:       5532
+Main.bsv: OUT integrator 2, ticks:       5532
+received -0.016041
+Main.bsv: IN integrator1, ticks:       5567
+Main.bsv: OUT integrator 2, ticks:       5567
+received -0.015924
+Main.bsv: IN integrator1, ticks:       5602
+Main.bsv: OUT integrator 2, ticks:       5602
+received -0.016315
+Main.bsv: IN integrator1, ticks:       5637
+Main.bsv: OUT integrator 2, ticks:       5637
+received -0.016015
+Main.bsv: IN integrator1, ticks:       5672
+Main.bsv: OUT integrator 2, ticks:       5672
+received -0.016029
+Main.bsv: IN integrator1, ticks:       5707
+Main.bsv: OUT integrator 2, ticks:       5707
+received -0.016029
+Main.bsv: IN integrator1, ticks:       5742
+Main.bsv: OUT integrator 2, ticks:       5742
+received -0.015820
+Main.bsv: IN integrator1, ticks:       5777
+Main.bsv: OUT integrator 2, ticks:       5777
+received -0.015937
+Main.bsv: IN integrator1, ticks:       5812
+Main.bsv: OUT integrator 2, ticks:       5812
+received -0.015872
+Main.bsv: IN integrator1, ticks:       5847
+Main.bsv: OUT integrator 2, ticks:       5847
+received -0.015963
+Main.bsv: IN integrator1, ticks:       5882
+Main.bsv: OUT integrator 2, ticks:       5882
+received -0.016041
+Main.bsv: IN integrator1, ticks:       5917
+Main.bsv: OUT integrator 2, ticks:       5917
+received -0.016119
+Main.bsv: IN integrator1, ticks:       5952
+Main.bsv: OUT integrator 2, ticks:       5952
+received -0.016055
+Main.bsv: IN integrator1, ticks:       5987
+Main.bsv: OUT integrator 2, ticks:       5987
+received -0.016015
+Main.bsv: IN integrator1, ticks:       6022
+Main.bsv: OUT integrator 2, ticks:       6022
+received -0.016133
+Main.bsv: IN integrator1, ticks:       6057
+Main.bsv: OUT integrator 2, ticks:       6057
+received -0.015989
+Main.bsv: IN integrator1, ticks:       6092
+Main.bsv: OUT integrator 2, ticks:       6092
+received -0.015989
+Main.bsv: IN integrator1, ticks:       6127
+Main.bsv: OUT integrator 2, ticks:       6127
+received -0.015886
+Main.bsv: IN integrator1, ticks:       6162
+Main.bsv: OUT integrator 2, ticks:       6162
+received -0.015820
+Main.bsv: IN integrator1, ticks:       6197
+Main.bsv: OUT integrator 2, ticks:       6197
+received -0.016158
+Main.bsv: IN integrator1, ticks:       6232
+Main.bsv: OUT integrator 2, ticks:       6232
+received -0.016119
+Main.bsv: IN integrator1, ticks:       6267
+Main.bsv: OUT integrator 2, ticks:       6267
+received -0.015846
+Main.bsv: IN integrator1, ticks:       6302
+Main.bsv: OUT integrator 2, ticks:       6302
+received -0.015937
+Main.bsv: IN integrator1, ticks:       6337
+Main.bsv: OUT integrator 2, ticks:       6337
+received -0.016146
+Main.bsv: IN integrator1, ticks:       6372
+Main.bsv: OUT integrator 2, ticks:       6372
+received -0.016172
+Main.bsv: IN integrator1, ticks:       6407
+Main.bsv: OUT integrator 2, ticks:       6407
+received -0.015937
+Main.bsv: IN integrator1, ticks:       6442
+Main.bsv: OUT integrator 2, ticks:       6442
+received -0.015936
+Main.bsv: IN integrator1, ticks:       6477
+Main.bsv: OUT integrator 2, ticks:       6477
+received -0.015859
+Main.bsv: IN integrator1, ticks:       6512
+Main.bsv: OUT integrator 2, ticks:       6512
+received -0.016041
+Main.bsv: IN integrator1, ticks:       6547
+Main.bsv: OUT integrator 2, ticks:       6547
+received -0.016015
+Main.bsv: IN integrator1, ticks:       6582
+Main.bsv: OUT integrator 2, ticks:       6582
+received -0.015781
+Main.bsv: IN integrator1, ticks:       6617
+Main.bsv: OUT integrator 2, ticks:       6617
+received -0.015951
+Main.bsv: IN integrator1, ticks:       6652
+Main.bsv: OUT integrator 2, ticks:       6652
+received -0.015937
+Main.bsv: IN integrator1, ticks:       6687
+Main.bsv: OUT integrator 2, ticks:       6687
+received -0.015976
+Main.bsv: IN integrator1, ticks:       6722
+Main.bsv: OUT integrator 2, ticks:       6722
+received -0.016107
+Main.bsv: IN integrator1, ticks:       6757
+Main.bsv: OUT integrator 2, ticks:       6757
+received -0.016041
+Main.bsv: IN integrator1, ticks:       6792
+Main.bsv: OUT integrator 2, ticks:       6792
+received -0.016028
+Main.bsv: IN integrator1, ticks:       6827
+Main.bsv: OUT integrator 2, ticks:       6827
+received -0.016315
+Main.bsv: IN integrator1, ticks:       6862
+Main.bsv: OUT integrator 2, ticks:       6862
+received -0.015754
+Main.bsv: IN integrator1, ticks:       6897
+Main.bsv: OUT integrator 2, ticks:       6897
+received -0.015702
+Main.bsv: IN integrator1, ticks:       6932
+Main.bsv: OUT integrator 2, ticks:       6932
+received -0.015976
+Main.bsv: IN integrator1, ticks:       6967
+Main.bsv: OUT integrator 2, ticks:       6967
+received -0.015923
+Main.bsv: IN integrator1, ticks:       7002
+Main.bsv: OUT integrator 2, ticks:       7002
+received -0.016146
+Main.bsv: IN integrator1, ticks:       7037
+Main.bsv: OUT integrator 2, ticks:       7037
+received -0.015963
+Main.bsv: IN integrator1, ticks:       7072
+Main.bsv: OUT integrator 2, ticks:       7072
+received -0.015950
+Main.bsv: IN integrator1, ticks:       7107
+Main.bsv: OUT integrator 2, ticks:       7107
+received -0.015885
+Main.bsv: IN integrator1, ticks:       7142
+Main.bsv: OUT integrator 2, ticks:       7142
+received -0.015806
+Main.bsv: IN integrator1, ticks:       7177
+Main.bsv: OUT integrator 2, ticks:       7177
+received -0.016015
+Main.bsv: IN integrator1, ticks:       7212
+Main.bsv: OUT integrator 2, ticks:       7212
+received -0.015715
+Main.bsv: IN integrator1, ticks:       7247
+Main.bsv: OUT integrator 2, ticks:       7247
+received -0.016263
+Main.bsv: IN integrator1, ticks:       7282
+Main.bsv: OUT integrator 2, ticks:       7282
+received -0.016145
+Main.bsv: IN integrator1, ticks:       7317
+Main.bsv: OUT integrator 2, ticks:       7317
+received -0.015950
+Main.bsv: IN integrator1, ticks:       7352
+Main.bsv: OUT integrator 2, ticks:       7352
+received -0.015924
+Main.bsv: IN integrator1, ticks:       7387
+Main.bsv: OUT integrator 2, ticks:       7387
+received -0.015715
+Main.bsv: IN integrator1, ticks:       7422
+Main.bsv: OUT integrator 2, ticks:       7422
+received -0.016029
+Main.bsv: IN integrator1, ticks:       7457
+Main.bsv: OUT integrator 2, ticks:       7457
+received -0.015989
+Main.bsv: IN integrator1, ticks:       7492
+Main.bsv: OUT integrator 2, ticks:       7492
+received -0.015846
+Main.bsv: IN integrator1, ticks:       7527
+Main.bsv: OUT integrator 2, ticks:       7527
+received -0.015976
+Main.bsv: IN integrator1, ticks:       7562
+Main.bsv: OUT integrator 2, ticks:       7562
+received -0.016094
+Main.bsv: IN integrator1, ticks:       7597
+Main.bsv: OUT integrator 2, ticks:       7597
+received -0.016029
+Main.bsv: IN integrator1, ticks:       7632
+Main.bsv: OUT integrator 2, ticks:       7632
+received -0.016003
+Main.bsv: IN integrator1, ticks:       7667
+Main.bsv: OUT integrator 2, ticks:       7667
+received -0.015846
+Main.bsv: IN integrator1, ticks:       7702
+Main.bsv: OUT integrator 2, ticks:       7702
+received -0.016160
+Main.bsv: IN integrator1, ticks:       7737
+Main.bsv: OUT integrator 2, ticks:       7737
+received -0.016160
+Main.bsv: IN integrator1, ticks:       7772
+Main.bsv: OUT integrator 2, ticks:       7772
+received -0.015832
+Main.bsv: IN integrator1, ticks:       7807
+Main.bsv: OUT integrator 2, ticks:       7807
+received -0.016133
+Main.bsv: IN integrator1, ticks:       7842
+Main.bsv: OUT integrator 2, ticks:       7842
+received -0.015924
+Main.bsv: OUT integrator 2, ticks:       7877
+received -0.015989
+Main.bsv: OUT integrator 2, ticks:       7912
+received -0.015833

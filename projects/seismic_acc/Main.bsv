@@ -20,10 +20,14 @@ module mkMain(MainIfc);
 	FIFO#(Bit#(8)) dataInQ <- mkFIFO;	// bytes received from RPi
 	FIFO#(Bit#(8)) dataOutQ <- mkFIFO;	// bytes to be transmitted to RPi
 
-	// FIFO#(Bit#(32)) floatQ <- mkFIFO; 	// debugging: floats read
 	Reg#(Bit#(32)) inputBuffer <- mkReg(0);
 	Reg#(Bit#(2)) inputBufferCnt <- mkReg(0);
 	IntegratorInterface integrator1 <- mkIntegrator;
+
+	Reg#(Bit#(32)) ticks <- mkReg(0);
+	rule cycleCounting;
+		ticks <= ticks + 1;
+	endrule
 
 	rule readFloat;
 		dataInQ.deq;
@@ -33,6 +37,7 @@ module mkMain(MainIfc);
 		if ( inputBufferCnt == 3 ) begin
 			inputBufferCnt <= 0;
 			//floatQ.enq(unpack(doubleword));
+			$write("Main.bsv: IN integrator1, ticks: %d\n", ticks);
 			integrator1.addSample(unpack(doubleword));
 		end else begin
 			inputBufferCnt <= inputBufferCnt + 1;
@@ -58,6 +63,7 @@ module mkMain(MainIfc);
 			// let float = floatQ.first;
 			let float <- integrator2.integrateOut;
 			Bit#(8) lsb_byte = truncate(pack(float));
+			$write("Main.bsv: OUT integrator 2, ticks: %d\n", ticks);
 			outputBuffer <= (pack(float)>>8);
 			outputBufferCnt <= 3;
 			dataOutQ.enq(lsb_byte);
