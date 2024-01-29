@@ -40,19 +40,22 @@ module mkIntegrator(IntegratorInterface);
     Reg#(Float) term2  <- mkReg(?); 
 
     rule enqSample(state == READY);
+        $write ("Integrator.bsv: ready state");
         sampleIn.deq;
+        // let newValue = sampleIn.first;
         prev <= curr;
         curr <= sampleIn.first;
 
         // Find the mean of last 512 samples
 
         if(samples.notFull) begin 
-            fadd.put(accum, sampleIn.first);         // accum + new_value
-            fmult.put(curr, unpack(32'h3ca3d70a));   // curr  * delta
+            fadd.put(accum, sampleIn.first);              // accum + new_value
+            fmult.put(sampleIn.first, unpack(32'h3ca3d70a));  // curr  * delta 
             state <= STEP1;
         end else begin 
-            samples.deq;
-            fadd.put(accum, negate(samples.first));
+            samples.deq; 
+            // let s = samples.first;
+            fadd.put(accum, negate(samples.first)); // remove first element in accum
             state <= FULL;
         end            
         samples.enq(sampleIn.first);
@@ -71,15 +74,19 @@ module mkIntegrator(IntegratorInterface);
     endfunction
 
     rule bufferFull(state == FULL);
+        $write("Integrator.bsv: full state");
         let adjusted_accum <- fadd.get; 
-        fadd.put(accum, sampleIn.first);       // accum + new_value
-        fmult.put(curr, unpack(32'h3ca3d70a)); // ci * delta
+        fadd.put(accum, curr);                  // accum + new_value
+        fmult.put(curr, unpack(32'h3ca3d70a));  // ci * delta
 
         state <= STEP1;
     endrule
 
     rule step1(state == STEP1);
+        $write("Integrator.bsv: step1 state");
         let new_accum <- fadd.get;
+        let cur_delta <- fmult.get;
+        curr <= cur_delta;
         accum <= new_accum;
 
         fmult.put(new_accum, unpack(32'h3823d70a)); // accum * (delta/512) = M*delta
@@ -87,6 +94,8 @@ module mkIntegrator(IntegratorInterface);
     endrule
 
     rule step2(state == STEP2);
+        $write("Integrator.bsv: step2 state");
+
         let mean <- fmult.get; // mean
 
         fadd.put(curr, negate(mean)); //c_i*delta - M*delta
@@ -95,6 +104,7 @@ module mkIntegrator(IntegratorInterface);
     endrule
 
     rule step3(state == STEP3);
+        $write("Integrator.bsv: step3 state");
         let part1 <- fadd.get;
         let part2 <- fmult.get;
 
@@ -103,18 +113,19 @@ module mkIntegrator(IntegratorInterface);
     endrule
 
     rule step4(state == STEP4);
+        $write("Integrator.bsv: step4 state");
         let result <- fadd.get;
         sampleOut.enq(result);
         state <= READY;
     endrule
 
     method Action addSample(Float sample) if (state == READY);
-        //$write("Integrator.bsv: added sample %d\n", sample);
+        $write("Integrator.bsv: added sample %d\n", sample);
         sampleIn.enq(sample);        
     endmethod
 
     method ActionValue#(Float) integrateOut();
-    	//$write("Integrator.bsv: intgrateOut called\n");
+    	$write("Integrator.bsv: intgrateOut called\n");
         sampleOut.deq;
         let res = sampleOut.first;
         return res;
