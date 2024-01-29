@@ -100,9 +100,9 @@ module mkSpi(SpiIfc);
     
 
 
-    Reg#(Bit#(4)) rxin <- mkReg(4'b1111);
-	Reg#(Bit#(4)) sckin <- mkReg(4'b1111);
-	Reg#(Bit#(4)) ncsin <- mkReg(4'b1111);
+    Reg#(Bit#(2)) rxin <- mkReg(2'b00);
+	Reg#(Bit#(2)) sckin <- mkReg(2'b00);
+	Reg#(Bit#(2)) ncsin <- mkReg(2'b00);
 
     interface SpiSlavePins pins;
         // OUT: Put txdr bit on the spi_sdo pin
@@ -112,20 +112,20 @@ module mkSpi(SpiIfc);
 
         // IN: Noise debouncing spi_sdi pin to read one bit into rxdw wire
         method Action sdi(Bit#(1) spi_sdi);
-            rxin <= {spi_sdi, rxin[3:1]};
-            rx <= (rxin==0)?0:1; 
+            rxin <= {spi_sdi, rxin[1]};
+            rx <= (rxin==2'b11)?1:0; 
         endmethod
 
         // IN: Noise debouncing spi_sck pin to read one bit into sckdw wire
         method Action sck(Bit#(1) spi_sck);
-            sckin <= {spi_sck, sckin[3:1]};
-            currSck <= (sckin==4'b1111)?1:0; // clock must be 1 when the fpga reads it four times
+            sckin <= {spi_sck, sckin[1]};
+            currSck <= (sckin==2'b11)?1:0; 
         endmethod
         
         // IN: Noise debouncing spi_ncs pin to read one bit into ncsBit
         method Action ncs(Bit#(1) spi_ncs);
-            ncsin <= {spi_ncs, ncsin[3:1]};
-            ncsBit <= (ncsin==0)?0:1; 
+            ncsin <= {spi_ncs, ncsin[1]};
+            ncsBit <= (ncsin==2'b11)?1:0; 
         endmethod
     endinterface
 
