@@ -34,7 +34,7 @@ module mkIntegrator(IntegratorInterface);
 
     Reg#(Float) accum <- mkReg(0);
 
-    FIFOF#(Float) samples <- mkSizedFIFOF(512);
+    FIFOF#(Float) samples <- mkSizedBRAMFIFOF(512);
 
     //Reg#(Float) term1  <- mkReg(?);
     //Reg#(Float) term2  <- mkReg(?); 

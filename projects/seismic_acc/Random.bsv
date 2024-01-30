@@ -4,7 +4,7 @@ import Vector::*;
 import SimpleFloat::*;
 import FloatingPoint::*;
 import Logarithm::*;
-
+import IntToFloat::*;
 interface RandomIfc#(numeric type bitwidth);
 	//method Action setSeed(Bit#(32) seed);
 	method ActionValue#(Bit#(bitwidth)) get;
@@ -102,13 +102,15 @@ endinterface
 
 module mkLaplaceRandFloat32(LaplaceRandFloat32Ifc);
 	//FIFO#(Tuple2#(Bit#(32), Bit#(32))) inQ <- mkFIFO;
-	FIFO#(Bit#(32)) outQ <- mkFIFO;
+	//FIFO#(Bit#(32)) outQ <- mkFIFO;
 
 	LogarithmIfc#(8) log1 <- mkFastLog32;
 	LogarithmIfc#(8) log2 <- mkFastLog32;
 
-	Reg#(Bit#(1)) log_valid <- mkReg(0);
-	Reg#(Bit#(32)) log_buffer <- mkReg(?);
+	//Reg#(Bit#(1)) log_valid <- mkReg(0);
+	//Reg#(Bit#(32)) log_buffer <- mkReg(?);
+
+	IntToFloatIfc itf <- mkIntToFloat;
 
 	//rule enqLog;
 	//	inQ.deq;
@@ -119,7 +121,8 @@ module mkLaplaceRandFloat32(LaplaceRandFloat32Ifc);
 	rule relayLog;
 	        let partial1 <- log1.get;
 		let partial2 <- log2.get;
-		outQ.enq(zeroExtend(partial1 - partial2)); //should i multiply by the -scale?
+		Bit#(8) diff = partial1 - partial2; //should i multiply by the -scale?
+		itf.put(diff);
 	endrule
 	
 	method Action randVal(Bit#(8) data1, Bit#(8) data2);
@@ -128,7 +131,7 @@ module mkLaplaceRandFloat32(LaplaceRandFloat32Ifc);
 		log2.addSample(data2);
 	endmethod
 	method ActionValue#(Bit#(32)) get;
-		outQ.deq;
-		return outQ.first;
+		let res <- itf.get;
+		return res;
 	endmethod
 endmodule 
