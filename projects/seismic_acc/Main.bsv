@@ -23,6 +23,50 @@ module mkMain(MainIfc);
 	Reg#(Bit#(32)) inputBuffer <- mkReg(0);
 	Reg#(Bit#(2)) inputBufferCnt <- mkReg(0);
 	IntegratorInterface integrator1 <- mkIntegrator;
+        IntegratorInterface integrator2 <- mkIntegrator;
+
+	//Reg#(Bit#(1)) initialize <- mkReg(1);
+
+	RandomIfc#(23) rand1  <- mkRandomLinearCongruential;
+	RandIntToFloatIfc itf <- mkRandIntToFloat;
+	//RandIfc#(32) rand2
+	
+	LaplaceRandFloat32Ifc dpModule <- mkLaplaceRandFloat32;
+
+	FloatTwoOp fadd <- mkFloatAdd;
+
+	FIFO#(Float) outQ <- mkFIFO;
+
+	Reg#(Bit#(1)) samplesRdy <- mkReg(0);
+	Reg#(Bit#(32)) randSample <- mkReg(0);
+
+	rule relaySample;
+		Bit#(23) randint <- rand1.get;
+		itf.randVal(randint);
+	endrule
+
+	rule relayRand;
+		let randFloat <- itf.get;
+		if(samplesRdy == 1'b0) begin 
+			randSample <= randFloat;//[30:23];
+			samplesRdy <= 1;
+		end else begin
+			dpModule.randVal(randSample[30:23], randFloat[30:23]);
+			samplesRdy <= 0;
+		end
+	endrule
+
+	rule relayNoise;
+		let noise <- dpModule.get;
+		let data  <- integrator2.integrateOut;
+
+		fadd.put(unpack(noise), data);
+	endrule
+
+	rule relayResult;
+		let result <- fadd.get;
+		outQ.enq(result);
+	endrule
 
 	Reg#(Bit#(32)) ticks <- mkReg(0);
 	rule cycleCounting;
