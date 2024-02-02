@@ -30,7 +30,7 @@ module mkMain(MainIfc);
 
 	//Reg#(Bit#(1)) initialize <- mkReg(1);
 
-	RandomIfc#(24) rand1  <- mkRandomLinearCongruential;
+	RandomIfc#(23) rand1  <- mkRandomLinearCongruential;
 	RandIntToFloatIfc itf <- mkRandIntToFloat;
 	//RandIfc#(32) rand2
 	
@@ -44,7 +44,7 @@ module mkMain(MainIfc);
 	Reg#(Bit#(32)) randSample <- mkReg(0);
 
 	rule relaySample;
-		Bit#(24) randint <- rand1.get;
+		Bit#(23) randint <- rand1.get;
 		itf.randVal(randint);
 	endrule
 

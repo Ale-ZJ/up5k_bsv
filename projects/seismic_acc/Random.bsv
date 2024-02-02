@@ -6,7 +6,7 @@ import FloatingPoint::*;
 import Logarithm::*;
 import IntToFloat::*;
 interface RandomIfc#(numeric type bitwidth);
-	//method Action setSeed(Bit#(32) seed);
+	method Action setSeed(Bit#(32) seed);
 	method ActionValue#(Bit#(bitwidth)) get;
 endinterface
 
@@ -14,12 +14,19 @@ module mkRandomLinearCongruential(RandomIfc#(bitwidth))
 	provisos(Add#(bitwidth,a__,32));
 	Reg#(Bit#(32)) curVal <- mkReg(7);
 	FIFO#(Bit#(bitwidth)) outQ <- mkFIFO;
-	//FIFOF#(Bit#(32)) seedQ <- mkFIFOF;
+	FIFOF#(Bit#(32)) seedQ <- mkFIFOF;
 	rule genRand;
-                curVal <= (curVal * 22695477 ) + 1; // magic numbers for linear congruential source : https://nuclear.llnl.gov/CNP/rng/rngman/node4.html
-		//end
+		if ( seedQ.notEmpty ) begin
+			seedQ.deq;
+			curVal <= seedQ.first;
+		end else begin 
+			curVal <= (curVal * 22695477 ) + 1; // magic numbers for linear congruential source : https://nuclear.llnl.gov/CNP/rng/rngman/node4.html
+		end
 		outQ.enq(truncate(curVal));
 	endrule
+	method Action setSeed(Bit#(32) seed);
+		seedQ.enq(seed);
+	endmethod
 	method ActionValue#(Bit#(bitwidth)) get;
 		outQ.deq;
 		return outQ.first;
@@ -65,30 +72,34 @@ endmodule
 
 
 interface RandIntToFloatIfc;
-	method Action randVal(Bit#(24) data);
+	method Action randVal(Bit#(23) data);
 	method ActionValue#(Bit#(32)) get;
 endinterface
 
 module mkRandIntToFloat(RandIntToFloatIfc);
 
-	FIFO#(Bit#(32)) inQ  <- mkFIFO;
+	FIFO#(Bit#(23)) inQ  <- mkFIFO;
 	FIFO#(Bit#(32)) outQ <- mkFIFO;
 
-	FloatTwoOp fmult <- mkFloatMult;
+	FloatTwoOp fadd <- mkFloatAdd;
+	//FloatTwoOp fmult <- mkFloatMult;
         
 	rule relayRand;
 		inQ.deq;
-		Bit#(32) randInt = inQ.first;
+		Bit#(23) randInt  = inQ.first;
+	        Bit#(32) adjusted = {9'b001111111, randInt}; 	
+		fadd.put(unpack(adjusted), unpack(32'hbf800000));
 		//fmult.put(unpack(truncate(randInt>>8)), unpack(32'h33800000));
         endrule
 
-	method Action randVal(Bit#(24) data);
-		fmult.put(unpack(zeroExtend(data)), unpack(32'h33800000));
+	method Action randVal(Bit#(23) data);
+		inQ.enq(data);
+		//fmult.put(unpack(zeroExtend(data)), unpack(32'h33800000));
 		//fmult.put(unpack(truncate(data >> 8)), unpack(32'h33800000));
 	endmethod
 
 	method ActionValue#(Bit#(32)) get;
-		let result <- fmult.get;
+		let result <- fadd.get;
 		return pack(result);
 	endmethod
 endmodule
