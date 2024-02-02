@@ -146,3 +146,53 @@ module mkLaplaceRandFloat32(LaplaceRandFloat32Ifc);
 		return res;
 	endmethod
 endmodule 
+
+
+interface ASGIfc#(numeric type bitwidth);
+	method ActionValue#(Bit#(bitwidth)) get;
+endinterface
+
+module mkLSFR32(LSFRIfc#(32));
+
+	Reg#(Bit#(32)) lsfr0 = mkReg(?);
+	Reg#(Bit#(31)) lsfr1 = mkReg(?);
+	Reg#(Bit#(30)) lsfr2 = mkReg(?);
+	//ff0001df
+	//7f000083
+	//3f0000e1
+	Reg#(Bit#(6))  count = mkReg(0);
+	Reg#(Bit#(32)) shift = mkReg(0);
+
+	FIFO#(Bit#(32)) outQ <- mkFIFO;
+	rule step;
+
+		if(count >= 6'h20) begin 
+			outQ.enq(shift);
+			count <= 1;
+		end else begin 
+			count <= count + 32'b1;
+		end 
+		shift <= {shift[30:0], lsfr0[0]^lsfr1[0]};
+		
+		Bit#(1) which = 1'b0;
+		if(lsfr2[0] == 1'b1) begin 
+			Bit#(32) tempReg = 32'hff0001df ^ (lsfr2 >> 1);
+			lsfr2 <= tempReg;
+			which = tempReg[0];
+		end else begin
+			which = lsfr[0];
+		end
+
+		if(which == 1'b1) begin 
+			lsfr1 <= 31'h7f000083 ^ (lsfr1 >> 1);
+		end else begin 
+			lsfr0 <= 30'h3f0000e1 ^ (lsfr0 >> 1);
+		end 
+
+	endrule 
+
+	method ActionValue#(Bit#(32)) get;
+		outQ.deq;
+		return outQ.first;
+	endmethod
+endmodule
