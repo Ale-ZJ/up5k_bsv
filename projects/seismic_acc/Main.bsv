@@ -30,7 +30,8 @@ module mkMain(MainIfc);
 
 	//Reg#(Bit#(1)) initialize <- mkReg(1);
 
-	RandomIfc#(23) rand1  <- mkRandomLinearCongruential;
+	//RandomIfc#(23) rand1  <- mkRandomLinearCongruential;
+	ASGIfc#(23) rand1 <- mkASG32;
 	RandIntToFloatIfc itf <- mkRandIntToFloat;
 	//RandIfc#(32) rand2
 	
