@@ -6,7 +6,9 @@ import BRAMFIFO::*;
 import SimpleFloat::*;
 import FloatingPoint::*;
 
-typedef enum { READY, NEG, SUB, ADDACCUM, CALCAVG, NEGAVG, SUBAVG, CALCTERM1, CALCRES} State deriving(Bits, Eq);
+//typedef enum { READY, NEG, SUB, ADDACCUM, CALCAVG, NEGAVG, SUBAVG, CALCTERM1, CALCRES} State deriving(Bits, Eq);
+
+typedef enum { READY, FULL, STEP1, STEP2, STEP3, STEP4 } State deriving(Bits, Eq);
 
 interface IntegratorInterface;
    method Action  addSample(Float sample);
@@ -19,8 +21,11 @@ module mkIntegrator(IntegratorInterface);
     FIFO#(Float) sampleIn   <- mkFIFO;
     FIFO#(Float) sampleOut  <- mkFIFO;
 
-    FloatTwoOp fmult <- mkFloatMult;
-    FloatTwoOp fadd <- mkFloatAdd;
+    FloatTwoOp fmult  <- mkFloatMult;
+    FloatTwoOp fadd   <- mkFloatAdd;
+
+    // FloatTwoOp fmult2 <- mkFloatMult;
+    // FloatTwoOp fadd2  <- mkFloatAdd;
 
     Reg#(State) state  <- mkReg(READY);
 
@@ -29,97 +34,98 @@ module mkIntegrator(IntegratorInterface);
 
     Reg#(Float) accum <- mkReg(0);
 
-    FIFOF#(Float) samples <- mkSizedFIFOF(512);
+    FIFOF#(Float) samples <- mkSizedBRAMFIFOF(512);
 
-    Reg#(Float) term1  <- mkReg(?);
-    Reg#(Float) term2  <- mkReg(?); 
+    //Reg#(Float) term1  <- mkReg(?);
+    //Reg#(Float) term2  <- mkReg(?); 
 
     rule enqSample(state == READY);
+        $write ("Integrator.bsv: ready state");
         sampleIn.deq;
+        // let newValue = sampleIn.first;
         prev <= curr;
         curr <= sampleIn.first;
 
         // Find the mean of last 512 samples
+
+        if(samples.notFull) begin 
+            fadd.put(accum, sampleIn.first);              // accum + new_value
+            fmult.put(sampleIn.first, unpack(32'h3ca3d70a));  // curr  * delta 
+            state <= STEP1;
+        end else begin 
+            samples.deq; 
+            // let s = samples.first;
+            fadd.put(accum, negate(samples.first)); // remove first element in accum
+            state <= FULL;
+        end            
         samples.enq(sampleIn.first);
-        fadd.put(accum, sampleIn.first);
-
-        if(samples.notFull) begin
-            state <= ADDACCUM;
-        end else begin
-            state <= NEG;
-        end
-
     endrule 
 
-    rule relayNegate(state == NEG);
-        samples.deq;
-        fmult.put(samples.first, unpack(32'hbf800000));
+// magic numbers
+// (1-L) = 0.905 = 0x3f67ae14
+// delta = 0.02  = 0x3ca3d70a
+// 1/512 = 0.001953125 = 0x3b000000
+// delta/512 =         = 0x3823d70a
 
-        state <= SUB;
-    endrule 
+    function Float negate(Float float32);
+        Bit#(32) bits = pack(float32); 
+        bits[31] = ~bits[31];
+        return unpack(bits);
+    endfunction
 
-    rule relaySubtract(state == SUB);
-        let tempNegate <- fmult.get;
-        let tempAccum  <- fadd.get;
-        fadd.put(tempAccum, tempNegate);
+    rule bufferFull(state == FULL);
+        $write("Integrator.bsv: full state");
+        let adjusted_accum <- fadd.get; 
+        fadd.put(accum, curr);                  // accum + new_value
+        fmult.put(curr, unpack(32'h3ca3d70a));  // ci * delta
 
-        state <= ADDACCUM;
+        state <= STEP1;
     endrule
 
-    rule relayAccum(state == ADDACCUM);
-        let tempAccum <- fadd.get;
-        fmult.put(tempAccum, unpack(32'h3b000000));
+    rule step1(state == STEP1);
+        $write("Integrator.bsv: step1 state");
+        let new_accum <- fadd.get;
+        let cur_delta <- fmult.get;
+        curr <= cur_delta;
+        accum <= new_accum;
 
-        state <= CALCAVG;
-    endrule 
+        fmult.put(new_accum, unpack(32'h3823d70a)); // accum * (delta/512) = M*delta
+        state <= STEP2;
+    endrule
 
-    rule relayAvg(state == CALCAVG);
-        let tempAvg <- fmult.get;
-        fmult.put(unpack(32'hbf800000), tempAvg); 
+    rule step2(state == STEP2);
+        $write("Integrator.bsv: step2 state");
 
-        state <= NEGAVG;
-    endrule 
+        let mean <- fmult.get; // mean
 
-    rule relayNegAvg(state == NEGAVG);
-        let tempNegAvg <- fmult.get;
-        fadd.put(curr, tempNegAvg); // ci - M
-        fmult.put(prev, unpack(32'h3f67ae14)); //ci-1*(1-L)
+        fadd.put(curr, negate(mean)); //c_i*delta - M*delta
+        fmult.put(prev, unpack(32'h3f67ae14)); // (ci-1)(1-L)
+        state <= STEP3;
+    endrule
 
-        state <= SUBAVG;
-    endrule 
+    rule step3(state == STEP3);
+        $write("Integrator.bsv: step3 state");
+        let part1 <- fadd.get;
+        let part2 <- fmult.get;
 
-    rule relaySubAvg(state == SUBAVG);
-        let tempSubAvg <- fadd.get;
-        let tempTerm2  <- fmult.get;
-        fmult.put(tempSubAvg, unpack(32'h3ca3d70a)); // multiply by delta 0.02 
-        term2 <= tempTerm2;
+        fadd.put(part1, part2); //sum lhs and rhs
+        state <= STEP4;
+    endrule
 
-        state <= CALCTERM1;
-    endrule 
-
-    rule relayTerm1(state == CALCTERM1);
-        let tempTerm1 <- fmult.get;
-        term1 <= tempTerm1;
-        fadd.put(term1, term2);
-
-        state <= CALCRES;
-    endrule 
-
-    rule relayResult(state == CALCRES);
-        let tempResult <- fadd.get;
-        sampleOut.enq(tempResult);
-
+    rule step4(state == STEP4);
+        $write("Integrator.bsv: step4 state");
+        let result <- fadd.get;
+        sampleOut.enq(result);
         state <= READY;
     endrule
 
-
     method Action addSample(Float sample) if (state == READY);
-        //$write("Integrator.bsv: added sample %d\n", sample);
+        $write("Integrator.bsv: added sample %d\n", sample);
         sampleIn.enq(sample);        
     endmethod
 
     method ActionValue#(Float) integrateOut();
-    	//$write("Integrator.bsv: intgrateOut called\n");
+    	$write("Integrator.bsv: intgrateOut called\n");
         sampleOut.deq;
         let res = sampleOut.first;
         return res;

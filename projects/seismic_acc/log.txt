@@ -213,648 +213,1508 @@ sent -0.018690
 sent -0.018507
 sent -0.018476
 sent -0.018537
-Main.bsv: IN integrator1, ticks:        352
-Main.bsv: IN integrator1, ticks:        387
-Main.bsv: IN integrator1, ticks:        422
-Main.bsv: OUT integrator 2, ticks:        422
-Main.bsv: IN integrator1, ticks:        457
-Main.bsv: OUT integrator 2, ticks:        457
-received -0.000000
-received -0.000000
-Main.bsv: IN integrator1, ticks:        492
-Main.bsv: OUT integrator 2, ticks:        492
-Main.bsv: IN integrator1, ticks:        527
-Main.bsv: OUT integrator 2, ticks:        527
-Main.bsv: IN integrator1, ticks:        562
-Main.bsv: OUT integrator 2, ticks:        562
-Main.bsv: IN integrator1, ticks:        597
-Main.bsv: OUT integrator 2, ticks:        597
-Main.bsv: IN integrator1, ticks:        632
-Main.bsv: OUT integrator 2, ticks:        632
-received -0.015764
-received -0.015741
-received -0.015806
-received -0.015872
-received -0.015924
-Main.bsv: IN integrator1, ticks:        667
-Main.bsv: OUT integrator 2, ticks:        667
-received -0.015976
-Main.bsv: IN integrator1, ticks:        702
-Main.bsv: OUT integrator 2, ticks:        702
-received -0.015976
-Main.bsv: IN integrator1, ticks:        737
-Main.bsv: OUT integrator 2, ticks:        737
-Main.bsv: IN integrator1, ticks:        772
-Main.bsv: OUT integrator 2, ticks:        772
-received -0.015937
-received -0.015793
-Main.bsv: IN integrator1, ticks:        807
-Main.bsv: OUT integrator 2, ticks:        807
-received -0.016002
-Main.bsv: IN integrator1, ticks:        842
-Main.bsv: OUT integrator 2, ticks:        842
-Main.bsv: IN integrator1, ticks:        877
+Main.bsv: IN integrator1, ticks:        381
+Integrator.bsv: added sample 3164009260
+Integrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        412
+Integrator.bsv: added sample 3163994872
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3116422656
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        443
+Integrator.bsv: added sample 3164035754
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124200448
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        443
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000007 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        474
+Integrator.bsv: added sample 3164076637
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124205824
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        474
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        505
+Integrator.bsv: added sample 3164109574
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124243328
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        505
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000027 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        536
+Integrator.bsv: added sample 3164142511
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124275648
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        536
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000027 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        567
+Integrator.bsv: added sample 3164142511
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124303232
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        567
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000027 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        598
+Integrator.bsv: added sample 3164118137
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124309696
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        598
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000027 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        629
+Integrator.bsv: added sample 3164027621
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124281536
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        629
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000027 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        660
+Integrator.bsv: added sample 3164158617
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124197056
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        660
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000027 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        691
+Integrator.bsv: added sample 3164232330
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124215936
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        691
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000027 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        722
+Integrator.bsv: added sample 3163937749
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124326464
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        722
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        753
+Integrator.bsv: added sample 3164060155
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124168256
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        753
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000027 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        784
+Integrator.bsv: added sample 3164142135
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124063488
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        784
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        815
+Integrator.bsv: added sample 3164142511
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124174400
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        815
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        846
+Integrator.bsv: added sample 3164019353
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124209728
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        846
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        877
+Integrator.bsv: added sample 3164011139
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124118592
+Integrator.bsv: intgrateOut called
 Main.bsv: OUT integrator 2, ticks:        877
-Main.bsv: IN integrator1, ticks:        912
-Main.bsv: OUT integrator 2, ticks:        912
-received -0.016119
-received -0.015650
-received -0.015845
-Main.bsv: IN integrator1, ticks:        947
-Main.bsv: OUT integrator 2, ticks:        947
-Main.bsv: IN integrator1, ticks:        982
-Main.bsv: OUT integrator 2, ticks:        982
-Main.bsv: IN integrator1, ticks:       1017
-Main.bsv: OUT integrator 2, ticks:       1017
-Main.bsv: IN integrator1, ticks:       1052
-Main.bsv: OUT integrator 2, ticks:       1052
-received -0.015976
-received -0.015976
-received -0.015780
-received -0.015767
-Main.bsv: IN integrator1, ticks:       1087
-Main.bsv: OUT integrator 2, ticks:       1087
-Main.bsv: IN integrator1, ticks:       1122
-Main.bsv: OUT integrator 2, ticks:       1122
-Main.bsv: IN integrator1, ticks:       1157
-Main.bsv: OUT integrator 2, ticks:       1157
-received -0.015728
-received -0.015872
-received -0.015937
-Main.bsv: IN integrator1, ticks:       1192
-Main.bsv: OUT integrator 2, ticks:       1192
-received -0.015925
-Main.bsv: IN integrator1, ticks:       1227
-Main.bsv: OUT integrator 2, ticks:       1227
-Main.bsv: IN integrator1, ticks:       1262
-Main.bsv: OUT integrator 2, ticks:       1262
-received -0.015676
-received -0.015846
-Main.bsv: IN integrator1, ticks:       1297
-Main.bsv: OUT integrator 2, ticks:       1297
-received -0.015806
-Main.bsv: IN integrator1, ticks:       1332
-Main.bsv: OUT integrator 2, ticks:       1332
-received -0.015924
-Main.bsv: IN integrator1, ticks:       1367
-Main.bsv: OUT integrator 2, ticks:       1367
-received -0.016146
-Main.bsv: IN integrator1, ticks:       1402
-Main.bsv: OUT integrator 2, ticks:       1402
-Main.bsv: IN integrator1, ticks:       1437
-Main.bsv: OUT integrator 2, ticks:       1437
-received -0.016120
-received -0.016276
-Main.bsv: IN integrator1, ticks:       1472
-Main.bsv: OUT integrator 2, ticks:       1472
-received -0.016159
-Main.bsv: IN integrator1, ticks:       1507
-Main.bsv: OUT integrator 2, ticks:       1507
-received -0.016042
-Main.bsv: IN integrator1, ticks:       1542
-Main.bsv: OUT integrator 2, ticks:       1542
-Main.bsv: IN integrator1, ticks:       1577
-Main.bsv: OUT integrator 2, ticks:       1577
-received -0.015989
-received -0.015950
-Main.bsv: IN integrator1, ticks:       1612
-Main.bsv: OUT integrator 2, ticks:       1612
-received -0.015923
-Main.bsv: IN integrator1, ticks:       1647
-Main.bsv: OUT integrator 2, ticks:       1647
-Main.bsv: IN integrator1, ticks:       1682
-Main.bsv: OUT integrator 2, ticks:       1682
-Main.bsv: IN integrator1, ticks:       1717
-Main.bsv: OUT integrator 2, ticks:       1717
-Main.bsv: IN integrator1, ticks:       1752
-Main.bsv: OUT integrator 2, ticks:       1752
-received -0.015976
-received -0.015806
-received -0.015976
-received -0.015624
-Main.bsv: IN integrator1, ticks:       1787
-Main.bsv: OUT integrator 2, ticks:       1787
-received -0.015911
-Main.bsv: IN integrator1, ticks:       1822
-Main.bsv: OUT integrator 2, ticks:       1822
-received -0.015728
-Main.bsv: IN integrator1, ticks:       1857
-Main.bsv: OUT integrator 2, ticks:       1857
-received -0.015858
-Main.bsv: IN integrator1, ticks:       1892
-Main.bsv: OUT integrator 2, ticks:       1892
-received -0.016016
-Main.bsv: IN integrator1, ticks:       1927
-Main.bsv: OUT integrator 2, ticks:       1927
-received -0.015820
-Main.bsv: IN integrator1, ticks:       1962
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        908
+Integrator.bsv: added sample 3163986819
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124029632
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        908
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        939
+Integrator.bsv: added sample 3164076637
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123996992
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        939
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:        970
+Integrator.bsv: added sample 3164117815
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124028096
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:        970
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1001
+Integrator.bsv: added sample 3164109923
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124093952
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1001
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1032
+Integrator.bsv: added sample 3163953855
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124100224
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1032
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1063
+Integrator.bsv: added sample 3164060531
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123983488
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1063
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1094
+Integrator.bsv: added sample 3164035835
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123948864
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1094
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1125
+Integrator.bsv: added sample 3164109547
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123982336
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1125
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1156
+Integrator.bsv: added sample 3164248812
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124002688
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1156
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1187
+Integrator.bsv: added sample 3164232706
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124121856
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1187
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1218
+Integrator.bsv: added sample 3164330738
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124179712
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1218
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1249
+Integrator.bsv: added sample 3164257026
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124220352
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1249
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1280
+Integrator.bsv: added sample 3164183636
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124217344
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1280
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1311
+Integrator.bsv: added sample 3164150725
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124115200
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1311
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1342
+Integrator.bsv: added sample 3164126029
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3124038912
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1342
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1373
+Integrator.bsv: added sample 3164109225
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123991552
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1373
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000026 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1404
+Integrator.bsv: added sample 3164142511
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123954048
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1404
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000025 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1435
+Integrator.bsv: added sample 3164035835
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123953088
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1435
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000025 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1466
+Integrator.bsv: added sample 3164142135
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123891520
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1466
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000025 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1497
+Integrator.bsv: added sample 3163921320
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123885312
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1497
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000025 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1528
+Integrator.bsv: added sample 3164101333
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123793408
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1528
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000025 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1559
+Integrator.bsv: added sample 3163986819
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123768128
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1559
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000025 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1590
+Integrator.bsv: added sample 3164068423
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123786752
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1590
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000025 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1621
+Integrator.bsv: added sample 3164167207
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123760384
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1621
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000025 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1652
+Integrator.bsv: added sample 3164044049
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123858304
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1652
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000025 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1683
+Integrator.bsv: added sample 3164002925
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123824320
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1683
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000025 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1714
+Integrator.bsv: added sample 3164125653
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123714304
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1714
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000025 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1745
+Integrator.bsv: added sample 3163962123
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123756352
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1745
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000025 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1776
+Integrator.bsv: added sample 3163929535
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123710592
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1776
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1807
+Integrator.bsv: added sample 3163986819
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123582720
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1807
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1838
+Integrator.bsv: added sample 3164175046
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123588032
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1838
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1869
+Integrator.bsv: added sample 3164273508
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123729216
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1869
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1900
+Integrator.bsv: added sample 3164027621
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123888576
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1900
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1931
+Integrator.bsv: added sample 3164134243
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123775744
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1931
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000025 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1962
+Integrator.bsv: added sample 3164134243
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123689024
+Integrator.bsv: intgrateOut called
 Main.bsv: OUT integrator 2, ticks:       1962
-received -0.015754
-Main.bsv: IN integrator1, ticks:       1997
-Main.bsv: OUT integrator 2, ticks:       1997
-received -0.015949
-Main.bsv: IN integrator1, ticks:       2032
-Main.bsv: OUT integrator 2, ticks:       2032
-received -0.015689
-Main.bsv: IN integrator1, ticks:       2067
-Main.bsv: OUT integrator 2, ticks:       2067
-received -0.015637
-Main.bsv: IN integrator1, ticks:       2102
-Main.bsv: OUT integrator 2, ticks:       2102
-received -0.015728
-Main.bsv: IN integrator1, ticks:       2137
-Main.bsv: OUT integrator 2, ticks:       2137
-received -0.016028
-Main.bsv: IN integrator1, ticks:       2172
-Main.bsv: OUT integrator 2, ticks:       2172
-received -0.016185
-Main.bsv: IN integrator1, ticks:       2207
-Main.bsv: OUT integrator 2, ticks:       2207
-received -0.015793
-Main.bsv: IN integrator1, ticks:       2242
-Main.bsv: OUT integrator 2, ticks:       2242
-received -0.015963
-Main.bsv: IN integrator1, ticks:       2277
-Main.bsv: OUT integrator 2, ticks:       2277
-received -0.015963
-Main.bsv: IN integrator1, ticks:       2312
-Main.bsv: OUT integrator 2, ticks:       2312
-received -0.016133
-Main.bsv: IN integrator1, ticks:       2347
-Main.bsv: OUT integrator 2, ticks:       2347
-received -0.015741
-Main.bsv: IN integrator1, ticks:       2382
-Main.bsv: OUT integrator 2, ticks:       2382
-received -0.015989
-Main.bsv: IN integrator1, ticks:       2417
-Main.bsv: OUT integrator 2, ticks:       2417
-received -0.016068
-Main.bsv: IN integrator1, ticks:       2452
-Main.bsv: OUT integrator 2, ticks:       2452
-received -0.016055
-Main.bsv: IN integrator1, ticks:       2487
-Main.bsv: OUT integrator 2, ticks:       2487
-received -0.015885
-Main.bsv: IN integrator1, ticks:       2522
-Main.bsv: OUT integrator 2, ticks:       2522
-received -0.015963
-Main.bsv: IN integrator1, ticks:       2557
-Main.bsv: OUT integrator 2, ticks:       2557
-received -0.015924
-Main.bsv: IN integrator1, ticks:       2592
-Main.bsv: OUT integrator 2, ticks:       2592
-received -0.015728
-Main.bsv: IN integrator1, ticks:       2627
-Main.bsv: OUT integrator 2, ticks:       2627
-received -0.016015
-Main.bsv: IN integrator1, ticks:       2662
-Main.bsv: OUT integrator 2, ticks:       2662
-Main.bsv: IN integrator1, ticks:       2697
-Main.bsv: OUT integrator 2, ticks:       2697
-Main.bsv: IN integrator1, ticks:       2732
-received -0.015781
-received -0.015832
-Main.bsv: OUT integrator 2, ticks:       2732
-received -0.015977
-Main.bsv: IN integrator1, ticks:       2767
-Main.bsv: OUT integrator 2, ticks:       2767
-received -0.016158
-Main.bsv: IN integrator1, ticks:       2802
-Main.bsv: OUT integrator 2, ticks:       2802
-received -0.015898
-Main.bsv: IN integrator1, ticks:       2837
-Main.bsv: OUT integrator 2, ticks:       2837
-received -0.015976
-Main.bsv: IN integrator1, ticks:       2872
-Main.bsv: OUT integrator 2, ticks:       2872
-received -0.016041
-Main.bsv: IN integrator1, ticks:       2907
-Main.bsv: OUT integrator 2, ticks:       2907
-received -0.015924
-Main.bsv: IN integrator1, ticks:       2942
-Main.bsv: OUT integrator 2, ticks:       2942
-received -0.015963
-Main.bsv: IN integrator1, ticks:       2977
-Main.bsv: OUT integrator 2, ticks:       2977
-received -0.015989
-Main.bsv: IN integrator1, ticks:       3012
-Main.bsv: OUT integrator 2, ticks:       3012
-received -0.016119
-Main.bsv: IN integrator1, ticks:       3047
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000025 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       1993
+Integrator.bsv: added sample 3164240544
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123738432
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       1993
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2024
+Integrator.bsv: added sample 3163994657
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123793728
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2024
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2055
+Integrator.bsv: added sample 3164150725
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123685632
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2055
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2086
+Integrator.bsv: added sample 3164199742
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123630592
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2086
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2117
+Integrator.bsv: added sample 3164191528
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123739648
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2117
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2148
+Integrator.bsv: added sample 3164084851
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123750400
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2148
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2179
+Integrator.bsv: added sample 3164134243
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123664832
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2179
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2210
+Integrator.bsv: added sample 3164109547
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123622144
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2210
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2241
+Integrator.bsv: added sample 3163986443
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123622272
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2241
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2272
+Integrator.bsv: added sample 3164166831
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123516992
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2272
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2303
+Integrator.bsv: added sample 3164019729
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123548672
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2303
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2334
+Integrator.bsv: added sample 3164051941
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123546560
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2334
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2365
+Integrator.bsv: added sample 3164142833
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123469504
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2365
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2396
+Integrator.bsv: added sample 3164256650
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123533632
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2396
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2427
+Integrator.bsv: added sample 3164093119
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123646464
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2427
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2458
+Integrator.bsv: added sample 3164142511
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123595456
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2458
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2489
+Integrator.bsv: added sample 3164183313
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123519744
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2489
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000024 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2520
+Integrator.bsv: added sample 3164109547
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123561920
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2520
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2551
+Integrator.bsv: added sample 3164134243
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123525824
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2551
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2582
+Integrator.bsv: added sample 3164150027
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123486400
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2582
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2613
+Integrator.bsv: added sample 3164232330
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123498368
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2613
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2644
+Integrator.bsv: added sample 3164166831
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123547456
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2644
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2675
+Integrator.bsv: added sample 3164265240
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123540608
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2675
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2706
+Integrator.bsv: added sample 3164240544
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123553088
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2706
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2737
+Integrator.bsv: added sample 3164216224
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123581504
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2737
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2768
+Integrator.bsv: added sample 3164240920
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123539008
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2768
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2799
+Integrator.bsv: added sample 3164224814
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123528192
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2799
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2830
+Integrator.bsv: added sample 3164068745
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123519616
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2830
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2861
+Integrator.bsv: added sample 3164019031
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123397824
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2861
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2892
+Integrator.bsv: added sample 3164084851
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123263232
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2892
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2923
+Integrator.bsv: added sample 3164257026
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123264192
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2923
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2954
+Integrator.bsv: added sample 3164027621
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123399872
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2954
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000022 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       2985
+Integrator.bsv: added sample 3164183636
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123340352
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       2985
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3016
+Integrator.bsv: added sample 3164257026
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123294592
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3016
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3047
+Integrator.bsv: added sample 3164330738
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123419456
+Integrator.bsv: intgrateOut called
 Main.bsv: OUT integrator 2, ticks:       3047
-received -0.016015
-Main.bsv: IN integrator1, ticks:       3082
-Main.bsv: OUT integrator 2, ticks:       3082
-received -0.016172
-Main.bsv: IN integrator1, ticks:       3117
-Main.bsv: OUT integrator 2, ticks:       3117
-received -0.016133
-Main.bsv: IN integrator1, ticks:       3152
-Main.bsv: OUT integrator 2, ticks:       3152
-received -0.016094
-Main.bsv: IN integrator1, ticks:       3187
-Main.bsv: OUT integrator 2, ticks:       3187
-received -0.016133
-Main.bsv: IN integrator1, ticks:       3222
-Main.bsv: OUT integrator 2, ticks:       3222
-received -0.016107
-Main.bsv: IN integrator1, ticks:       3257
-Main.bsv: OUT integrator 2, ticks:       3257
-received -0.015859
-Main.bsv: IN integrator1, ticks:       3292
-Main.bsv: OUT integrator 2, ticks:       3292
-received -0.015780
-Main.bsv: IN integrator1, ticks:       3327
-Main.bsv: OUT integrator 2, ticks:       3327
-received -0.015885
-Main.bsv: IN integrator1, ticks:       3362
-Main.bsv: OUT integrator 2, ticks:       3362
-received -0.016159
-Main.bsv: IN integrator1, ticks:       3397
-Main.bsv: OUT integrator 2, ticks:       3397
-received -0.015793
-Main.bsv: IN integrator1, ticks:       3432
-Main.bsv: OUT integrator 2, ticks:       3432
-received -0.016042
-Main.bsv: IN integrator1, ticks:       3467
-Main.bsv: OUT integrator 2, ticks:       3467
-received -0.016159
-Main.bsv: IN integrator1, ticks:       3502
-Main.bsv: OUT integrator 2, ticks:       3502
-received -0.016276
-Main.bsv: IN integrator1, ticks:       3537
-Main.bsv: OUT integrator 2, ticks:       3537
-received -0.016094
-Main.bsv: IN integrator1, ticks:       3572
-Main.bsv: OUT integrator 2, ticks:       3572
-received -0.015872
-Main.bsv: IN integrator1, ticks:       3607
-Main.bsv: OUT integrator 2, ticks:       3607
-received -0.015650
-Main.bsv: IN integrator1, ticks:       3642
-Main.bsv: OUT integrator 2, ticks:       3642
-received -0.016081
-Main.bsv: IN integrator1, ticks:       3677
-Main.bsv: OUT integrator 2, ticks:       3677
-received -0.016016
-Main.bsv: IN integrator1, ticks:       3712
-Main.bsv: OUT integrator 2, ticks:       3712
-received -0.015963
-Main.bsv: IN integrator1, ticks:       3747
-Main.bsv: OUT integrator 2, ticks:       3747
-received -0.015989
-Main.bsv: IN integrator1, ticks:       3782
-Main.bsv: OUT integrator 2, ticks:       3782
-received -0.016015
-Main.bsv: IN integrator1, ticks:       3817
-Main.bsv: OUT integrator 2, ticks:       3817
-received -0.015884
-Main.bsv: IN integrator1, ticks:       3852
-Main.bsv: OUT integrator 2, ticks:       3852
-received -0.016081
-Main.bsv: IN integrator1, ticks:       3887
-Main.bsv: OUT integrator 2, ticks:       3887
-received -0.015793
-Main.bsv: IN integrator1, ticks:       3922
-Main.bsv: OUT integrator 2, ticks:       3922
-received -0.015820
-Main.bsv: IN integrator1, ticks:       3957
-Main.bsv: OUT integrator 2, ticks:       3957
-received -0.016016
-Main.bsv: IN integrator1, ticks:       3992
-Main.bsv: OUT integrator 2, ticks:       3992
-received -0.015885
-Main.bsv: IN integrator1, ticks:       4027
-Main.bsv: OUT integrator 2, ticks:       4027
-received -0.015885
-Main.bsv: IN integrator1, ticks:       4062
-Main.bsv: OUT integrator 2, ticks:       4062
-received -0.015963
-Main.bsv: IN integrator1, ticks:       4097
-Main.bsv: OUT integrator 2, ticks:       4097
-received -0.015989
-Main.bsv: IN integrator1, ticks:       4132
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000022 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3078
+Integrator.bsv: added sample 3164216224
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123496320
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3078
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3109
+Integrator.bsv: added sample 3164076637
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123452992
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3109
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3140
+Integrator.bsv: added sample 3163937427
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123284992
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3140
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000023 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3171
+Integrator.bsv: added sample 3164208009
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123102784
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3171
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000022 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3202
+Integrator.bsv: added sample 3164167207
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123182656
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3202
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000022 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3233
+Integrator.bsv: added sample 3164134243
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123300800
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3233
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000022 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3264
+Integrator.bsv: added sample 3164150725
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123243456
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3264
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000022 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3295
+Integrator.bsv: added sample 3164166831
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123222400
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3295
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000022 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3326
+Integrator.bsv: added sample 3164084529
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123229568
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3326
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000022 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3357
+Integrator.bsv: added sample 3164208009
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123173952
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3357
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000022 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3388
+Integrator.bsv: added sample 3164027621
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123192704
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3388
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000022 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3419
+Integrator.bsv: added sample 3164044425
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123136256
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3419
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000022 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3450
+Integrator.bsv: added sample 3164167207
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123030016
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3450
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000022 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3481
+Integrator.bsv: added sample 3164084851
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123105984
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3481
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000022 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3512
+Integrator.bsv: added sample 3164084851
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123111936
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3512
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000022 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3543
+Integrator.bsv: added sample 3164134243
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123051776
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3543
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000022 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3574
+Integrator.bsv: added sample 3164150350
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123070848
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3574
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000022 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3605
+Integrator.bsv: added sample 3164142135
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123097216
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3605
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3636
+Integrator.bsv: added sample 3164150350
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123088768
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3636
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3667
+Integrator.bsv: added sample 3164232706
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123076800
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3667
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3698
+Integrator.bsv: added sample 3164117439
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123121600
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3698
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3729
+Integrator.bsv: added sample 3164224438
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123083008
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3729
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3760
+Integrator.bsv: added sample 3164085227
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123072064
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3760
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3791
+Integrator.bsv: added sample 3163994657
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123032384
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3791
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3822
+Integrator.bsv: added sample 3164126029
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122881600
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3822
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3853
+Integrator.bsv: added sample 3164232330
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122900800
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3853
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3884
+Integrator.bsv: added sample 3164142135
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123032192
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3884
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3915
+Integrator.bsv: added sample 3163995033
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3123023488
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3915
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3946
+Integrator.bsv: added sample 3164109923
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122864768
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3946
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       3977
+Integrator.bsv: added sample 3164093119
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122840640
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       3977
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4008
+Integrator.bsv: added sample 3164109547
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122883968
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4008
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4039
+Integrator.bsv: added sample 3164084851
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122872064
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4039
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4070
+Integrator.bsv: added sample 3164002925
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122853440
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4070
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4101
+received -0.000021 
+Integrator.bsv: added sample 3164093119
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122774400
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4101
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4132
+Integrator.bsv: added sample 3164151101
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122772160
+Integrator.bsv: intgrateOut called
 Main.bsv: OUT integrator 2, ticks:       4132
-received -0.015976
-Main.bsv: IN integrator1, ticks:       4167
-Main.bsv: OUT integrator 2, ticks:       4167
-received -0.015989
-Main.bsv: IN integrator1, ticks:       4202
-Main.bsv: OUT integrator 2, ticks:       4202
-received -0.016120
-Main.bsv: IN integrator1, ticks:       4237
-Main.bsv: OUT integrator 2, ticks:       4237
-received -0.015936
-Main.bsv: IN integrator1, ticks:       4272
-Main.bsv: OUT integrator 2, ticks:       4272
-received -0.016107
-Main.bsv: IN integrator1, ticks:       4307
-Main.bsv: OUT integrator 2, ticks:       4307
-received -0.015885
-Main.bsv: IN integrator1, ticks:       4342
-Main.bsv: OUT integrator 2, ticks:       4342
-received -0.015741
-Main.bsv: IN integrator1, ticks:       4377
-Main.bsv: OUT integrator 2, ticks:       4377
-received -0.015950
-Main.bsv: IN integrator1, ticks:       4412
-Main.bsv: OUT integrator 2, ticks:       4412
-received -0.016119
-Main.bsv: IN integrator1, ticks:       4447
-Main.bsv: OUT integrator 2, ticks:       4447
-received -0.015976
-Main.bsv: IN integrator1, ticks:       4482
-Main.bsv: OUT integrator 2, ticks:       4482
-received -0.015742
-Main.bsv: IN integrator1, ticks:       4517
-Main.bsv: OUT integrator 2, ticks:       4517
-received -0.015925
-Main.bsv: IN integrator1, ticks:       4552
-Main.bsv: OUT integrator 2, ticks:       4552
-received -0.015898
-Main.bsv: IN integrator1, ticks:       4587
-Main.bsv: OUT integrator 2, ticks:       4587
-received -0.015924
-Main.bsv: IN integrator1, ticks:       4622
-Main.bsv: OUT integrator 2, ticks:       4622
-received -0.015885
-Main.bsv: IN integrator1, ticks:       4657
-Main.bsv: OUT integrator 2, ticks:       4657
-received -0.015754
-Main.bsv: IN integrator1, ticks:       4692
-Main.bsv: OUT integrator 2, ticks:       4692
-received -0.015898
-Main.bsv: IN integrator1, ticks:       4727
-Main.bsv: OUT integrator 2, ticks:       4727
-received -0.015990
-Main.bsv: IN integrator1, ticks:       4762
-Main.bsv: OUT integrator 2, ticks:       4762
-received -0.016041
-Main.bsv: IN integrator1, ticks:       4797
-Main.bsv: OUT integrator 2, ticks:       4797
-received -0.015937
-Main.bsv: IN integrator1, ticks:       4832
-Main.bsv: OUT integrator 2, ticks:       4832
-received -0.016133
-Main.bsv: IN integrator1, ticks:       4867
-Main.bsv: OUT integrator 2, ticks:       4867
-received -0.016081
-Main.bsv: IN integrator1, ticks:       4902
-Main.bsv: OUT integrator 2, ticks:       4902
-received -0.015976
-Main.bsv: IN integrator1, ticks:       4937
-Main.bsv: OUT integrator 2, ticks:       4937
-received -0.015976
-Main.bsv: IN integrator1, ticks:       4972
-Main.bsv: OUT integrator 2, ticks:       4972
-received -0.016250
-Main.bsv: IN integrator1, ticks:       5007
-Main.bsv: OUT integrator 2, ticks:       5007
-received -0.015989
-Main.bsv: IN integrator1, ticks:       5042
-Main.bsv: OUT integrator 2, ticks:       5042
-received -0.016186
-Main.bsv: IN integrator1, ticks:       5077
-Main.bsv: OUT integrator 2, ticks:       5077
-received -0.015911
-Main.bsv: IN integrator1, ticks:       5112
-Main.bsv: OUT integrator 2, ticks:       5112
-received -0.016095
-Main.bsv: IN integrator1, ticks:       5147
-Main.bsv: OUT integrator 2, ticks:       5147
-received -0.016133
-Main.bsv: IN integrator1, ticks:       5182
-Main.bsv: OUT integrator 2, ticks:       5182
-received -0.016080
-Main.bsv: IN integrator1, ticks:       5217
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4163
+Integrator.bsv: added sample 3164183313
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122849024
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4163
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4194
+Integrator.bsv: added sample 3164117815
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122890816
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4194
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4225
+Integrator.bsv: added sample 3164240544
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122854976
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4225
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4256
+Integrator.bsv: added sample 3164208009
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122882816
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4256
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4287
+Integrator.bsv: added sample 3164142135
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122920448
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4287
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4318
+Integrator.bsv: added sample 3164142135
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122847040
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4318
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000021 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4349
+Integrator.bsv: added sample 3164314310
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122796352
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4349
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4380
+Integrator.bsv: added sample 3164150350
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122893696
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4380
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4411
+Integrator.bsv: added sample 3164273830
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122876032
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4411
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4442
+Integrator.bsv: added sample 3164101333
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122847424
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4442
+received -0.000020 
+received -0.000020 
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4473
+Integrator.bsv: added sample 3164216599
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122796032
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4473
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4504
+Integrator.bsv: added sample 3164240544
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122757248
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4504
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4535
+Integrator.bsv: added sample 3164207634
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122826752
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4535
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4566
+Integrator.bsv: added sample 3164199742
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122806912
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4566
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4597
+Integrator.bsv: added sample 3164077013
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122770240
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4597
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4628
+Integrator.bsv: added sample 3164191528
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122674688
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4628
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4659
+Integrator.bsv: added sample 3164043727
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122664192
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4659
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4690
+Integrator.bsv: added sample 3164166831
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122623616
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4690
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4721
+Integrator.bsv: added sample 3164060531
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122604160
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4721
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4752
+Integrator.bsv: added sample 3164174723
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122595072
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4752
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4783
+Integrator.bsv: added sample 3164199742
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122593984
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4783
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4814
+Integrator.bsv: added sample 3164133921
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122663552
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4814
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4845
+Integrator.bsv: added sample 3164183313
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122623616
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4845
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4876
+Integrator.bsv: added sample 3164109547
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122604480
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4876
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4907
+Integrator.bsv: added sample 3164355112
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122573248
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4907
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4938
+Integrator.bsv: added sample 3164166831
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122674880
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4938
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       4969
+Integrator.bsv: added sample 3164175421
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122684160
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       4969
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5000
+Integrator.bsv: added sample 3164175421
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122568064
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5000
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000020 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5031
+Integrator.bsv: added sample 3164044049
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122560448
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5031
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5062
+Integrator.bsv: added sample 3164118137
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122464064
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5062
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5093
+Integrator.bsv: added sample 3164077013
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122422784
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5093
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5124
+Integrator.bsv: added sample 3164134243
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122426752
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5124
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5155
+Integrator.bsv: added sample 3164183313
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122427136
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5155
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5186
+Integrator.bsv: added sample 3164231954
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122479232
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5186
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5217
+Integrator.bsv: added sample 3164191528
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122526208
+Integrator.bsv: intgrateOut called
 Main.bsv: OUT integrator 2, ticks:       5217
-received -0.016068
-Main.bsv: IN integrator1, ticks:       5252
-Main.bsv: OUT integrator 2, ticks:       5252
-received -0.015872
-Main.bsv: IN integrator1, ticks:       5287
-Main.bsv: OUT integrator 2, ticks:       5287
-received -0.016055
-Main.bsv: IN integrator1, ticks:       5322
-Main.bsv: OUT integrator 2, ticks:       5322
-received -0.015819
-Main.bsv: IN integrator1, ticks:       5357
-Main.bsv: OUT integrator 2, ticks:       5357
-received -0.016015
-Main.bsv: IN integrator1, ticks:       5392
-Main.bsv: OUT integrator 2, ticks:       5392
-received -0.015846
-Main.bsv: IN integrator1, ticks:       5427
-Main.bsv: OUT integrator 2, ticks:       5427
-received -0.016028
-Main.bsv: IN integrator1, ticks:       5462
-Main.bsv: OUT integrator 2, ticks:       5462
-received -0.016068
-Main.bsv: IN integrator1, ticks:       5497
-Main.bsv: OUT integrator 2, ticks:       5497
-received -0.015963
-Main.bsv: IN integrator1, ticks:       5532
-Main.bsv: OUT integrator 2, ticks:       5532
-received -0.016041
-Main.bsv: IN integrator1, ticks:       5567
-Main.bsv: OUT integrator 2, ticks:       5567
-received -0.015924
-Main.bsv: IN integrator1, ticks:       5602
-Main.bsv: OUT integrator 2, ticks:       5602
-received -0.016315
-Main.bsv: IN integrator1, ticks:       5637
-Main.bsv: OUT integrator 2, ticks:       5637
-received -0.016015
-Main.bsv: IN integrator1, ticks:       5672
-Main.bsv: OUT integrator 2, ticks:       5672
-received -0.016029
-Main.bsv: IN integrator1, ticks:       5707
-Main.bsv: OUT integrator 2, ticks:       5707
-received -0.016029
-Main.bsv: IN integrator1, ticks:       5742
-Main.bsv: OUT integrator 2, ticks:       5742
-received -0.015820
-Main.bsv: IN integrator1, ticks:       5777
-Main.bsv: OUT integrator 2, ticks:       5777
-received -0.015937
-Main.bsv: IN integrator1, ticks:       5812
-Main.bsv: OUT integrator 2, ticks:       5812
-received -0.015872
-Main.bsv: IN integrator1, ticks:       5847
-Main.bsv: OUT integrator 2, ticks:       5847
-received -0.015963
-Main.bsv: IN integrator1, ticks:       5882
-Main.bsv: OUT integrator 2, ticks:       5882
-received -0.016041
-Main.bsv: IN integrator1, ticks:       5917
-Main.bsv: OUT integrator 2, ticks:       5917
-received -0.016119
-Main.bsv: IN integrator1, ticks:       5952
-Main.bsv: OUT integrator 2, ticks:       5952
-received -0.016055
-Main.bsv: IN integrator1, ticks:       5987
-Main.bsv: OUT integrator 2, ticks:       5987
-received -0.016015
-Main.bsv: IN integrator1, ticks:       6022
-Main.bsv: OUT integrator 2, ticks:       6022
-received -0.016133
-Main.bsv: IN integrator1, ticks:       6057
-Main.bsv: OUT integrator 2, ticks:       6057
-received -0.015989
-Main.bsv: IN integrator1, ticks:       6092
-Main.bsv: OUT integrator 2, ticks:       6092
-received -0.015989
-Main.bsv: IN integrator1, ticks:       6127
-Main.bsv: OUT integrator 2, ticks:       6127
-received -0.015886
-Main.bsv: IN integrator1, ticks:       6162
-Main.bsv: OUT integrator 2, ticks:       6162
-received -0.015820
-Main.bsv: IN integrator1, ticks:       6197
-Main.bsv: OUT integrator 2, ticks:       6197
-received -0.016158
-Main.bsv: IN integrator1, ticks:       6232
-Main.bsv: OUT integrator 2, ticks:       6232
-received -0.016119
-Main.bsv: IN integrator1, ticks:       6267
-Main.bsv: OUT integrator 2, ticks:       6267
-received -0.015846
-Main.bsv: IN integrator1, ticks:       6302
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5248
+Integrator.bsv: added sample 3164166831
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122515904
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5248
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5279
+Integrator.bsv: added sample 3164240920
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122464064
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5279
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5310
+Integrator.bsv: added sample 3164150350
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122484544
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5310
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5341
+Integrator.bsv: added sample 3164150350
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122456960
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5341
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5372
+Integrator.bsv: added sample 3164085603
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122392000
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5372
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5403
+Integrator.bsv: added sample 3164044049
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122338048
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5403
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5434
+Integrator.bsv: added sample 3164256650
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122261632
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5434
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000018 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5465
+Integrator.bsv: added sample 3164232330
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122360896
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5465
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000018 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5496
+Integrator.bsv: added sample 3164060531
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122455808
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5496
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000018 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5527
+Integrator.bsv: added sample 3164117815
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122319296
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5527
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000019 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5558
+Integrator.bsv: added sample 3164248812
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122243968
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5558
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5589
+Integrator.bsv: added sample 3164265240
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122348288
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5589
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5620
+Integrator.bsv: added sample 3164117815
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122422016
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5620
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5651
+Integrator.bsv: added sample 3164117439
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122324800
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5651
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5682
+Integrator.bsv: added sample 3164068745
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122226624
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5682
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5713
+Integrator.bsv: added sample 3164183313
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122182784
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5713
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5744
+Integrator.bsv: added sample 3164166456
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122215296
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5744
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5775
+Integrator.bsv: added sample 3164019729
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122258496
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5775
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 statereceived -0.000018 
+received -0.000018 
+received -0.000018 
+received -0.000018 
+received -0.000018 
+received -0.000018 
+received -0.000018 
+received -0.000018 
+Integrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5806
+Integrator.bsv: added sample 3164126405
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122142336
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5806
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000018 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5837
+Integrator.bsv: added sample 3164117815
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122113152
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5837
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000018 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5868
+Integrator.bsv: added sample 3164142135
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122156800
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5868
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000018 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5899
+Integrator.bsv: added sample 3164224116
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122155008
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5899
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000018 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5930
+Integrator.bsv: added sample 3164183313
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122208896
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5930
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000018 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5961
+Integrator.bsv: added sample 3164175046
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122217728
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5961
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000018 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       5992
+Integrator.bsv: added sample 3164355112
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122176256
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       5992
+Integrator.bsv: ready stateIntegrator.bsv: ready statereceived -0.000018 
+Integrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6023
+Integrator.bsv: added sample 3164003247
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122273920
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6023
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6054
+Integrator.bsv: added sample 3163970337
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122140672
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6054
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6085
+Integrator.bsv: added sample 3164142511
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121903424
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6085
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:    received -0.000018 
+received -0.000018 
+received -0.000018 
+   6116
+Integrator.bsv: added sample 3164109225
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121982080
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6116
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6147
+Integrator.bsv: added sample 3164248812
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122047936
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6147
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6178
+Integrator.bsv: added sample 3164134243
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122105344
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6178
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6209
+Integrator.bsv: added sample 3164126029
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122100288
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6209
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6240
+Integrator.bsv: added sample 3164085227
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122016320
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6240
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6271
+Integrator.bsv: added sample 3164035835
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121972928
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6271
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6302
+Integrator.bsv: added sample 3164166831
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121905152
+Integrator.bsv: intgrateOut called
 Main.bsv: OUT integrator 2, ticks:       6302
-received -0.015937
-Main.bsv: IN integrator1, ticks:       6337
-Main.bsv: OUT integrator 2, ticks:       6337
-received -0.016146
-Main.bsv: IN integrator1, ticks:       6372
-Main.bsv: OUT integrator 2, ticks:       6372
-received -0.016172
-Main.bsv: IN integrator1, ticks:       6407
-Main.bsv: OUT integrator 2, ticks:       6407
-received -0.015937
-Main.bsv: IN integrator1, ticks:       6442
-Main.bsv: OUT integrator 2, ticks:       6442
-received -0.015936
-Main.bsv: IN integrator1, ticks:       6477
-Main.bsv: OUT integrator 2, ticks:       6477
-received -0.015859
-Main.bsv: IN integrator1, ticks:       6512
-Main.bsv: OUT integrator 2, ticks:       6512
-received -0.016041
-Main.bsv: IN integrator1, ticks:       6547
-Main.bsv: OUT integrator 2, ticks:       6547
-received -0.016015
-Main.bsv: IN integrator1, ticks:       6582
-Main.bsv: OUT integrator 2, ticks:       6582
-received -0.015781
-Main.bsv: IN integrator1, ticks:       6617
-Main.bsv: OUT integrator 2, ticks:       6617
-received -0.015951
-Main.bsv: IN integrator1, ticks:       6652
-Main.bsv: OUT integrator 2, ticks:       6652
-received -0.015937
-Main.bsv: IN integrator1, ticks:       6687
-Main.bsv: OUT integrator 2, ticks:       6687
-received -0.015976
-Main.bsv: IN integrator1, ticks:       6722
-Main.bsv: OUT integrator 2, ticks:       6722
-received -0.016107
-Main.bsv: IN integrator1, ticks:       6757
-Main.bsv: OUT integrator 2, ticks:       6757
-received -0.016041
-Main.bsv: IN integrator1, ticks:       6792
-Main.bsv: OUT integrator 2, ticks:       6792
-received -0.016028
-Main.bsv: IN integrator1, ticks:       6827
-Main.bsv: OUT integrator 2, ticks:       6827
-received -0.016315
-Main.bsv: IN integrator1, ticks:       6862
-Main.bsv: OUT integrator 2, ticks:       6862
-received -0.015754
-Main.bsv: IN integrator1, ticks:       6897
-Main.bsv: OUT integrator 2, ticks:       6897
-received -0.015702
-Main.bsv: IN integrator1, ticks:       6932
-Main.bsv: OUT integrator 2, ticks:       6932
-received -0.015976
-Main.bsv: IN integrator1, ticks:       6967
-Main.bsv: OUT integrator 2, ticks:       6967
-received -0.015923
-Main.bsv: IN integrator1, ticks:       7002
-Main.bsv: OUT integrator 2, ticks:       7002
-received -0.016146
-Main.bsv: IN integrator1, ticks:       7037
-Main.bsv: OUT integrator 2, ticks:       7037
-received -0.015963
-Main.bsv: IN integrator1, ticks:       7072
-Main.bsv: OUT integrator 2, ticks:       7072
-received -0.015950
-Main.bsv: IN integrator1, ticks:       7107
-Main.bsv: OUT integrator 2, ticks:       7107
-received -0.015885
-Main.bsv: IN integrator1, ticks:       7142
-Main.bsv: OUT integrator 2, ticks:       7142
-received -0.015806
-Main.bsv: IN integrator1, ticks:       7177
-Main.bsv: OUT integrator 2, ticks:       7177
-received -0.016015
-Main.bsv: IN integrator1, ticks:       7212
-Main.bsv: OUT integrator 2, ticks:       7212
-received -0.015715
-Main.bsv: IN integrator1, ticks:       7247
-Main.bsv: OUT integrator 2, ticks:       7247
-received -0.016263
-Main.bsv: IN integrator1, ticks:       7282
-Main.bsv: OUT integrator 2, ticks:       7282
-received -0.016145
-Main.bsv: IN integrator1, ticks:       7317
-Main.bsv: OUT integrator 2, ticks:       7317
-received -0.015950
-Main.bsv: IN integrator1, ticks:       7352
-Main.bsv: OUT integrator 2, ticks:       7352
-received -0.015924
-Main.bsv: IN integrator1, ticks:       7387
-Main.bsv: OUT integrator 2, ticks:       7387
-received -0.015715
-Main.bsv: IN integrator1, ticks:       7422
-Main.bsv: OUT integrator 2, ticks:       7422
-received -0.016029
-Main.bsv: IN integrator1, ticks:       7457
-Main.bsv: OUT integrator 2, ticks:       7457
-received -0.015989
-Main.bsv: IN integrator1, ticks:       7492
-Main.bsv: OUT integrator 2, ticks:       7492
-received -0.015846
-Main.bsv: IN integrator1, ticks:       7527
-Main.bsv: OUT integrator 2, ticks:       7527
-received -0.015976
-Main.bsv: IN integrator1, ticks:       7562
-Main.bsv: OUT integrator 2, ticks:       7562
-received -0.016094
-Main.bsv: IN integrator1, ticks:       7597
-Main.bsv: OUT integrator 2, ticks:       7597
-received -0.016029
-Main.bsv: IN integrator1, ticks:       7632
-Main.bsv: OUT integrator 2, ticks:       7632
-received -0.016003
-Main.bsv: IN integrator1, ticks:       7667
-Main.bsv: OUT integrator 2, ticks:       7667
-received -0.015846
-Main.bsv: IN integrator1, ticks:       7702
-Main.bsv: OUT integrator 2, ticks:       7702
-received -0.016160
-Main.bsv: IN integrator1, ticks:       7737
-Main.bsv: OUT integrator 2, ticks:       7737
-received -0.016160
-Main.bsv: IN integrator1, ticks:       7772
-Main.bsv: OUT integrator 2, ticks:       7772
-received -0.015832
-Main.bsv: IN integrator1, ticks:       7807
-Main.bsv: OUT integrator 2, ticks:       7807
-received -0.016133
-Main.bsv: IN integrator1, ticks:       7842
-Main.bsv: OUT integrator 2, ticks:       7842
-received -0.015924
-Main.bsv: OUT integrator 2, ticks:       7877
-received -0.015989
-Main.bsv: OUT integrator 2, ticks:       7912
-received -0.015833
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6333
+Integrator.bsv: added sample 3163978551
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121947904
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6333
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6364
+Integrator.bsv: added sample 3164322148
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121891072
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6364
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6395
+Integrator.bsv: added sample 3164248436
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121989248
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6395
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6426
+Integrator.bsv: added sample 3164126029
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3122128384
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6426
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6457
+Integrator.bsv: added sample 3164109547
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121994816
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6457
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6488
+Integrator.bsv: added sample 3163978551
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121900800
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6488
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6519
+Integrator.bsv: added sample 3164175421
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121795072
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6519
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6550
+Integrator.bsv: added sample 3164150350
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121832896
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6550
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6581
+Integrator.bsv: added sample 3164060531
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121918272
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6581
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6612
+Integrator.bsv: added sample 3164142511
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121833728
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6612
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6643
+Integrator.bsv: added sample 3164215848
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121821632
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6643
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6674
+Integrator.bsv: added sample 3164175421
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121903488
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6674
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6705
+Integrator.bsv: added sample 3164158939
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121907520
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6705
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6736
+Integrator.bsv: added sample 3164060907
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121861056
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6736
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6767
+Integrator.bsv: added sample 3164257402
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121776128
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6767
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6798
+Integrator.bsv: added sample 3164257402
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121832576
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6798
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6829
+Integrator.bsv: added sample 3164051941
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121933760
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6829
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6860
+Integrator.bsv: added sample 3164240544
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121789824
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6860
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6891
+Integrator.bsv: added sample 3164109547
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121778816
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6891
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6922
+Integrator.bsv: added sample 3164150725
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121791680
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6922
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6953
+Integrator.bsv: added sample 3164052317
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121729664
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6953
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       6984
+Integrator.bsv: added sample 3164035835
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121678208
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       6984
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateMain.bsv: IN integrator1, ticks:       7015
+Integrator.bsv: added sample 3164068745
+Integrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121598336
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       7015
+Integrator.bsv: ready stateIntegrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: step4 stateIntegrator.bsv: intgrateOut called
+Integrator.bsv: added sample 3121597248
+Integrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       7046
+Integrator.bsv: ready stateIntegrator.bsv: step1 stateIntegrator.bsv: step2 stateIntegrator.bsv: step3 stateIntegrator.bsv: step4 stateIntegrator.bsv: intgrateOut called
+Main.bsv: OUT integrator 2, ticks:       7077
+received -0.000017 
+received -0.000017 
+received -0.000017 
+received -0.000017 
+received -0.000017 
+received -0.000017 
+received -0.000017 
+received -0.000017 
+received -0.000017 
+received -0.000017 
+received -0.000017 
+received -0.000017 
+received -0.000017 
+received -0.000017 
+received -0.000017 
+received -0.000016 
+received -0.000017 
+received -0.000017 
+received -0.000016 
+received -0.000016 
+received -0.000017 
+received -0.000016 
+received -0.000016 
+received -0.000016 
+received -0.000016 
+received -0.000016 
+received -0.000016 
+received -0.000016 
+received -0.000016 
+received -0.000016 
+received -0.000016 
+received -0.000016 

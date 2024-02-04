@@ -8,6 +8,9 @@
 
 import FIFO::*;
 import Integrator::*;
+import Random::*;
+import SimpleFloat::*;
+import FloatingPoint::*;
 
 interface MainIfc;
 	method Action uartIn(Bit#(8) data);
@@ -88,7 +91,6 @@ module mkMain(MainIfc);
 		end 
 	endrule
 
-	IntegratorInterface integrator2 <- mkIntegrator;
 	rule relayFirstIntegral;
 		let fi <- integrator1.integrateOut; // QUESTION: the rule will only fire when integrator1 has a value ready?
 		integrator2.addSample(fi);
@@ -105,7 +107,9 @@ module mkMain(MainIfc);
 		end else begin
 			// floatQ.deq;
 			// let float = floatQ.first;
-			let float <- integrator2.integrateOut;
+			// let float <- integrator2.integrateOut;
+			outQ.deq;
+			let float = outQ.first;
 			Bit#(8) lsb_byte = truncate(pack(float));
 			$write("Main.bsv: OUT integrator 2, ticks: %d\n", ticks);
 			outputBuffer <= (pack(float)>>8);
