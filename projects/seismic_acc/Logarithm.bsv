@@ -11,29 +11,31 @@ interface LogarithmIfc#(numeric type bitwidth);
 	method ActionValue#(Bit#(bitwidth)) get;
 endinterface
 
-module mkFastLog32(LogarithmIfc#(8));
+module mkFastLog32(LogarithmIfc#(32));
     //FIFO#(Bit#(32)) sampleIn  <- mkFIFO;
-    FIFO#(Bit#(8)) sampleOut <- mkFIFO;
-    
-    
-//    rule relaySample;
-//	    sampleIn.deq;
-//	    Bit#(32) sample = sampleIn.first;
-//	    
-//          Bit#(8) float_exp = sample[30:23];
-//            Bit#(32) float_log = zeroExtend(float_exp - 123);
-//
-//          sampleOut.enq(float_log);
-//    endrule 
+    FIFO#(Bit#(32)) sampleOut <- mkFIFO;
 
 
-    method Action addSample(Bit#(8) sample); //assume sample is float exp
-	    //sampleIn.enq(sample);
-	    Bit#(8) float_log = sample-127;
-	    sampleOut.enq(float_log);
+    method Action addSample(Bit#(31) float_sample); //assume sample is float exp
+	    
+	    Bit#(8)  exponent = float_sample[30:23];
+	    Bit#(23) mantissa = float_sample[22:0];
+
+	    Bit#(9) integer_part = zeroExtend(exponent) + 9'b110000001;
+
+	    if(integer_part[8] == 0) begin 
+	    	//is positive
+
+	    	Bit#(31) new_mantissa = (zeroExtend(integer_part[7:0]) << 23) + zeroExtend(mantissa) + 31'h00040000;
+	    end else begin 
+	    	Bit#(31) new_mantissa = (zeroExtend(negate(integer_part)) << 23) + negate(zeroExtend(mantissa)) + 31'h00040000;
+	    end	
+	    
+
+	    sampleOut.enq({integer_part[8], 8'd135, new_mantissa[30:8]});
     endmethod
 
-    method ActionValue#(Bit#(8)) get;
+    method ActionValue#(Bit#(32)) get;
 	    sampleOut.deq;
 	    return sampleOut.first;
     endmethod
