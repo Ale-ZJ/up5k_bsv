@@ -30,8 +30,11 @@ module mkMain(MainIfc);
 
 	//Reg#(Bit#(1)) initialize <- mkReg(1);
 
-	RandomIfc#(23) rand1  <- mkRandomLinearCongruential;
+	//RandomIfc#(23) rand1  <- mkRandomLinearCongruential;
+	ASGIfc#(23) rand1 <- mkASG32;
+	ASGIfc#(23) rand2 <- mkASG32;
 	RandIntToFloatIfc itf <- mkRandIntToFloat;
+	RandIntToFloatIfc itf2 <- mkRandIntToFloat;
 	//RandIfc#(32) rand2
 	
 	LaplaceRandFloat32Ifc dpModule <- mkLaplaceRandFloat32;
@@ -40,23 +43,23 @@ module mkMain(MainIfc);
 
 	FIFO#(Float) outQ <- mkFIFO;
 
-	Reg#(Bit#(1)) samplesRdy <- mkReg(0);
-	Reg#(Bit#(32)) randSample <- mkReg(0);
+	//Reg#(Bit#(1)) samplesRdy <- mkReg(0);
+	//Reg#(Bit#(32)) randSample <- mkReg(0);
 
 	rule relaySample;
-		Bit#(23) randint <- rand1.get;
-		itf.randVal(randint);
+		let randInt <- rand1.get;
+		itf.randVal(randInt);
+	endrule
+
+	rule relaySample2;
+		let randInt <- rand2.get;
+		itf2.randVal(randInt);
 	endrule
 
 	rule relayRand;
-		let randFloat <- itf.get;
-		if(samplesRdy == 1'b0) begin 
-			randSample <= randFloat;//[30:23];
-			samplesRdy <= 1;
-		end else begin
-			dpModule.randVal(randSample[30:23], randFloat[30:23]);
-			samplesRdy <= 0;
-		end
+		let randFloat1 <- itf.get;
+		let randFloat2 <- itf2.get;
+		dpModule.randVal(randFloat1[7:0], randFloat2[7:0]);
 	endrule
 
 	rule relayNoise;
