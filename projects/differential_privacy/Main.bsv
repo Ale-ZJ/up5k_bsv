@@ -25,18 +25,14 @@ module mkMain(MainIfc);
 	FIFO#(Bit#(8)) dataInQ <- mkFIFO;	// bytes received from RPi
 	FIFO#(Bit#(8)) dataOutQ <- mkFIFO;	// bytes to be transmitted to RPi
 
+	FIFO#(Bit#(32)) sampleIn <- mkFIFO;
+
 	Reg#(Bit#(32)) inputBuffer <- mkReg(0);
 	Reg#(Bit#(2)) inputBufferCnt <- mkReg(0);
-	IntegratorInterface integrator1 <- mkIntegrator;
-        IntegratorInterface integrator2 <- mkIntegrator;
 
-	//Reg#(Bit#(1)) initialize <- mkReg(1);
 
-	//RandomIfc#(23) rand1  <- mkRandomLinearCongruential;
-	//ASGIfc#(23) rand1 <- mkASG32;
-	//ASGIfc#(23) rand2 <- mkASG32;
-	VASGIfc rand1 <- mkASG;
-	VASGIfc rand2 <- mkASG;
+	ASGIfc#(23) rand1 <- mkASG32;
+	ASGIfc#(23) rand2 <- mkASG32;
 	Reg#(Bit#(23)) randshift1 <- mkReg(?);
 	Reg#(Bit#(23)) randshift2 <- mkReg(?);
 	Reg#(Bit#(5))  count  <- mkReg(?);
@@ -54,36 +50,7 @@ module mkMain(MainIfc);
 	Reg#(Bit#(2)) rand_sel <- mkReg(0);
 	//Reg#(Bit#(32)) randSample <- mkReg(0);
 
-	/**
-	rule relay;
-		if(countbits != 5'h18) begin 
-			randshift <= {randshift[21:0], rand1.get};
-			countbits <= countbits + 1;  		
-		end else begin
-			if(rand_sel == 2'b0) begin
-				itf.randVal(randshift);
-				rand_sel <= 2'b1;
-			end else begin 
-				itf.randVal(randshift);
-				rand_sel <= 2'b10;
-			end
-			countbits <= 0;
-		end
-	endrule
-	**/
-
-	//rule relaySample (rand_sel == 2'b0);
-	//	let randInt <- rand1.get;
-	//	itf.randVal(randInt);
-	//	rand_sel <= 2'b1;
-	//endrule
-
-	//rule relaySample2 (rand_sel == 2'b1);
-	//	let randInt <- rand1.get;
-	//	itf2.randVal(randInt);
-	//	rand_sel <= 2'b10;
-	//endrule **/
-        
+        /** 
         rule relayShift;
 		randshift1 <= {randshift1[21:0], rand1.get};
 		randshift2 <= {randshift2[21:0], rand2.get};
@@ -94,20 +61,29 @@ module mkMain(MainIfc);
 			itf2.randVal(randshift2);
 			count <= 1;
 		end 
+	endrule 
+	**/
+
+        rule relayRand;
+		let rv1 <- rand1.get;
+		let rv2 <- rand2.get;
+		itf.randVal(rv1);
+		itf2.randVal(rv2);
 	endrule
 
-	rule relayRand;
+	rule relayConvert;
 		let randFloat1 <- itf.get;
 		let randFloat2 <- itf2.get;
-		dpModule.randVal(randFloat1[7:0], randFloat2[7:0]);
+		dpModule.randVal(randFloat1, randFloat2);
 		rand_sel <= 2'b0;
 	endrule
 
 	rule relayNoise;
+		sampleIn.deq;
 		let noise <- dpModule.get;
-		let data  <- integrator2.integrateOut;
+		Bit#(32) data = sampleIn.first;
 
-		fadd.put(unpack(noise), data);
+		fadd.put(unpack(noise), unpack(data));
 	endrule
 
 	rule relayResult;
@@ -128,17 +104,18 @@ module mkMain(MainIfc);
 		if ( inputBufferCnt == 3 ) begin
 			inputBufferCnt <= 0;
 			//floatQ.enq(unpack(doubleword));
-			$write("Main.bsv: IN integrator1, ticks: %d\n", ticks);
-			integrator1.addSample(unpack(doubleword));
+			//$write("Main.bsv: IN integrator1, ticks: %d\n", ticks);
+			//integrator1.addSample(unpack(doubleword));
+			sampleIn.enq(inputBuffer);
 		end else begin
 			inputBufferCnt <= inputBufferCnt + 1;
 		end 
 	endrule
 
-	rule relayFirstIntegral;
-		let fi <- integrator1.integrateOut; // QUESTION: the rule will only fire when integrator1 has a value ready?
-		integrator2.addSample(fi);
-	endrule
+	//rule relayFirstIntegral;
+	//	let fi <- integrator1.integrateOut; // QUESTION: the rule will only fire when integrator1 has a value ready?
+	//	integrator2.addSample(fi);
+	//endrule
 
     Reg#(Bit#(32)) outputBuffer <- mkReg(0);
 	Reg#(Bit#(2)) outputBufferCnt <- mkReg(0);

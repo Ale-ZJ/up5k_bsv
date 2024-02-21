@@ -107,7 +107,7 @@ endmodule
 
 
 interface LaplaceRandFloat32Ifc;
-	method Action randVal(Bit#(8) data1, Bit#(8) data2);
+	method Action randVal(Bit#(32) data1, Bit#(32) data2);
 	method ActionValue#(Bit#(32)) get;
 endinterface
 
@@ -115,8 +115,8 @@ module mkLaplaceRandFloat32(LaplaceRandFloat32Ifc);
 	//FIFO#(Tuple2#(Bit#(32), Bit#(32))) inQ <- mkFIFO;
 	//FIFO#(Bit#(32)) outQ <- mkFIFO;
 
-	LogarithmIfc#(8) log1 <- mkFastLog32;
-	LogarithmIfc#(8) log2 <- mkFastLog32;
+	LogarithmIfc#(32) log1 <- mkFastLog32;
+	LogarithmIfc#(32) log2 <- mkFastLog32;
 
 	//Reg#(Bit#(1)) log_valid <- mkReg(0);
 	//Reg#(Bit#(32)) log_buffer <- mkReg(?);
@@ -132,11 +132,11 @@ module mkLaplaceRandFloat32(LaplaceRandFloat32Ifc);
 	rule relayLog;
 	        let partial1 <- log1.get;
 		let partial2 <- log2.get;
-		Bit#(8) diff = partial1 - partial2; //should i multiply by the -scale?
-		itf.put(diff);
+		Bit#(32) diff = partial1 - partial2; //should i multiply by the -scale?
+		itf.put(truncate(diff));
 	endrule
 	
-	method Action randVal(Bit#(8) data1, Bit#(8) data2);
+	method Action randVal(Bit#(32) data1, Bit#(32) data2);
 		//inQ.enq(tuple2(data1,data2));
 		log1.addSample(data1);
 		log2.addSample(data2);
@@ -149,10 +149,13 @@ endmodule
 
 
 interface ASGIfc#(numeric type bitwidth);
+	method Action setSeed(Bit#(93) seed);
 	method ActionValue#(Bit#(bitwidth)) get;
 endinterface
 
 module mkASG32(ASGIfc#(23));
+
+	FIFOF#(Bit#(93)) seedQ <- mkFIFOF;
 
 	Reg#(Bit#(30)) lsfr0 <- mkReg(30'h2a85eacf); //mkReg(32'h884c2686);
 	Reg#(Bit#(31)) lsfr1 <- mkReg(31'h5de46c20);
@@ -166,7 +169,9 @@ module mkASG32(ASGIfc#(23));
 	FIFO#(Bit#(23)) outQ <- mkFIFO;
 
 	rule shift_lsfr;
-		if(count >= 6'h17) begin
+		if( seedQ.notEmpty ) begin 
+			count <= 6'b0;
+		end else if(count >= 6'h17) begin
 			outQ.enq(shift);
 			count <= 6'b1;
 		end else begin
@@ -176,48 +181,35 @@ module mkASG32(ASGIfc#(23));
 	endrule
 
 	rule which_lsfr;
-		Bit#(32) lsfr2_next = 32'hff0001df ^ (lsfr2 >> 1);
 
-		if(lsfr2[0] == 1'b1) begin 
-			lsfr2 <= lsfr2_next;
-		end
-
-		Bit#(1) which = lsfr2[0] == 1'b1 ? lsfr2_next[0] : lsfr2[0];	
-
-		if(which == 1'b1) begin
-			lsfr1 <= 31'h7f000083 ^ (lsfr1 >> 1);
+		if( seedQ.notEmpty ) begin 
+			seedQ.deq;
+			Bit#(93) seed = seedQ.first;
+			lsfr0 <= seed[92:63];
+			lsfr1 <= seed[62:32];
+			lsfr2 <= seed[31:0];
 		end else begin 
-			lsfr0 <= 30'h3f0000e1 ^ (lsfr0 >> 1);
+
+
+			Bit#(32) lsfr2_next = 32'hff0001df ^ (lsfr2 >> 1);
+
+			if(lsfr2[0] == 1'b1) begin 
+				lsfr2 <= lsfr2_next;
+			end
+
+			Bit#(1) which = lsfr2[0] == 1'b1 ? lsfr2_next[0] : lsfr2[0];	
+
+			if(which == 1'b1) begin
+				lsfr1 <= 31'h7f000083 ^ (lsfr1 >> 1);
+			end else begin 
+				lsfr0 <= 30'h3f0000e1 ^ (lsfr0 >> 1);
+			end
 		end
 	endrule 
 
-/**
-	rule step;
-
-		if(count >= 6'h17) begin 
-			outQ.enq(shift);
-			count <= 6'b1;
-		end else begin 
-			count <= count + 6'b1;
-		end 
-		shift <= {shift[21:0], (lsfr0[0]^lsfr1[0])};
-		
-		Bit#(1) which = 1'b0;
-		if(lsfr2[0] == 1'b1) begin 
-			Bit#(32) tempReg = 32'hff0001df ^ (lsfr2 >> 1);
-			lsfr2 <= tempReg;
-			which = tempReg[0];
-		end else begin
-			which = lsfr2[0];
-		end
-
-		if(which == 1'b1) begin 
-			lsfr1 <= 31'h7f000083 ^ (lsfr1 >> 1);
-		end else begin 
-			lsfr0 <= 30'h3f0000e1 ^ (lsfr0 >> 1);
-		end 
-
-	endrule  **/
+	method Action setSeed(Bit#(93) seed);
+		seedQ.enq(seed);
+	endmethod
 
 	method ActionValue#(Bit#(23)) get;
 		outQ.deq;
