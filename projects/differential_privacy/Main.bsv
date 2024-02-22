@@ -50,23 +50,19 @@ module mkMain(MainIfc);
 	Reg#(Bit#(2)) rand_sel <- mkReg(0);
 	//Reg#(Bit#(32)) randSample <- mkReg(0);
 
-        /** 
-        rule relayShift;
-		randshift1 <= {randshift1[21:0], rand1.get};
-		randshift2 <= {randshift2[21:0], rand2.get};
-		if(count != 5'h18) begin 
-			count <= count + 1;
-		end else begin 
-			itf.randVal(randshift1);
-			itf2.randVal(randshift2);
-			count <= 1;
-		end 
-	endrule 
-	**/
+	Reg#(Bit#(1)) init_flag <- mkReg(0);
+
+	rule initialize(init_flag == 0);
+		rand1.setSeed(truncate(96'h2facf7c9e445afa9844d1d3b));
+		rand2.setSeed(truncate(96'he74f2c5a38e112c88699361b));
+		init_flag <= 1'b1;
+	endrule
 
         rule relayRand;
 		let rv1 <- rand1.get;
 		let rv2 <- rand2.get;
+
+		//$display("rand  : %8d, %8d", rv1, rv2);
 		itf.randVal(rv1);
 		itf2.randVal(rv2);
 	endrule
@@ -74,6 +70,7 @@ module mkMain(MainIfc);
 	rule relayConvert;
 		let randFloat1 <- itf.get;
 		let randFloat2 <- itf2.get;
+		//$display("float : %f, %f", randFloat1, randFloat2);
 		dpModule.randVal(randFloat1, randFloat2);
 		rand_sel <= 2'b0;
 	endrule
@@ -82,6 +79,8 @@ module mkMain(MainIfc);
 		sampleIn.deq;
 		let noise <- dpModule.get;
 		Bit#(32) data = sampleIn.first;
+		Float float_noise = unpack(noise);
+		//$display("noise : %32u", float_noise);
 
 		fadd.put(unpack(noise), unpack(data));
 	endrule
@@ -132,7 +131,7 @@ module mkMain(MainIfc);
 			outQ.deq;
 			let float = outQ.first;
 			Bit#(8) lsb_byte = truncate(pack(float));
-			$write("Main.bsv: OUT integrator 2, ticks: %d\n", ticks);
+			//$write("Main.bsv: OUT integrator 2, ticks: %d\n", ticks);
 			outputBuffer <= (pack(float)>>8);
 			outputBufferCnt <= 3;
 			dataOutQ.enq(lsb_byte);

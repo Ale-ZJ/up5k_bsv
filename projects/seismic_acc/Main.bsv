@@ -35,14 +35,14 @@ module mkMain(MainIfc);
 	//RandomIfc#(23) rand1  <- mkRandomLinearCongruential;
 	//ASGIfc#(23) rand1 <- mkASG32;
 	//ASGIfc#(23) rand2 <- mkASG32;
-	VASGIfc rand1 <- mkASG;
-	VASGIfc rand2 <- mkASG;
-	Reg#(Bit#(23)) randshift1 <- mkReg(?);
-	Reg#(Bit#(23)) randshift2 <- mkReg(?);
-	Reg#(Bit#(5))  count  <- mkReg(?);
+	//VASGIfc rand1 <- mkASG;
+	//VASGIfc rand2 <- mkASG;
+	//Reg#(Bit#(23)) randshift1 <- mkReg(?);
+	//Reg#(Bit#(23)) randshift2 <- mkReg(?);
+	//Reg#(Bit#(5))  count  <- mkReg(?);
 
-	RandIntToFloatIfc itf <- mkRandIntToFloat;
-	RandIntToFloatIfc itf2 <- mkRandIntToFloat;
+	//RandIntToFloatIfc itf <- mkRandIntToFloat;
+	//RandIntToFloatIfc itf2 <- mkRandIntToFloat;
 	//RandIfc#(32) rand2
 	
 	LaplaceRandFloat32Ifc dpModule <- mkLaplaceRandFloat32;
@@ -84,34 +84,9 @@ module mkMain(MainIfc);
 	//	rand_sel <= 2'b10;
 	//endrule **/
         
-        rule relayShift;
-		randshift1 <= {randshift1[21:0], rand1.get};
-		randshift2 <= {randshift2[21:0], rand2.get};
-		if(count != 5'h18) begin 
-			count <= count + 1;
-		end else begin 
-			itf.randVal(randshift1);
-			itf2.randVal(randshift2);
-			count <= 1;
-		end 
-	endrule
-
-	rule relayRand;
-		let randFloat1 <- itf.get;
-		let randFloat2 <- itf2.get;
-		dpModule.randVal(randFloat1[7:0], randFloat2[7:0]);
-		rand_sel <= 2'b0;
-	endrule
-
-	rule relayNoise;
-		let noise <- dpModule.get;
-		let data  <- integrator2.integrateOut;
-
-		fadd.put(unpack(noise), data);
-	endrule
 
 	rule relayResult;
-		let result <- fadd.get;
+		let result <- integrator2.integrateOut;
 		outQ.enq(result);
 	endrule
 

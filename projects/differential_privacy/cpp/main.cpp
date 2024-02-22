@@ -275,8 +275,8 @@ void* hwmain(void* arg) {
 	// double t = micros();
 	
 	for (int i = 0; i < BUFFER_SIZE; ++i) {
-		send_data(c[i]);
-		printf("sent %f\n",(float)c[i]);
+		send_data((float)0.0);
+		//printf("sent %f\n",(float)c[i]);
 	}
 
 	for (int j = 0; j < BUFFER_SIZE; ++j) {

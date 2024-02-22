@@ -178,6 +178,9 @@ module mkASG32(ASGIfc#(23));
 			count <= count + 6'b1;
 		end
 		shift <= {shift[21:0], lsfr0[0]^lsfr1[0]};
+		//$display("lsfr0 : %32u", lsfr0);
+		//$display("lsfr1 : %32u", lsfr1);
+		//$display("lsfr2 : %32u", lsfr2);
 	endrule
 
 	rule which_lsfr;
@@ -191,18 +194,14 @@ module mkASG32(ASGIfc#(23));
 		end else begin 
 
 
-			Bit#(32) lsfr2_next = 32'hff0001df ^ (lsfr2 >> 1);
-
-			if(lsfr2[0] == 1'b1) begin 
-				lsfr2 <= lsfr2_next;
-			end
+			Bit#(32) lsfr2_next = (lsfr2[0] == 1) ? 32'hff0000be ^ (lsfr2 >> 1) : (lsfr2 >> 1);
 
 			Bit#(1) which = lsfr2[0] == 1'b1 ? lsfr2_next[0] : lsfr2[0];	
 
 			if(which == 1'b1) begin
-				lsfr1 <= 31'h7f000083 ^ (lsfr1 >> 1);
+				lsfr1 <= (lsfr1[0] == 1) ? 31'h7f000023 ^ (lsfr1 >> 1) : (lsfr1 >> 1);
 			end else begin 
-				lsfr0 <= 30'h3f0000e1 ^ (lsfr0 >> 1);
+				lsfr0 <= (lsfr0[0] == 1) ? 30'h3f000071 ^ (lsfr0 >> 1) : (lsfr0 >> 1);
 			end
 		end
 	endrule 
