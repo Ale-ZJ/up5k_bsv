@@ -4,3 +4,5 @@ build
 .*.sw?
 *.log
 timing/bin
+**/*.o
+**/*.txt
