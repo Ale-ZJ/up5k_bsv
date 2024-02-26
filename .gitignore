@@ -3,4 +3,4 @@ bsim
 build
 .*.sw?
 *.log
-
+timing/bin
