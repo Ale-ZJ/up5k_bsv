@@ -195,8 +195,8 @@ module mkASG32(ASGIfc#(23));
 
 
 			Bit#(32) lsfr2_next = (lsfr2[0] == 1) ? 32'hff0000be ^ (lsfr2 >> 1) : (lsfr2 >> 1);
-
-			Bit#(1) which = lsfr2[0] == 1'b1 ? lsfr2_next[0] : lsfr2[0];	
+			lsfr2 <= lsfr2_next;
+			Bit#(1) which = lsfr2_next[0];//lsfr2[0] == 1'b1 ? lsfr2_next[0] : lsfr2[0];	
 
 			if(which == 1'b1) begin
 				lsfr1 <= (lsfr1[0] == 1) ? 31'h7f000023 ^ (lsfr1 >> 1) : (lsfr1 >> 1);
