@@ -12,7 +12,7 @@ import Random::*;
 import SimpleFloat::*;
 import FloatingPoint::*;
 
-import ASGWrapper::*;
+import Tausworthe::*;
 
 interface MainIfc;
 	method Action uartIn(Bit#(8) data);
@@ -31,8 +31,8 @@ module mkMain(MainIfc);
 	Reg#(Bit#(2)) inputBufferCnt <- mkReg(0);
 
 
-	ASGIfc#(23) rand1 <- mkASG32;
-	ASGIfc#(23) rand2 <- mkASG32;
+	TauswortheIfc rand1 <- mkTausworthe;
+	TauswortheIfc rand2 <- mkTausworthe;
 	Reg#(Bit#(23)) randshift1 <- mkReg(?);
 	Reg#(Bit#(23)) randshift2 <- mkReg(?);
 	Reg#(Bit#(5))  count  <- mkReg(?);
