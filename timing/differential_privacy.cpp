@@ -18,40 +18,32 @@
 // 	}
 // };
 
-class ASGPRNG { 
+class TausworthePRNG { 
 private:
 	uint32_t lsfr0 = 0x2a85eacf; //actually 30 bits
 	uint32_t lsfr1 = 0x5de46c20; //actually 31 bits
 	uint32_t lsfr2 = 0x884c2686; //actually 32 bits
 
+	uint32_t const0 = 4294967294;
+	uint32_t const1 = 4294967288;
+	uint32_t const2 = 4294967280;
 
 public:	
 	void seed(uint32_t seed0, uint32_t seed1, uint32_t seed2) {
 		lsfr0 = seed0, lsfr1 = seed1, lsfr2 = seed2;
 	}
 	void step() {
-		lsfr2 = (lsfr2 & 1) ? 0xff0000be ^ (lsfr2 >> 1) : (lsfr2 >> 1);
-
-		if(lsfr2 & 1) {
-			lsfr1 = (lsfr1 & 1) ? 0x7f000023 ^ (lsfr1 >> 1) : (lsfr1 >> 1);
-			lsfr1 &= 0x7fffffff;
-		} else {
-			lsfr0 = (lsfr0 & 1) ? 0x3f000071 ^ (lsfr0 >> 1) : (lsfr0 >> 1);
-			lsfr0 &= 0x3fffffff;
-		}
+		lsfr0 = (((lsfr0 << 13)^lsfr0) >> 19)^((lsfr0 & const0) << 12);
+		lsfr1 = (((lsfr1 << 2) ^lsfr1) >> 25)^((lsfr1 & const1) << 4);
+		lsfr2 = (((lsfr2 << 3) ^lsfr2) >> 11)^((lsfr2 & const2) << 17);
 	}
-
-	uint32_t get_bit() {
-		return (lsfr0 & 1) ^ (lsfr1 & 1);
-	}
+	// uint32_t get_bit() {
+	// 	return (lsfr0 & 1) ^ (lsfr1 & 1);
+	// }
 
 	uint32_t generate() {
-		uint32_t value = 0;
-		for(int i = 0; i < 32; i++) {
-			step();
-			value = ((value << 1) | get_bit());
-		}
-		return value;
+		step();
+		return (lsfr0 ^ lsfr1 ^ lsfr2);
 	}
 };
 
@@ -73,9 +65,9 @@ static inline float to_float(uint32_t x) {
 
 int main() {
 
-	ASGPRNG prng0 = ASGPRNG();
+	TausworthePRNG prng0 = TausworthePRNG();
 	prng0.seed(0x2facf7c9, 0xe445afa9, 0x844d1d3b);
-	ASGPRNG prng1 = ASGPRNG();
+	TausworthePRNG prng1 = TausworthePRNG();
 	prng1.seed(0xe74f2c5a, 0x38e112c8, 0x8699361b);
 
 	std::ofstream stats_file("timing.log");
