@@ -8,11 +8,11 @@ import IntToFloat::*;
 
 
 interface TauswortheIfc;
-	method Action seed(Bit#(96) seed);
-	method ActionValue#(Bit#(32)) get;
+	method Action setSeed(Bit#(96) seed);
+	method ActionValue#(Bit#(23)) get;
 endinterface
 
-module mkTausworthe(ASGIfc);
+module mkTausworthe(TauswortheIfc);
 
 	Reg#(Bit#(32)) lsfr1 <- mkReg(32'h2a85eacf); //mkReg(32'h884c2686);
 	Reg#(Bit#(32)) lsfr2 <- mkReg(32'h5de46c20);
@@ -24,7 +24,7 @@ module mkTausworthe(ASGIfc);
 
 	FIFO#(Bit#(23)) outQ <- mkFIFO;
 
-	FIFO#(Bit#(96)) seedQ <- mkFIFO;
+	FIFOF#(Bit#(96)) seedQ <- mkFIFOF;
 	
 
 	rule which_lsfr;
@@ -44,7 +44,7 @@ module mkTausworthe(ASGIfc);
 		outQ.enq((lsfr1^lsfr2^lsfr3)[22:0]);
 	endrule 
 
-	method Action seed(Bit#(96) seed);
+	method Action setSeed(Bit#(96) seed);
 		seedQ.enq(seed);
 	endmethod 
 
