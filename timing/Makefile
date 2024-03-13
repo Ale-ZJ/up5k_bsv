@@ -2,8 +2,8 @@
 # tool macros
 CC ?= gcc # FILL: the compiler
 CXX ?= g++# FILL: the compiler
-CFLAGS := -Wall -O3 -lstdc++# FILL: compile flags
-CXXFLAGS := -Wall -O3 -lstdc++# FILL: compile flags
+CFLAGS := -Wall -O2 -lstdc++# FILL: compile flags
+CXXFLAGS := -Wall -O2 -lstdc++# FILL: compile flags
 DBGFLAGS := -g
 COBJFLAGS := $(CFLAGS) -c
 

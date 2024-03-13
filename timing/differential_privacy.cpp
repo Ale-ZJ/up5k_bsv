@@ -55,7 +55,7 @@ static inline float less_evil_log(float x) {
 	float integer_part = static_cast<float>(((reinterpret_cast<int &>(x) & 0x7F800000) >> 23) - 127);
 	float mantissa_part = + static_cast<float>(reinterpret_cast<int &>(x) & 0x007fffff)*(std::pow(2.0, -23)) + (0.03125);
 	// std::cout << integer_part << "," << mantissa_part << std::endl;
-	return (integer_part + mantissa_part);
+	return (integer_part + mantissa_part)/1.44269504089;
 }
 
 static inline float to_float(uint32_t x) {
