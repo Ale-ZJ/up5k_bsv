@@ -107,111 +107,148 @@ endmodule
 
 
 interface LaplaceRandFloat32Ifc;
-	method Action randVal(Bit#(32) data1, Bit#(32) data2);
+	method Action enqRand(Bit#(32) data1);
 	method ActionValue#(Bit#(32)) get;
 endinterface
 
 module mkLaplaceRandFloat32(LaplaceRandFloat32Ifc);
 	//FIFO#(Tuple2#(Bit#(32), Bit#(32))) inQ <- mkFIFO;
 	//FIFO#(Bit#(32)) outQ <- mkFIFO;
+	FIFO#(Bit#(32)) dataQ <- mkSizedFIFO(2);
 
-	LogarithmIfc#(32) log1 <- mkFastLog32;
-	LogarithmIfc#(32) log2 <- mkFastLog32;
+	LogarithmIfc#(32) log <- mkLogarithm32;//mkFastLog32;
+	
+	FIFO#(Bit#(32)) float1Q <- mkSizedFIFO(1);
+	FIFO#(Bit#(32)) float2Q <- mkSizedFIFO(1);
+	// LogarithmIfc#(32) log2 <- mkLogarithm32;//mkFastLog32;
 
 	//Reg#(Bit#(1)) log_valid <- mkReg(0);
 	//Reg#(Bit#(32)) log_buffer <- mkReg(?);
 
-	IntToFloatIfc itf <- mkIntToFloat;
+	// IntToFloatIfc itf <- mkIntToFloat;
 
+	Reg#(Bit#(1)) select <- mkReg(0);
+
+	FloatTwoOp subtract <- mkFloatAdd;
+	FIFO#(Bit#(32)) outQ <- mkFIFO;
 	//rule enqLog;
 	//	inQ.deq;
 	//	let d = inQ.first;
 	//	log1.addSample(tpl_1(d));
 	//	log2.addSample(tpl_2(d));
 	//endrule
-	rule relayLog;
-	        let partial1 <- log1.get;
-		let partial2 <- log2.get;
-		Bit#(32) diff = partial1 - partial2; //should i multiply by the -scale?
-		itf.put(truncate(diff));
-	endrule
-	
-	method Action randVal(Bit#(32) data1, Bit#(32) data2);
-		//inQ.enq(tuple2(data1,data2));
-		log1.addSample(data1);
-		log2.addSample(data2);
-	endmethod
-	method ActionValue#(Bit#(32)) get;
-		let res <- itf.get;
-		return res;
-	endmethod
-endmodule 
-
-
-interface ASGIfc#(numeric type bitwidth);
-	method Action setSeed(Bit#(93) seed);
-	method ActionValue#(Bit#(bitwidth)) get;
-endinterface
-
-module mkASG32(ASGIfc#(23));
-
-	FIFOF#(Bit#(93)) seedQ <- mkFIFOF;
-
-	Reg#(Bit#(30)) lsfr0 <- mkReg(30'h2a85eacf); //mkReg(32'h884c2686);
-	Reg#(Bit#(31)) lsfr1 <- mkReg(31'h5de46c20);
-	Reg#(Bit#(32)) lsfr2 <- mkReg(32'h884c2686); //mkReg(30'h2a85eacf);
-	//ff0001df
-	//7f000083
-	//3f0000e1
-	Reg#(Bit#(6))  count <- mkReg(6'b0);
-	Reg#(Bit#(23)) shift <- mkReg(?);
-
-	FIFO#(Bit#(23)) outQ <- mkFIFO;
-
-	rule shift_lsfr;
-		if( seedQ.notEmpty ) begin 
-			count <= 6'b0;
-		end else if(count >= 6'h17) begin
-			outQ.enq(shift);
-			count <= 6'b1;
-		end else begin
-			count <= count + 6'b1;
-		end
-		shift <= {shift[21:0], lsfr0[0]^lsfr1[0]};
-		//$display("lsfr0 : %32u", lsfr0);
-		//$display("lsfr1 : %32u", lsfr1);
-		//$display("lsfr2 : %32u", lsfr2);
-	endrule
-
-	rule which_lsfr;
-
-		if( seedQ.notEmpty ) begin 
-			seedQ.deq;
-			Bit#(93) seed = seedQ.first;
-			lsfr0 <= seed[92:63];
-			lsfr1 <= seed[62:32];
-			lsfr2 <= seed[31:0];
-		end else begin 
-
-
-			Bit#(32) lsfr2_next = (lsfr2[0] == 1) ? 32'hff0000be ^ (lsfr2 >> 1) : (lsfr2 >> 1);
-			lsfr2 <= lsfr2_next;
-			Bit#(1) which = lsfr2_next[0];//lsfr2[0] == 1'b1 ? lsfr2_next[0] : lsfr2[0];	
-
-			if(which == 1'b1) begin
-				lsfr1 <= (lsfr1[0] == 1) ? 31'h7f000023 ^ (lsfr1 >> 1) : (lsfr1 >> 1);
-			end else begin 
-				lsfr0 <= (lsfr0[0] == 1) ? 30'h3f000071 ^ (lsfr0 >> 1) : (lsfr0 >> 1);
-			end
-		end
+	rule enqLog;
+		dataQ.deq;
+		log.addSample(dataQ.first);
 	endrule 
+	rule relayLog;
+		let logarithm <- log.get;
+		if(select == 1'b0) begin 
+			float1Q.enq(logarithm);
+		end else begin 
+			float2Q.enq(logarithm);
+		end 
+		select <= ~select;
+	endrule 
+	rule enqSubtract;
+		// let partial2 <- log2.get;
+		float1Q.deq;
+		float2Q.deq;
+		let float1 = float1Q.first;
+		let float2 = float2Q.first;
+		subtract.put(unpack(float1), unpack({~float2[31], float2[30:0]}));
+		// subtract.put(unpack(partial1), unpack({~partial2[31], partial2[30:0]}));
+		// Bit#(32) diff = partial1 - partial2; //should i multiply by the -scale?
+		// itf.put(truncate(diff));
+	endrule
 
-	method Action setSeed(Bit#(93) seed);
-		seedQ.enq(seed);
-	endmethod
-
-	method ActionValue#(Bit#(23)) get;
+	rule relaySubtract;
+		let sub_result <- subtract.get;
+		outQ.enq(pack(sub_result));
+	endrule 
+	
+	method Action enqRand(Bit#(32) data);
+		dataQ.enq(data);
+	endmethod 
+	// method Action randVal(Bit#(32) data1, Bit#(32) data2);
+	// 	//inQ.enq(tuple2(data1,data2));
+	// 	log1.addSample(data1);
+	// 	log2.addSample(data2);
+	// endmethod
+	method ActionValue#(Bit#(32)) get;
+		// let res <- itf.get;
+		// return res;
+		// log_out <- mkFIFO;
 		outQ.deq;
 		return outQ.first;
 	endmethod
 endmodule 
+
+
+// interface ASGIfc#(numeric type bitwidth);
+// 	method Action setSeed(Bit#(93) seed);
+// 	method ActionValue#(Bit#(bitwidth)) get;
+// endinterface
+
+// module mkASG32(ASGIfc#(23));
+
+// 	FIFOF#(Bit#(93)) seedQ <- mkFIFOF;
+
+// 	Reg#(Bit#(30)) lsfr0 <- mkReg(30'h2a85eacf); //mkReg(32'h884c2686);
+// 	Reg#(Bit#(31)) lsfr1 <- mkReg(31'h5de46c20);
+// 	Reg#(Bit#(32)) lsfr2 <- mkReg(32'h884c2686); //mkReg(30'h2a85eacf);
+// 	//ff0001df
+// 	//7f000083
+// 	//3f0000e1
+// 	Reg#(Bit#(6))  count <- mkReg(6'b0);
+// 	Reg#(Bit#(23)) shift <- mkReg(?);
+
+// 	FIFO#(Bit#(23)) outQ <- mkFIFO;
+
+// 	rule shift_lsfr;
+// 		if( seedQ.notEmpty ) begin 
+// 			count <= 6'b0;
+// 		end else if(count >= 6'h17) begin
+// 			outQ.enq(shift);
+// 			count <= 6'b1;
+// 		end else begin
+// 			count <= count + 6'b1;
+// 		end
+// 		shift <= {shift[21:0], lsfr0[0]^lsfr1[0]};
+// 		//$display("lsfr0 : %32u", lsfr0);
+// 		//$display("lsfr1 : %32u", lsfr1);
+// 		//$display("lsfr2 : %32u", lsfr2);
+// 	endrule
+
+// 	rule which_lsfr;
+
+// 		if( seedQ.notEmpty ) begin 
+// 			seedQ.deq;
+// 			Bit#(93) seed = seedQ.first;
+// 			lsfr0 <= seed[92:63];
+// 			lsfr1 <= seed[62:32];
+// 			lsfr2 <= seed[31:0];
+// 		end else begin 
+
+
+// 			Bit#(32) lsfr2_next = (lsfr2[0] == 1) ? 32'hff0000be ^ (lsfr2 >> 1) : (lsfr2 >> 1);
+// 			lsfr2 <= lsfr2_next;
+// 			Bit#(1) which = lsfr2_next[0];//lsfr2[0] == 1'b1 ? lsfr2_next[0] : lsfr2[0];	
+
+// 			if(which == 1'b1) begin
+// 				lsfr1 <= (lsfr1[0] == 1) ? 31'h7f000023 ^ (lsfr1 >> 1) : (lsfr1 >> 1);
+// 			end else begin 
+// 				lsfr0 <= (lsfr0[0] == 1) ? 30'h3f000071 ^ (lsfr0 >> 1) : (lsfr0 >> 1);
+// 			end
+// 		end
+// 	endrule 
+
+// 	method Action setSeed(Bit#(93) seed);
+// 		seedQ.enq(seed);
+// 	endmethod
+
+// 	method ActionValue#(Bit#(23)) get;
+// 		outQ.deq;
+// 		return outQ.first;
+// 	endmethod
+// endmodule 

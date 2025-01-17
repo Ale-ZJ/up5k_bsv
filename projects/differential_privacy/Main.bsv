@@ -47,32 +47,37 @@ module mkMain(MainIfc);
 
 	FIFO#(Float) outQ <- mkFIFO;
 
-	Reg#(Bit#(2)) rand_sel <- mkReg(0);
+	// Reg#(Bit#(2)) rand_sel <- mkReg(0);
 	//Reg#(Bit#(32)) randSample <- mkReg(0);
 
-	Reg#(Bit#(1)) init_flag <- mkReg(0);
+	// Reg#(Bit#(1)) init_flag <- mkReg(0);
+	// Reg#(Bool) rand_sel <- mkReg(False);
+	// rule initialize(init_flag == 0);
+	// 	rand1.setSeed(truncate(96'h2facf7c9e445afa9844d1d3b));
+	// 	rand2.setSeed(truncate(96'he74f2c5a38e112c88699361b));
+	// 	init_flag <= 1'b1;
+	// endrule
 
-	rule initialize(init_flag == 0);
-		rand1.setSeed(truncate(96'h2facf7c9e445afa9844d1d3b));
-		rand2.setSeed(truncate(96'he74f2c5a38e112c88699361b));
-		init_flag <= 1'b1;
-	endrule
-
-        rule relayRand;
+    rule relayRand;
 		let rv1 <- rand1.get;
-		let rv2 <- rand2.get;
+		// let rv2 <- rand2.get;
 
 		//$display("rand  : %8d, %8d", rv1, rv2);
+		// if(rand_sel == True) begin 
+		// 	itf.randVal(rv1);
+		// end else begin 
+		// 	itf2.randVal(rv1);
+		// end
 		itf.randVal(rv1);
-		itf2.randVal(rv2);
+		// itf2.randVal(rv2);
 	endrule
 
 	rule relayConvert;
-		let randFloat1 <- itf.get;
-		let randFloat2 <- itf2.get;
+		let randFloat <- itf.get;
+		// let randFloat2 <- itf2.get;
 		//$display("float : %f, %f", randFloat1, randFloat2);
-		dpModule.randVal(randFloat1, randFloat2);
-		rand_sel <= 2'b0;
+		dpModule.enqRand(randFloat);
+		// rand_sel <= 2'b0;
 	endrule
 
 	rule relayNoise;
@@ -90,15 +95,15 @@ module mkMain(MainIfc);
 		outQ.enq(result);
 	endrule
 
-	Reg#(Bit#(32)) ticks <- mkReg(0);
-	rule cycleCounting;
-		ticks <= ticks + 1;
-	endrule
+	// Reg#(Bit#(32)) ticks <- mkReg(0);
+	// rule cycleCounting;
+	// 	ticks <= ticks + 1;
+	// endrule
 
 	rule readFloat;
 		dataInQ.deq;
 		let msb_byte = dataInQ.first;
-		Bit#(32) doubleword = (inputBuffer>>8)|(zeroExtend(msb_byte)<<24);
+		Bit#(32) doubleword = {msb_byte[7:0], inputBuffer[31:8]}; //(inputBuffer>>8)|(zeroExtend(msb_byte)<<24);
 		inputBuffer <= doubleword;
 		if ( inputBufferCnt == 3 ) begin
 			inputBufferCnt <= 0;
